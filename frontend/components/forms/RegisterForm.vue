@@ -49,9 +49,9 @@ export default {}
         padding: 25px;
         border-radius: 15px;
         align-self: center;
-        -webkit-box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
-        -moz-box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
-        box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
+        -webkit-box-shadow: 2px 2px 8px 6px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 2px 2px 8px 6px rgba(34, 60, 80, 0.2);
+        box-shadow: 2px 2px 8px 6px rgba(34, 60, 80, 0.2);
         & div:last-of-type {
             margin-bottom: 2rem !important;
         }

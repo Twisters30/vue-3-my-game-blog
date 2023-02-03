@@ -1,14 +1,14 @@
 <template>
-    <div class="header__root sides-2 border">
+    <div class="header__root line">
         <div class="container">
             <header class="header">
                 <div class="header__logo logo">MY GameBLoG</div>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item"><NuxtLink class="btn" to="/articles">Статьи</NuxtLink></li>
-                        <li class="nav__item"><NuxtLink class="btn" to="/about">О нас</NuxtLink></li>
-                        <li class="nav__item"><NuxtLink class="btn" to="/join">Стать автором</NuxtLink></li>
-                        <li class="nav__item"><button class="btn" @click="loginStore.showPage">Войти</button></li>
+                        <li class="nav__item"><NuxtLink class="btn main-link" to="/articles">Статьи</NuxtLink></li>
+                        <li class="nav__item"><NuxtLink class="btn main-link" to="/about">О нас</NuxtLink></li>
+                        <li class="nav__item"><NuxtLink class="btn main-link" to="/join">Стать автором</NuxtLink></li>
+                        <li class="nav__item"><button class="btn main-link" @click="loginStore.showPage">Войти</button></li>
                     </ul>
                 </nav>
             </header>
@@ -28,11 +28,16 @@ export default {
 </script>
 
 <style lang="scss">
-.sides-2 {
-	border-image: linear-gradient(to bottom, turquoise, greenyellow) 0 1;
-}
-.header {
 
+.line{
+    text-align:center;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255,249,34), rgba(255,0,128), rgba(56,2,155,0));
+    border-image-slice: 1;
+    width:100%;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
