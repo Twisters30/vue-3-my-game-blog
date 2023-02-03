@@ -21,7 +21,7 @@ final class CreateUsersTable extends AbstractMigration
         $table = $this->table('users');
 
         $table->addColumn('name', 'string', ['null' => false])
-            ->addColumn('email', 'string', ['null' => false])
+            ->addColumn('email', 'string', ['null' => false,])
             ->addColumn('password', 'string', ['null' => false])
             ->addColumn('avatar', 'string', ['default' => '../frontend/assets/images/avatar.png'])
             ->addColumn('description', 'text', ['null' => true])
@@ -29,6 +29,7 @@ final class CreateUsersTable extends AbstractMigration
             ->addColumn('social_links', 'text', ['null' => true])
             ->addColumn('role_id', 'integer', ['null' => true, 'signed' => false, 'default' => 4])
             ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
+            ->addIndex(['email'],['unique' => true])
             ->addForeignKey('role_id', 'roles', 'id', ['delete' => 'SET_NULL'])
             ->save();
     }
