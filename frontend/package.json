@@ -12,7 +12,10 @@
     "sass": "^1.58.0"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
     "bootstrap": "^5.2.3",
-    "normalize.css": "^8.0.1"
+    "node": "^19.6.0",
+    "normalize.css": "^8.0.1",
+    "pinia": "^2.0.30"
   }
 }
