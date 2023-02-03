@@ -1,11 +1,26 @@
 <template>
   <div class="main-page">
     <TheHeader />
-    <div class="container ">
-      <NuxtPage />
+    <div class="container">
+      <main class="py-4">
+        <NuxtPage />
+        <LoginForm v-if="loginStore.isLoginPageShow"/>
+      </main>
     </div>  
   </div>
 </template>
+
+<script>
+import { useLoginStore } from './stores/login.js';
+import LoginForm from './components/forms/LoginForm.vue';
+export default {
+  components: { LoginForm },
+  created() {
+    this.loginStore = useLoginStore();
+},
+}
+
+</script>
 
 <style lang="scss">
 .main-page {

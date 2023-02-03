@@ -19,11 +19,11 @@ class RoleSeeder extends AbstractSeed
             ['name' => 'Admin'],
             ['name' => 'Moderator'],
             ['name' => 'Author'],
-            ['name' => 'user'],
+            ['name' => 'User']
         ];
 
         $roles = $this->table('roles');
         $roles->insert($data)
-            ->saveData();
+              ->saveData();
     }
 }
