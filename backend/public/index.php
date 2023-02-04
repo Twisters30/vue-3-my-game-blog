@@ -1,2 +1,2 @@
 <?php
-echo 'test';
+echo json_encode(['test' => 'test']);
