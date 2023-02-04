@@ -1,8 +1,7 @@
 <?php
 
-namespace controller\user;
-
-class RegisterUser 
+namespace controllers\user;
+class RegisterUser
 {
-    
+
 }
