@@ -1,5 +1,5 @@
 <template>
     <div>
-        <h1>join</h1>
+        <h1 class="main-title">join</h1>
     </div>
 </template>

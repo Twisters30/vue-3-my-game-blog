@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrapper">
-    <img class="bg-page" src="./assets/images/battlefield-v.jpg" alt="обои">
+    <img class="bg-page zoom " src="./assets/images/battlefield-v.jpg" alt="обои">
     <div class="wrapper-content">
       <TheHeader />
     <div class="container">
@@ -20,7 +20,21 @@ export default {
   components: { LoginForm },
   created() {
     this.loginStore = useLoginStore();
+    this.getDate();
 },
+methods: {
+  async getDate() {
+    try {
+      const response = await fetch('http://localhost:80',{
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  }
+}
 }
 
 </script>
