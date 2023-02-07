@@ -22,8 +22,70 @@ class Router
         return self::$route;
     }
 
+    protected static function removeParams($url): string
+    {
+        if ($url) {
+            $params = explode('&', $url, 2);
+
+            if (!strpos($params[0], '=')){
+                return rtrim($params[0], '/');
+            }
+        }
+        return '';
+    }
+
     public static function dispatch($url)
     {
-        var_dump($url);
+        $url = self::removeParams($url);
+
+        if (self::matchRoute($url)){
+            $controller = 'controllers\\'. key(self::$route);
+
+            if (class_exists($controller)){
+
+                $controllerObject = new $controller(self::$route);
+                $action = self::$route[key(self::$route)];
+
+                if (method_exists($controllerObject, $action)){
+                    $controllerObject->$action();
+                } else {
+                    exit("method $action does not exists");
+                }
+            } else {
+                exit("class $controller does not exists");
+            }
+        } else {
+            exit("route $url does not exists");
+        }
+    }
+
+    public static function matchRoute($url): bool
+    {
+        $urlParts = explode('/', $url);
+
+        foreach (self::$routes as $path => $route){
+
+            $pathParts = explode('/', $path);
+
+            if (count($urlParts) !== count($pathParts)) {
+                continue;
+            }
+
+            for ($i = 0; $i < count($urlParts); $i++ ){
+
+                if ($urlParts[$i] !== $pathParts[$i]){
+
+                    if ($pathParts[$i] === '{id}') {
+                        continue;
+                    }
+                    continue 2;
+                }
+            }
+            self::$route = $route;
+
+            return true;
+        }
+
+        return false;
     }
 }

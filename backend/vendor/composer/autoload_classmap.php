@@ -492,6 +492,12 @@ return array(
     'UnhandledMatchError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
     'ValueError' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     'controllers\\AppController' => $baseDir . '/controllers/AppController.php',
+    'controllers\\BaseController' => $baseDir . '/controllers/BaseController.php',
+    'controllers\\SingletonTrait' => $baseDir . '/controllers/SingletonTrait.php',
+    'controllers\\posts\\PostController' => $baseDir . '/controllers/posts/PostController.php',
     'controllers\\user\\RegisterUser' => $baseDir . '/controllers/user/RegisterUser.php',
+    'models\\DB' => $baseDir . '/models/DB.php',
+    'models\\Model' => $baseDir . '/models/Model.php',
+    'models\\Post\\Post' => $baseDir . '/models/Post/Post.php',
     'routes\\Router' => $baseDir . '/routes/Router.php',
 );
