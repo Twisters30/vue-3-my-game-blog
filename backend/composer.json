@@ -2,7 +2,8 @@
     "autoload": {
         "psr-4": {
             "controllers\\": "controllers",
-            "routes\\": "routes"
+            "routes\\": "routes",
+            "models\\": "models"
         }
     },
     "require": {

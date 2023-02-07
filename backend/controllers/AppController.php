@@ -1,10 +1,10 @@
 <?php
 
-namespace contollers;
+namespace controllers;
 
 use routes\Router;
 
-class AppController
+class AppController extends BaseController
 {
     public static $app;
 
@@ -13,4 +13,6 @@ class AppController
         $query = trim(urldecode($_SERVER['QUERY_STRING']), '/');
         Router::dispatch($query);
     }
+
+
 }

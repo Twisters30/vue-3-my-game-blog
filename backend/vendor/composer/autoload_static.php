@@ -25,6 +25,10 @@ class ComposerStaticInit28cd15787bee5aa895af96da9791f197
         array (
             'routes\\' => 7,
         ),
+        'm' => 
+        array (
+            'models\\' => 7,
+        ),
         'c' => 
         array (
             'controllers\\' => 12,
@@ -64,6 +68,10 @@ class ComposerStaticInit28cd15787bee5aa895af96da9791f197
         'routes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/routes',
+        ),
+        'models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/models',
         ),
         'controllers\\' => 
         array (
@@ -637,7 +645,14 @@ class ComposerStaticInit28cd15787bee5aa895af96da9791f197
         'Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'controllers\\AppController' => __DIR__ . '/../..' . '/controllers/AppController.php',
+        'controllers\\BaseController' => __DIR__ . '/../..' . '/controllers/BaseController.php',
+        'controllers\\SingletonTrait' => __DIR__ . '/../..' . '/controllers/SingletonTrait.php',
+        'controllers\\posts\\PostController' => __DIR__ . '/../..' . '/controllers/posts/PostController.php',
         'controllers\\user\\RegisterUser' => __DIR__ . '/../..' . '/controllers/user/RegisterUser.php',
+        'models\\DB' => __DIR__ . '/../..' . '/models/DB.php',
+        'models\\Model' => __DIR__ . '/../..' . '/models/Model.php',
+        'models\\Post\\Post' => __DIR__ . '/../..' . '/models/Post/Post.php',
         'routes\\Router' => __DIR__ . '/../..' . '/routes/Router.php',
     );
 

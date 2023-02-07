@@ -1,42 +1,30 @@
 <template>
   <div class="page-wrapper">
-    <img class="bg-page zoom " src="./assets/images/battlefield-v.jpg" alt="обои">
+    <img class="bg-page" src="./assets/images/battlefield-v.jpg" alt="обои">
     <div class="wrapper-content">
       <TheHeader />
     <div class="container">
       <main class="main my-4">
         <NuxtPage />
-        <LoginForm v-if="loginStore.isLoginPageShow"/>
+        <LoginForm v-if="loginStore.isLoginPageShow" />
       </main>
     </div>  
     </div>
   </div>
 </template>
 
-<script>
-import { useLoginStore } from './stores/login.js';
+<script setup>
+import { useLoginStore } from '@/stores/login.js';
 import LoginForm from './components/forms/LoginForm.vue';
-export default {
-  components: { LoginForm },
-  created() {
-    this.loginStore = useLoginStore();
-    this.getDate();
-},
-methods: {
-  async getDate() {
-    try {
-      const response = await fetch('http://localhost:80',{
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      });
-    } catch (err) {
-      console.log(err)
-    }
+
+const loginStore = useLoginStore();
+const getData = async () => {
+  try {
+    const response = await fetch('http://localhost:80');
+  } catch (err) {
+    console.log(err)
   }
 }
-}
-
 </script>
 
 <style lang="scss">

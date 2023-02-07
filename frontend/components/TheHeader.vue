@@ -21,7 +21,7 @@ import { useLoginStore } from '../stores/login.js';
 
 export default {
     created() {
-    this.loginStore = useLoginStore();
+        this.loginStore = useLoginStore();
 },
 }
 
