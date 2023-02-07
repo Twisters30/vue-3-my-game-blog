@@ -1,8 +1,6 @@
 <?php
 
-
 namespace models;
-
 
 use controllers\SingletonTrait;
 
@@ -13,10 +11,11 @@ class DB
     private function __construct()
     {
         $db = require_once ROOT . 'config/connect.php';
-        $this->connect = mysqli_connect($db['host'],$db['user'],$db['password'],$db['database']);
+        $this->connect = mysqli_connect($db['host'], $db['user'], $db['password'], $db['database']);
 
         if (!$this->connect) {
-            exit('Ошибка подключения к БД: ' . mysqli_connect_error());
+            exit('Connection error: ' . mysqli_connect_error());
         }
     }
+
 }

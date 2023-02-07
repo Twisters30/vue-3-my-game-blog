@@ -8,3 +8,5 @@ Router::add('admin/posts/{id}', ['posts\PostController' => 'index']);
 Router::add('posts/{id}', ['posts\PostController' => 'show']);
 Router::add('posts', ['posts\PostController' => 'index']);
 
+
+

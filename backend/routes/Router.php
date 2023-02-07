@@ -25,11 +25,10 @@ class Router
     protected static function removeParams($url): string
     {
         if ($url) {
-            $result = explode('&', $url, 2);
-            if (strpos($result[0], '=')) {
-                return '';
-            } else {
-                return rtrim($result[0], '/');
+            $params = explode('&', $url, 2);
+
+            if (!strpos($params[0], '=')){
+                return rtrim($params[0], '/');
             }
         }
         return '';
@@ -38,23 +37,28 @@ class Router
     public static function dispatch($url)
     {
         $url = self::removeParams($url);
-        if (self::matchRoute($url)) {
-            $controller = 'controllers\\' . key(self::$route);
-            if (class_exists($controller)) {
-                $method = self::$route[key(self::$route)];
+
+        if (self::matchRoute($url)){
+            $controller = 'controllers\\'. key(self::$route);
+
+            if (class_exists($controller)){
+
                 $controllerObject = new $controller(self::$route);
-                if (method_exists($controller, $method)) {
-                    $controllerObject->$method();
+                $action = self::$route[key(self::$route)];
+
+                if (method_exists($controllerObject, $action)){
+                    $controllerObject->$action();
                 } else {
-                    exit("method $method не существует");
+                    exit("method $action does not exists");
                 }
             } else {
-                exit("Класс $controller не существует");
+                exit("class $controller does not exists");
             }
         } else {
-            exit("Маршрут $url не существует");
+            exit("route $url does not exists");
         }
     }
+
     public static function matchRoute($url): bool
     {
         $urlParts = explode('/', $url);
@@ -67,7 +71,6 @@ class Router
                 continue;
             }
 
-
             for ($i = 0; $i < count($urlParts); $i++ ){
 
                 if ($urlParts[$i] !== $pathParts[$i]){
@@ -75,11 +78,11 @@ class Router
                     if ($pathParts[$i] === '{id}') {
                         continue;
                     }
-
                     continue 2;
                 }
             }
             self::$route = $route;
+
             return true;
         }
 

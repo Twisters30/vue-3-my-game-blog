@@ -1,8 +1,6 @@
 <?php
 
-
 namespace models\Post;
-
 
 use models\Model;
 

@@ -10,6 +10,7 @@ class PostController extends BaseController
     public function index()
     {
         $postModel = new Post();
-//        dd(0,$postModel->select(['name'])->where('id', '3')->execute());
+
+        dd(1, $postModel->find(1));
     }
 }

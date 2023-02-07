@@ -1,8 +1,6 @@
 <?php
 
-
 namespace models;
-
 
 abstract class Model
 {
@@ -10,13 +8,12 @@ abstract class Model
     public string $table;
     public string $key = 'id';
     private string $query = '';
-
     public function __construct()
     {
         $this->instance = DB::getInstance();
     }
 
-    public function execute() :array
+    public function execute(): array
     {
         $result = [];
         $data = mysqli_query($this->instance->connect, $this->query);
@@ -31,7 +28,7 @@ abstract class Model
 
     public function select(array $columns = []): Model
     {
-        if (empty($columns)) {
+        if (empty($columns)){
             $columns = '*';
         } else {
             $columns = implode(',', $columns);
@@ -41,24 +38,33 @@ abstract class Model
         return $this;
     }
 
-    public function where($column, $value, $conditions = '='): Model
+    public function where($column, $value, $condition = '='): Model
     {
-        $this->query .= " WHERE {$column} {$conditions} '{$value}'";
+        $this->query .= " WHERE {$column} {$condition} '{$value}'";
 
         return $this;
     }
 
-    public function orWhere($column, $value, $conditions = '='): Model
+    public function orWhere($column, $value, $condition = '='): Model
     {
-        $this->query .= " OR {$column} {$conditions} '{$value}'";
+        $this->query .= " OR {$column} {$condition} '{$value}'";
 
         return $this;
     }
 
     public function find($id): array
     {
-        $this->query .= "SELECT * FROM {$this->table} WHERE  {$this->key} = {$id} LIMIT 1";
+        $this->query .= "SELECT * FROM {$this->table} WHERE {$this->key} = {$id} LIMIT 1";
 
-        return  $this->execute();
+        return $this->execute();
     }
+
+    public function first(): array
+    {
+        $this->query .= " LIMIT 1";
+
+        return $this->execute();
+    }
+
+
 }
