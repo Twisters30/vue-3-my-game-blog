@@ -20,7 +20,7 @@ abstract class Model
 
         if ($data) {
             while ($row = mysqli_fetch_assoc($data)) {
-                array_push($result, $row);
+                $result[] = $row;
             }
         }
         return $result;
