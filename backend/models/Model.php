@@ -81,22 +81,25 @@ abstract class Model
 
     final public function executeRaw($query)
     {
-        return mysqli_query($this->instance->connect, $query);
+        //TODO
     }
 
-    public function update(array $data, $filter): bool
+    final public function execute()
     {
-        $setData = '';
-        $setFilter = '';
-        foreach ($setData as $key => $value) {
-            $setData .= "{$key}={'$value'}, ";
-        }
-        foreach ($filter as $key => $value) {
-            $setFilter
-        }
-        $setParams = trim($setData, ', ');
-        $this->executeRaw("UPDATE {$this->table} SET lastname='Doe' WHERE id=2");
+        mysqli_query($this->instance->connect, $this->query);
+    }
 
-        return true;
+    public function update(array $data): Model
+    {
+        $params = '';
+        foreach ($data as $key => $value) {
+            $params .= "{$key}='{$value}', ";
+
+        }
+        $params = rtrim($params, ', ');
+
+        $this->query = "UPDATE {$this->table} SET {$params} ";
+
+        return $this;
     }
 }
