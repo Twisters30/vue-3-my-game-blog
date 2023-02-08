@@ -84,9 +84,18 @@ abstract class Model
         return mysqli_query($this->instance->connect, $query);
     }
 
-    public function update(): bool
+    public function update(array $data, $filter): bool
     {
-        $this->executeRaw("UPDATE MyGuests SET lastname='Doe' WHERE id=2");
+        $setData = '';
+        $setFilter = '';
+        foreach ($setData as $key => $value) {
+            $setData .= "{$key}={'$value'}, ";
+        }
+        foreach ($filter as $key => $value) {
+            $setFilter
+        }
+        $setParams = trim($setData, ', ');
+        $this->executeRaw("UPDATE {$this->table} SET lastname='Doe' WHERE id=2");
 
         return true;
     }
