@@ -12,7 +12,7 @@ class PostController extends BaseController
         $postModel = new Post();
 
         $result = $postModel->create([
-            'name' => 'test',
+            'asd' => 'test',
         ]);
 
         dd(1, $result);
