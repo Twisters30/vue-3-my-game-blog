@@ -13,10 +13,10 @@ abstract class Model
         $this->instance = DB::getInstance();
     }
 
-    public function execute(): array
+    public function get(): array
     {
         $result = [];
-        $data = mysqli_query($this->instance->connect, $this->query);
+        $data = $this->execute($this->query);
 
         if ($data) {
             while ($row = mysqli_fetch_assoc($data)) {
@@ -63,8 +63,28 @@ abstract class Model
     {
         $this->query .= " LIMIT 1";
 
-        return $this->execute();
+        return $this->get();
     }
+
+    public function create(array $data)
+    {
+        $columns = implode(', ', array_keys($data));
+        $values = implode('\', \'', array_values($data));
+        $this->execute("INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')");
+
+        if (!mysqli_insert_id($this->instance->connect)) {
+            exit(mysqli_error($this->instance->connect));
+        }
+
+        return $this->select()->where('id', mysqli_insert_id($this->instance->connect))->first();
+    }
+
+    protected function execute($query)
+    {
+        return mysqli_query($this->instance->connect, $query);
+    }
+
+
 
 
 }
