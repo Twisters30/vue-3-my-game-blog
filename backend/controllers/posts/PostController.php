@@ -11,9 +11,7 @@ class PostController extends BaseController
     {
         $postModel = new Post();
 
-        dd(1, $postModel->executeRaw("SELECT * FROM users"));
-
-        $result = $postModel->update(['name' => 'john'])->where('id', 5)->execute();
+        dd(1, $postModel->delete('id', '5'));
 
         //dd(1, $result);
 

@@ -72,9 +72,7 @@ abstract class Model
         $values = implode('\', \'', array_values($data));
         $this->executeRaw("INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')");
 
-        if (!mysqli_insert_id($this->instance->connect)) {
-            exit(mysqli_error($this->instance->connect));
-        }
+        $this->checkErrors();
 
         return $this->select()->where('id', mysqli_insert_id($this->instance->connect))->first();
     }
@@ -84,9 +82,19 @@ abstract class Model
         //TODO
     }
 
+    protected function checkErrors()
+    {
+        if (!mysqli_insert_id($this->instance->connect)) {
+            exit(mysqli_error($this->instance->connect));
+        }
+    }
+
     final public function execute()
     {
         mysqli_query($this->instance->connect, $this->query);
+        mysqli_error($this->instance->connect);
+        $this->checkErrors();
+        return true;
     }
 
     public function update(array $data): Model
@@ -99,6 +107,14 @@ abstract class Model
         $params = rtrim($params, ', ');
 
         $this->query = "UPDATE {$this->table} SET {$params} ";
+
+        return $this;
+    }
+    public function delete($column, $value, $condition = '='): Model
+    {
+        $this->query = "DELETE FROM {$this->table}";
+        $this->where($column, $value, $condition);
+        $this->execute();
 
         return $this;
     }
