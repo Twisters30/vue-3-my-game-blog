@@ -66,7 +66,7 @@ abstract class Model
         return $this->get();
     }
 
-    public function create(array $data)
+    public function create(array $data): array
     {
         $columns = implode(', ', array_keys($data));
         $values = implode('\', \'', array_values($data));
