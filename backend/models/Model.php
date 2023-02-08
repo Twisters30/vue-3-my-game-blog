@@ -70,7 +70,7 @@ abstract class Model
     {
         $columns = implode(', ', array_keys($data));
         $values = implode('\', \'', array_values($data));
-        $this->execute("INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')");
+        $this->executeRaw("INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')");
 
         if (!mysqli_insert_id($this->instance->connect)) {
             exit(mysqli_error($this->instance->connect));
@@ -79,12 +79,15 @@ abstract class Model
         return $this->select()->where('id', mysqli_insert_id($this->instance->connect))->first();
     }
 
-    protected function execute($query)
+    final public function executeRaw($query)
     {
         return mysqli_query($this->instance->connect, $query);
     }
 
+    public function update(): bool
+    {
+        $this->executeRaw("UPDATE MyGuests SET lastname='Doe' WHERE id=2");
 
-
-
+        return true;
+    }
 }

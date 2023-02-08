@@ -11,9 +11,7 @@ class PostController extends BaseController
     {
         $postModel = new Post();
 
-        $result = $postModel->create([
-            'asd' => 'test',
-        ]);
+        $result = $postModel->executeRaw();
 
         dd(1, $result);
 
