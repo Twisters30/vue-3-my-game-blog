@@ -8,33 +8,51 @@
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Имя</span>
             <label class="form__label">
-                <input type="name" name="name" class="form__input" placeholder="Введите Имя">
+                <input v-model="formData.name" type="name" name="name" class="form__input" placeholder="Введите Имя">
             </label>
         </div>
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Email</span>
             <label class="form__label">
-                <input type="text" name="email" class="form__input" placeholder="Введите email">
+                <input v-model="formData.email" type="text" name="email" class="form__input" placeholder="Введите email">
             </label>
         </div>
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Пароль</span>
             <label class="form__label">
-                <input type="password" name="password" class="form__input" placeholder="Введите пароль">
+                <input v-model="formData.password" type="password" name="password" class="form__input" placeholder="Введите пароль">
             </label>
         </div>
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Повторите пароль</span>
             <label class="form__label">
-                <input type="password" name="password" class="form__input" placeholder="Введите пароль">
+                <input v-model="formData.repPassword" type="password" name="password" class="form__input" placeholder="Введите пароль">
             </label>
         </div>
-        <button class="form__btn-register btn btn-outline-success main-btn">Регистрация</button>
+        <button @click="register" class="form__btn-register btn btn-outline-success main-btn">Регистрация</button>
         </form>
     </div>
 </template>
-<script>
-export default {}
+<script setup>
+import axios from 'axios';
+const formData = reactive({});
+
+const register = async () => {
+  const response = await axios.post('http://localhost:80/register',{
+    "name":"VERS"
+  });
+  // try {
+  //   const response = await axios.post('http://localhost:80/register',{
+  //     name:12456789
+  //   });
+  //   // const parseResponse = await response.json();
+  //   // console.log(parseResponse)
+  // } catch (error) {
+  //   console.log(error)
+  // }
+
+}
+
 </script>
 <style lang="scss" scoped>
 .form {
