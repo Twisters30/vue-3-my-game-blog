@@ -1,17 +1,25 @@
 <?php
 
 namespace controllers\user;
-class RegisterController
+use controllers\BaseController;
+use models\user\User;
+
+class RegisterController extends BaseController
 {
     public function store()
     {
-        if ($_SERVER['REQUEST_METHOD'] != ('POST' || 'OPTIONS')) {
-            http_response_code(405);
-            exit('method not allowed');
-        }
-
+        $this->allowMethod('POST');
         $request_body = file_get_contents('php://input');
-
-        echo $request_body;
+        $request = json_decode($request_body,true);
+        $user = new User();
+        $isUniqUser = $user->select()->where('email', $request['email'])->first();
+        if ($isUniqUser) {
+            http_response_code(400);
+            echo json_encode(['errors' => 'Пользователь уже существует'], JSON_UNESCAPED_UNICODE);
+            exit();
+        }
+        $request['password'] = password_hash($request['password'], PASSWORD_DEFAULT);
+        $newUser = $user->create($request);
+        echo json_encode($newUser);
     }
 }

@@ -12,6 +12,9 @@ header('Access-Control-Allow-Credentials: true');
 header('Access-Control-Expose-Headers: *');
 header('Access-Control-Request-Method: *');
 
+//              PREFLIGHT REQUEST CHECK
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    return 0;
+}
 new \controllers\AppController();
-
 //dd(\routes\Router::getRoutes());

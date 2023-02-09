@@ -7,6 +7,7 @@
         }
     },
     "require": {
-        "robmorgan/phinx": "^0.13.4"
+        "robmorgan/phinx": "^0.13.4",
+        "firebase/php-jwt": "^6.3"
     }
 }

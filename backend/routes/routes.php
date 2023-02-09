@@ -2,7 +2,12 @@
 
 use routes\Router;
 
-Router::add('posts', ['posts\PostController' => 'index']);
-Router::add('register', ['user\RegisterController' => 'store']);
+Router::addRoute('posts', ['posts\PostController' => 'index']);
+Router::addRoute('register', ['user\RegisterController' => 'store']);
+Router::addRoute('login', ['login\LoginController' => 'login']);
 
+Router::routeGroup(['role' => 'Admin', 'prefix' => 'admin'], fn () => [
+    'posts' => ['posts\PostController' => 'index'],
+    'test' => ['posts\PostController' => 'index']
+] );
 

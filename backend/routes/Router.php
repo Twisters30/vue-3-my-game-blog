@@ -7,7 +7,7 @@ class Router
     protected static array $routes = [];
     protected static array $route = [];
 
-    public static function add($path, $route = [])
+    public static function addRoute($path, $route = [])
     {
         self::$routes[$path] = $route;
     }
@@ -34,6 +34,14 @@ class Router
         return '';
     }
 
+    public static function routeGroup(array $attributes,$callback): void
+    {
+        $prefix = $attributes['prefix'] ?? '';
+
+        foreach ($callback() as $url => $route) {
+            self::addRoute("{$prefix}/{$url}", $route);
+        }
+    }
     public static function dispatch($url)
     {
         $url = self::removeParams($url);
@@ -55,6 +63,7 @@ class Router
                 exit("class $controller does not exists");
             }
         } else {
+            http_response_code(404);
             exit("route $url does not exists");
         }
     }

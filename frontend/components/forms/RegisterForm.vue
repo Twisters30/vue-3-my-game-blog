@@ -39,7 +39,9 @@ const formData = reactive({});
 
 const register = async () => {
   const response = await axios.post('http://localhost:80/register',{
-    "name":"VERS"
+    "name": formData.name,
+    "email": formData.email,
+    "password": formData.password,
   });
   // try {
   //   const response = await axios.post('http://localhost:80/register',{
