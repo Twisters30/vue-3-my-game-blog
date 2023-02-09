@@ -80,7 +80,7 @@ abstract class Model
 
     final public function executeRaw($query)
     {
-        //TODO
+        return $this->instance->connect->query($query)->fetch_assoc();
     }
 
     protected function checkErrors()
@@ -94,8 +94,10 @@ abstract class Model
     final public function execute()
     {
         $this->checkErrors();
+
         $executeResult = mysqli_query($this->instance->connect, $this->query);
         $this->query = '';
+
         return $executeResult;
     }
 
