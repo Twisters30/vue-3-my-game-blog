@@ -11,7 +11,5 @@ class PostController extends BaseController
     {
         $postModel = new Post();
 
-        //dd(1, $result);
-
     }
 }

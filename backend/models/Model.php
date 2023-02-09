@@ -16,7 +16,7 @@ abstract class Model
     public function get(): array
     {
         $result = [];
-        $data = $this->execute($this->query);
+        $data = $this->execute();
 
         if ($data) {
             while ($row = mysqli_fetch_assoc($data)) {
@@ -33,7 +33,7 @@ abstract class Model
         } else {
             $columns = implode(',', $columns);
         }
-        $this->query .= "SELECT {$columns} FROM {$this->table}";
+        $this->query = "SELECT {$columns} FROM {$this->table}";
 
         return $this;
     }
@@ -70,7 +70,8 @@ abstract class Model
     {
         $columns = implode(', ', array_keys($data));
         $values = implode('\', \'', array_values($data));
-        $this->executeRaw("INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')");
+        $this->query = "INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')";
+        $this->execute();
 
         $this->checkErrors();
 
@@ -79,22 +80,25 @@ abstract class Model
 
     final public function executeRaw($query)
     {
-        //TODO
+        return $this->instance->connect->query($query)->fetch_assoc();
     }
 
     protected function checkErrors()
     {
-        if (!mysqli_insert_id($this->instance->connect)) {
-            exit(mysqli_error($this->instance->connect));
+        if (mysqli_error($this->instance->connect)) {
+            echo mysqli_error($this->instance->connect);
+            exit();
         }
     }
 
     final public function execute()
     {
-        mysqli_query($this->instance->connect, $this->query);
-        mysqli_error($this->instance->connect);
         $this->checkErrors();
-        return true;
+
+        $executeResult = mysqli_query($this->instance->connect, $this->query);
+        $this->query = '';
+
+        return $executeResult;
     }
 
     public function update(array $data): Model

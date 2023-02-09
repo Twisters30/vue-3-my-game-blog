@@ -6,10 +6,40 @@ class Router
 {
     protected static array $routes = [];
     protected static array $route = [];
+    protected static array $avalibleAttributes = [
+        'prefix',
+        'role',
+        'namespace'
+    ];
 
-    public static function add($path, $route = [])
+    public static function addRoute($path, $route = [])
     {
         self::$routes[$path] = $route;
+    }
+
+    public static function routeGroup(array $attribites, $callback): void
+    {
+        $prefix = $attribites['prefix'] ?? '';
+
+        foreach ($callback() as $url => $route) {
+            self::addRoute("{$prefix}/{$url}", $route);
+        }
+
+        if (isset($attribites['method'])) {
+            self::allowMethod($attribites['method']);
+        }
+    }
+
+    // temporary code
+    public static function allowMethod(string $method = 'GET'): void
+    {
+        $upMethod = strtoupper($method);
+
+        if ($_SERVER['REQUEST_METHOD'] != strtoupper($upMethod)) {
+            http_response_code(405);
+            echo json_encode(['error' => "Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}"]);
+            exit();
+        }
     }
 
     public static function getRoutes(): array
@@ -55,6 +85,7 @@ class Router
                 exit("class $controller does not exists");
             }
         } else {
+            http_response_code(404);
             exit("route $url does not exists");
         }
     }
@@ -64,7 +95,6 @@ class Router
         $urlParts = explode('/', $url);
 
         foreach (self::$routes as $path => $route){
-
             $pathParts = explode('/', $path);
 
             if (count($urlParts) !== count($pathParts)) {

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '13ea892024dfa0834dc7ec8b590c4ac8f5083992',
+    'reference' => '9b88be2296c3f50b81fc263b3a53f8892a84f6c7',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '13ea892024dfa0834dc7ec8b590c4ac8f5083992',
+      'reference' => '9b88be2296c3f50b81fc263b3a53f8892a84f6c7',
     ),
     'cakephp/core' => 
     array (
@@ -55,6 +55,15 @@
       array (
       ),
       'reference' => 'aa7bba6c39b56751f5c917464f113c924d4ba10f',
+    ),
+    'firebase/php-jwt' => 
+    array (
+      'pretty_version' => 'v6.3.2',
+      'version' => '6.3.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ea7dda77098b96e666c5ef382452f94841e439cd',
     ),
     'psr/container' => 
     array (
