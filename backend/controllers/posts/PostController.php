@@ -11,8 +11,6 @@ class PostController extends BaseController
     {
         $postModel = new Post();
 
-        dd(1, $postModel->delete('id', '5'));
-
         //dd(1, $result);
 
     }
