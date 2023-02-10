@@ -2,7 +2,7 @@
 
 namespace controllers\user;
 use controllers\BaseController;
-use models\user\User;
+use models\User\User;
 
 class RegisterController extends BaseController
 {
