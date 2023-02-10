@@ -1,42 +1,32 @@
 <template>
-    <div class="form__wrapper" id="modal-overlay" @click="closeModalOutside($event)">
+    <div class="form__wrapper" id="modal-overlay" @click="loginStore.closeModalOutside($event)">
         <form class="form__main" @submit.prevent action="index.php" >
             <div class="form__input-wrapper my-3">
                 <span class="form__input-name">Email</span>
                 <label class="form__label">
-                    <input type="text" name="email" class="form__input" placeholder="Введите email">
+                    <input v-model="loginStore.formData.email" type="text" name="email" class="form__input" placeholder="Введите email">
                 </label>
             </div>
             <div class="form__input-wrapper my-3">
                 <span class="form__input-name">Пароль</span>
                 <label class="form__label">
-                    <input type="password" name="password" class="form__input" placeholder="Введите пароль">
+                    <input v-model="loginStore.formData.password" type="password" name="password" class="form__input" placeholder="Введите пароль">
                 </label>
             </div>
-            <button class="form__btn-login btn btn-outline-success main-btn">Войти</button>
+            <button @click="loginStore.loginAction" class="form__btn-login btn btn-outline-success main-btn">Войти</button>
             <span class="form__link-wrapper">
                 <NuxtLink class="main-link text-danger" to="#">забыли пароль?</NuxtLink>
-                <NuxtLink @click="useLoginStore.showPage" class="main-link text-danger" to="/register">регистрация</NuxtLink>
+                <NuxtLink @click="loginStore.showPage" class="main-link text-danger" to="/register">регистрация</NuxtLink>
             </span>
         </form>
     </div>
 </template>
 
-<script>
-import { useLoginStore } from '../../stores/login.js';
+<script setup>
+import { useLoginStore } from '../../../stores/login.js';
 
-export default {
-    created() {
-        this.useLoginStore = useLoginStore();
-    },
-    methods: {
-        closeModalOutside(event) {
-            if (event.target.id === 'modal-overlay') {
-                this.useLoginStore.showPage();
-            }
-        }
-    },
-}
+const loginStore = useLoginStore();
+
 </script>
 
 <style lang="scss" scoped>

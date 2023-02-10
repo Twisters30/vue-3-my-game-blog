@@ -7,13 +7,7 @@
     </div>
 </template>
 
-<script>
-import Post from '@/components/Post.vue';
-
-export default {
-comments: { Post }
-
-}
+<script setup>
 
 </script>
 

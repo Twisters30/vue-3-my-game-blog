@@ -8,52 +8,35 @@
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Имя</span>
             <label class="form__label">
-                <input v-model="formData.name" type="name" name="name" class="form__input" placeholder="Введите Имя">
+                <input v-model="registerStore.formData.name" type="name" name="name" class="form__input" placeholder="Введите Имя">
             </label>
         </div>
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Email</span>
             <label class="form__label">
-                <input v-model="formData.email" type="text" name="email" class="form__input" placeholder="Введите email">
+                <input v-model="registerStore.formData.email" type="text" name="email" class="form__input" placeholder="Введите email">
             </label>
         </div>
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Пароль</span>
             <label class="form__label">
-                <input v-model="formData.password" type="password" name="password" class="form__input" placeholder="Введите пароль">
+                <input v-model="registerStore.formData.password" type="password" name="password" class="form__input" placeholder="Введите пароль">
             </label>
         </div>
         <div class="form__input-wrapper my-3">
             <span class="form__input-name">Повторите пароль</span>
             <label class="form__label">
-                <input v-model="formData.repPassword" type="password" name="password" class="form__input" placeholder="Введите пароль">
+                <input v-model="registerStore.formData.repPassword" type="password" name="password" class="form__input" placeholder="Введите пароль">
             </label>
         </div>
-        <button @click="register" class="form__btn-register btn btn-outline-success main-btn">Регистрация</button>
+        <button @click="registerStore.registerAction" class="form__btn-register btn btn-outline-success main-btn">Регистрация</button>
         </form>
     </div>
 </template>
 <script setup>
-import axios from 'axios';
-const formData = reactive({});
+import { useRegisterStore } from "../../../stores/register.js";
 
-const register = async () => {
-  const response = await axios.post('http://localhost:80/register',{
-    "name": formData.name,
-    "email": formData.email,
-    "password": formData.password,
-  });
-  // try {
-  //   const response = await axios.post('http://localhost:80/register',{
-  //     name:12456789
-  //   });
-  //   // const parseResponse = await response.json();
-  //   // console.log(parseResponse)
-  // } catch (error) {
-  //   console.log(error)
-  // }
-
-}
+const registerStore = useRegisterStore();
 
 </script>
 <style lang="scss" scoped>

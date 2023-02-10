@@ -15,7 +15,8 @@
 
 <script setup>
 import { useLoginStore } from '@/stores/login.js';
-import LoginForm from './components/forms/LoginForm.vue';
+import LoginForm from './components/frontend/forms/LoginForm.vue';
+import TheHeader from "./components/frontend/TheHeader";
 
 const loginStore = useLoginStore();
 const getData = async () => {

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { useLoginStore } from '../stores/login.js';
+import { useLoginStore } from '../../stores/login.js';
 
 export default {
     created() {
