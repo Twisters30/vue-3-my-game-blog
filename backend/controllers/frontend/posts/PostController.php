@@ -11,7 +11,7 @@ class PostController extends BaseController
     {
         $postModel = new Post();
 
-        echo 'test';
+        echo dirname(__DIR__).'\db\migrations';
 
     }
 }
