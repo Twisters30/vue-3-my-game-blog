@@ -37,12 +37,6 @@ abstract class Model
 
         return $this;
     }
-    public function andWhere($column, $value, $condition = '='): Model
-    {
-        $this->query .= " AND {$column} {$condition} '{$value}'";
-
-        return $this;
-    }
 
     public function where($column, $value, $condition = '='): Model
     {
@@ -58,6 +52,13 @@ abstract class Model
         return $this;
     }
 
+    public function andWhere($column, $value, $condition = '='): Model
+    {
+        $this->query .= " AND {$column} {$condition} '{$value}'";
+
+        return $this;
+    }
+
     public function find($id): array
     {
         $this->query .= "SELECT * FROM {$this->table} WHERE {$this->key} = {$id} LIMIT 1";
@@ -65,11 +66,12 @@ abstract class Model
         return $this->execute();
     }
 
-    public function first(): array
+    public function first()
     {
         $this->query .= " LIMIT 1";
 
         return $this->execute()->fetch_assoc();
+
     }
 
     public function create(array $data): array
@@ -99,10 +101,10 @@ abstract class Model
 
     final public function execute()
     {
-        $this->checkErrors();
-
         $executeResult = mysqli_query($this->instance->connect, $this->query);
         $this->query = '';
+
+        $this->checkErrors();
 
         return $executeResult;
     }

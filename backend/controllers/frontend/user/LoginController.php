@@ -9,24 +9,33 @@ class LoginController extends BaseController
 {
     public function login($request)
     {
-        $this->allowMethod('POST');
+        $this->allowMethod('post');
+
         $user = new User();
         $isUser = $user->select()
             ->where('email', $request['email'])
             ->first();
-        if (!$isUser || !password_verify($request['password'],$isUser['password'])) {
+
+        if (!$isUser ||
+            !password_verify($request['password'], $isUser['password']))
+        {
             http_response_code(404);
-            echo jsonWrite(['error' => 'Пароль или email не найдены!']);
+            echo jsonWrite(['error' => 'Пользователь или пароль не совпадают']);
             exit();
         }
-        $token = $this->createToken($isUser['email']);
+
+        $token = $this->createToken();
+
         $user->update(['token' => $token])->execute();
+
         echo jsonWrite(['token' => $token]);
-//        $user->parseToken();
-
     }
-    public function logout(): void
-    {
 
+    public function logout() :void
+    {
+        $user = new User();
+        $token = $this->parseToken();
+        $user->update(['token'=> null])->where('token', $token)->execute();
+        http_response_code(200);
     }
 }
