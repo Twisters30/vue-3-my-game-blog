@@ -19,6 +19,7 @@ import LoginForm from './components/frontend/forms/LoginForm.vue';
 import TheHeader from "./components/frontend/TheHeader";
 
 const loginStore = useLoginStore();
+loginStore.getLocalStorageToken();
 const getData = async () => {
   try {
     const response = await fetch('http://localhost:80');

@@ -6,12 +6,9 @@ use models\User\User;
 
 class RegisterController extends BaseController
 {
-    public function store()
+    public function store($request): void
     {
         $this->allowMethod('POST');
-
-        $request_body = file_get_contents('php://input');
-        $request = json_decode($request_body, true);
 
         $user = new User();
         $checkUser = $user->select()->where('email', $request['email'])->first();
@@ -25,7 +22,7 @@ class RegisterController extends BaseController
             exit();
         }
 
-        $request['password'] = password_hash($request['password'], PASSWORD_DEFAULT);
+        $request['password'] = phash($request['password']);
         $newUser = $user->create($request);
 
         echo json_encode($newUser);

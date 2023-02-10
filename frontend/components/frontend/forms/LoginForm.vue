@@ -1,5 +1,5 @@
 <template>
-    <div class="form__wrapper" id="modal-overlay" @click="loginStore.closeModalOutside($event)">
+    <div class="form__wrapper" id="modal-overlay" @click="loginStore.closeModalOutside($event)" v-if="!loginStore.token">
         <form class="form__main" @submit.prevent action="index.php" >
             <div class="form__input-wrapper my-3">
                 <span class="form__input-name">Email</span>
@@ -26,7 +26,6 @@
 import { useLoginStore } from '../../../stores/login.js';
 
 const loginStore = useLoginStore();
-
 </script>
 
 <style lang="scss" scoped>

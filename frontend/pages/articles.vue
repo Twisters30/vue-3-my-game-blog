@@ -8,6 +8,7 @@
 </template>
 
 <script setup>
+import Post from "../components/frontend/Post.vue";
 
 </script>
 

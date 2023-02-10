@@ -37,6 +37,12 @@ abstract class Model
 
         return $this;
     }
+    public function andWhere($column, $value, $condition = '='): Model
+    {
+        $this->query .= " AND {$column} {$condition} '{$value}'";
+
+        return $this;
+    }
 
     public function where($column, $value, $condition = '='): Model
     {
@@ -63,7 +69,7 @@ abstract class Model
     {
         $this->query .= " LIMIT 1";
 
-        return $this->get();
+        return $this->execute()->fetch_assoc();
     }
 
     public function create(array $data): array
