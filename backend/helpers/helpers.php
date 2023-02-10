@@ -11,6 +11,7 @@ function dd($die = false, ...$data)
         die;
     }
 }
+
 function phash(string $password): string
 {
     return password_hash($password, PASSWORD_DEFAULT);
