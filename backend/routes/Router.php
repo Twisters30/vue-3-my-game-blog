@@ -6,7 +6,7 @@ class Router
 {
     protected static array $routes = [];
     protected static array $route = [];
-    protected static array $avalibleAttributes = [
+    protected static array $availableAttributes = [
         'prefix',
         'role',
         'namespace'
@@ -17,16 +17,16 @@ class Router
         self::$routes[$path] = $route;
     }
 
-    public static function routeGroup(array $attribites, $callback): void
+    public static function routeGroup(array $attributes, $callback): void
     {
-        $prefix = $attribites['prefix'] ?? '';
+        $prefix = $attributes['prefix'] ?? '';
 
         foreach ($callback() as $url => $route) {
             self::addRoute("{$prefix}/{$url}", $route);
         }
 
-        if (isset($attribites['method'])) {
-            self::allowMethod($attribites['method']);
+        if (isset($attributes['method'])) {
+            self::allowMethod($attributes['method']);
         }
     }
 
