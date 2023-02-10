@@ -11,3 +11,13 @@ function dd($die = false, ...$data)
         die;
     }
 }
+
+function phash(string $password): string
+{
+    return password_hash($password, PASSWORD_DEFAULT);
+}
+
+function jsonWrite(array $data): string
+{
+    return json_encode($data, JSON_UNESCAPED_UNICODE);
+}

@@ -64,7 +64,7 @@ class Router
         return '';
     }
 
-    public static function dispatch($url)
+    public static function dispatch($url): void
     {
         $url = self::removeParams($url);
 
@@ -77,7 +77,7 @@ class Router
                 $action = self::$route[key(self::$route)];
 
                 if (method_exists($controllerObject, $action)){
-                    $controllerObject->$action();
+                    $controllerObject->$action(json_decode(file_get_contents('php://input'), true));
                 } else {
                     exit("method $action does not exists");
                 }
@@ -100,7 +100,6 @@ class Router
             if (count($urlParts) !== count($pathParts)) {
                 continue;
             }
-
             for ($i = 0; $i < count($urlParts); $i++ ){
 
                 if ($urlParts[$i] !== $pathParts[$i]){
@@ -115,7 +114,6 @@ class Router
 
             return true;
         }
-
         return false;
     }
 }
