@@ -1,6 +1,6 @@
 <?php
 
-namespace controllers\user;
+namespace controllers\frontend\user;
 
 use controllers\BaseController;
 

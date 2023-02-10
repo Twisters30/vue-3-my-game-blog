@@ -1,6 +1,6 @@
 <?php
 
-namespace controllers\posts;
+namespace controllers\frontend\posts;
 
 use controllers\BaseController;
 use models\Post\Post;
@@ -10,6 +10,8 @@ class PostController extends BaseController
     public function index()
     {
         $postModel = new Post();
+
+        echo 'test';
 
     }
 }
