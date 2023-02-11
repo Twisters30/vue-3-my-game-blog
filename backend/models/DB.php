@@ -14,7 +14,7 @@ class DB
         $this->connect = mysqli_connect($db['host'], $db['user'], $db['password'], $db['database']);
 
         if (!$this->connect) {
-            exit('Connection error: ' . mysqli_connect_error());
+            new \Exception('Connection error: ' . mysqli_connect_error());
         }
     }
 

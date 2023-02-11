@@ -2,6 +2,8 @@
 
 namespace routes;
 
+use Symfony\Component\Config\Definition\Exception\Exception;
+
 class Router
 {
     protected static array $routes = [];
@@ -38,7 +40,7 @@ class Router
         if ($_SERVER['REQUEST_METHOD'] != strtoupper($upMethod)) {
             http_response_code(405);
             echo json_encode(['error' => "Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}"]);
-            exit();
+            new \Exception();
         }
     }
 
@@ -79,14 +81,14 @@ class Router
                 if (method_exists($controllerObject, $action)){
                     $controllerObject->$action(json_decode(file_get_contents('php://input'), true));
                 } else {
-                    exit("method $action does not exists");
+                    new Exception("method $action does not exists");
                 }
             } else {
-                exit("class $controller does not exists");
+                new Exception("class $controller does not exists");
             }
         } else {
             http_response_code(404);
-            exit("route $url does not exists");
+            new Exception("route $url does not exists");
         }
     }
 

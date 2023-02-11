@@ -25,7 +25,7 @@ abstract class BaseController
                 ['error' => "Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$ucMethod}"],
                 JSON_UNESCAPED_UNICODE
             );
-            exit();
+            new \Exception();
         }
     }
 
@@ -49,8 +49,11 @@ abstract class BaseController
 
         try {
             $token = JWT::decode($jwt, new Key(SECRET_KEY, JWT_ALGORITHM));
-        } catch (\Exception $error) {
-            echo jsonWrite(['error => Ошибка авторизации']);
+        } catch (\Exception $exception) {
+
+            echo jsonWrite(['error' => 'Ошибка авторизации']);
+            http_response_code(401);
+            new \Exception();
         }
 
         if ($token->iss !== DOMAIN ||
@@ -67,8 +70,10 @@ abstract class BaseController
         $token = apache_request_headers()['Authorization'] ??
             $_SERVER['Authorization'] ??
             $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+
         if (!$token) {
-            exit(401);
+            http_response_code(401);
+            new \Exception();
         }
         return str_replace('Bearer ', '', $token);
     }

@@ -19,7 +19,7 @@ class RegisterController extends BaseController
                 ['error' => "Пользователь {$request['email']} уже существует"],
                 JSON_UNESCAPED_UNICODE
             );
-            exit();
+            new \Exception();
         }
 
         $request['password'] = phash($request['password']);

@@ -21,7 +21,7 @@ class LoginController extends BaseController
         {
             http_response_code(404);
             echo jsonWrite(['error' => 'Пользователь или пароль не совпадают']);
-            exit();
+            new \Exception();
         }
 
         $token = $this->createToken();
@@ -31,9 +31,10 @@ class LoginController extends BaseController
         echo jsonWrite(['token' => $token]);
     }
 
-    public function logout() :void
+    public function logout(): void
     {
-        $this->allowMethod('PATCH');
+        $this->allowMethod('patch');
+
         $user = new User();
         $token = $this->parseToken();
         $user->update(['token'=> null])->where('token', $token)->execute();

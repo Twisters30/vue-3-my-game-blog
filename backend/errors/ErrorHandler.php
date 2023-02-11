@@ -6,10 +6,11 @@ namespace errors;
 
 class ErrorHandler
 {
+
     public function __construct()
     {
         if (DEBUG) {
-            error_reporting( E_ALL);
+            error_reporting(E_ALL);
         } else {
             error_reporting(0);
         }
@@ -18,23 +19,74 @@ class ErrorHandler
         ob_start();
         register_shutdown_function([$this, 'fatalErrorHandler']);
     }
-    protected function logError($message = '',$file = '',$line = ''): void
+
+    public function errorHandler($errno, $errstr, $errfile, $errline)
     {
-        $now = date('Y-m-d H:i:s');
-        file_put_contents(
-            'tmp/logs/errors.log',
-            "[{$now}] ошибка: {$message} | имя файла: {$file} | строка {$line} \n=====================\n",
-            FILE_APPEND
+        $this->logError($errstr, $errfile, $errline);
+        $this->displayError($errno, $errstr, $errfile, $errline);
+    }
+
+    public function fatalErrorHandler()
+    {
+        $error = error_get_last();
+
+        if (!empty($error) && $error['type'] &
+            (E_ERROR | E_PARSE | E_COMPILE_ERROR | E_CORE_ERROR)
+        ) {
+            $this->logError(
+                $error['message'],
+                $error['file'],
+                $error['line']
+            );
+            ob_end_clean();
+
+            $this->displayError(
+                $error['type'],
+                $error['message'],
+                $error['file'],
+                $error['line']
+            );
+        } else {
+            ob_end_flush();
+        }
+    }
+
+    public function exceptionHandler(\Throwable $e)
+    {
+        $this->logError(
+            $e->getMessage(),
+            $e->getFile(),
+            $e->getLine()
+        );
+        $this->displayError(
+            'Исключение',
+            $e->getMessage(),
+            $e->getFile(),
+            $e->getLine(),
+            $e->getCode()
         );
     }
-    protected function displayError($errorNo, $errorMsg, $errorFile,$errorLine, $statusCode): void
-    {
-        if($statusCode == 0) {
-            $statusCode = 500;
-        }
-        http_response_code($statusCode);
-        require ROOT . '/public/errors/error.php';
 
-        die();
+    protected function logError($message = '', $file = '', $line = '')
+    {
+        $data = date('Y-m-d H:i:s');
+
+        file_put_contents(
+             '../tmp/logs/errors.log',
+            "[{$data}] Текст ошибки: {$message} | Файл: {$file} | Строка: {$line}\n=================\n",
+            FILE_APPEND);
     }
+
+    protected function displayError($errno, $errstr, $errfile, $errline, $responce = 500)
+    {
+        if ($responce == 0) {
+            $responce = 500;
+        }
+        http_response_code($responce);
+
+        require '../public/errors/error.php';
+
+        die;
+    }
+
 }

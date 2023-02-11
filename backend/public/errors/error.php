@@ -1,17 +1,17 @@
 <?php
-
 use errors\ErrorHandler;
 
 /**
- * @var $errorNo ErrorHandler
- * @var $erorMsg ErrorHandler
- * @var $errorFile ErrorHandler
- * @var $errorLine ErrorHandler
+ *
+ * @var $errno ErrorHandler
+ * @var $errstr ErrorHandler
+ * @var $errfile ErrorHandler
+ * @var $errline ErrorHandler
  */
 
-echo  jsonWrite([
-    'error_code' => $errorNo,
-    'message'    => $erorMsg,
-    'file'       => $errorFile,
-    'line'       => $errorLine
+echo jsonWrite([
+    'error_code' => $errno,
+    'message' => $errstr,
+    'file' => $errfile,
+    'line' => $errline
 ]);
