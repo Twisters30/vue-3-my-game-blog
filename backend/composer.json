@@ -3,7 +3,8 @@
         "psr-4": {
             "controllers\\": "controllers",
             "routes\\": "routes",
-            "models\\": "models"
+            "models\\": "models",
+            "errors\\": "errors"
         }
     },
     "require": {

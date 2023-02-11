@@ -33,9 +33,9 @@ class LoginController extends BaseController
 
     public function logout() :void
     {
+        $this->allowMethod('PATCH');
         $user = new User();
         $token = $this->parseToken();
         $user->update(['token'=> null])->where('token', $token)->execute();
-        http_response_code(200);
     }
 }

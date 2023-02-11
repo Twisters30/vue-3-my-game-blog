@@ -44,10 +44,14 @@ abstract class BaseController
 
     public function checkToken(): bool
     {
-        $jwt = 'token from header';
-        $now = new DateTimeImmutable();
+        $jwt = $this->parseToken();
+        $now = new \DateTimeImmutable();
 
-        $token = JWT::decode($jwt, new Key(SECRET_KEY, JWT_ALGORITHM));
+        try {
+            $token = JWT::decode($jwt, new Key(SECRET_KEY, JWT_ALGORITHM));
+        } catch (\Exception $error) {
+            echo jsonWrite(['error => Ошибка авторизации']);
+        }
 
         if ($token->iss !== DOMAIN ||
             $token->nbf > $now->getTimestamp())
@@ -60,6 +64,12 @@ abstract class BaseController
 
     public function parseToken(): string
     {
-        return str_replace('Bearer ', '', apache_request_headers()['Authorization']);
+        $token = apache_request_headers()['Authorization'] ??
+            $_SERVER['Authorization'] ??
+            $_SERVER['HTTP_AUTHORIZATION'] ?? '';
+        if (!$token) {
+            exit(401);
+        }
+        return str_replace('Bearer ', '', $token);
     }
 }

@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/backend/routes" isTestSource="false" packagePrefix="routes\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/errors" isTestSource="false" packagePrefix="errors\" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/robmorgan/phinx" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/composer" />

@@ -9,7 +9,10 @@
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/about">О нас</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/join">Стать автором</NuxtLink></li>
                         <li v-if="!loginStore.token" class="nav__item"><button class="btn main-link" @click="loginStore.showPage">Войти</button></li>
-                        <li v-else class="nav__item"><button class="btn main-link" @click="loginStore.logout">Выйти</button></li>
+                        <li v-else class="nav__item">
+                          <button class="btn main-link" @click="loginStore.logout">Выйти</button>
+                          <AcceptForm v-if="loginStore.acceptWindowShow" />
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -20,7 +23,7 @@
 <script setup>
 import { useLoginStore } from '../../stores/login.js';
 import axios from "axios";
-
+import AcceptForm from './forms/AcceptForm.vue';
 const loginStore = useLoginStore();
 
 const userActionWithToken = async () => {
