@@ -26,9 +26,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
                 email: formData.email,
                 password: formData.password
             });
-            console.log(result.data.token);
+            console.log(result);
             token.value = result.data.token;
-            localStorage.setItem('token',result.data.token);
+            if (result.data.token) {
+                localStorage.setItem('token',result.data.token);
+            }
         } catch (error) {
             console.log(error);
         }
@@ -37,13 +39,13 @@ export const useLoginStore = defineStore('LoginStore', () => {
     const logout = async () => {
         if (!token.value) return;
         try {
-            const response = axios.post(`${apiHost}/${apiLogout}`, {
-                headers: {
-                    'Authorization': `Bearer ${token.value}`
+            const response = await axios.patch(`${apiHost}/${apiLogout}`,{},
+                {
+                    headers: {'Authorization': `Bearer ${token.value}`}
                 }
-            })
-            console.log(response.data);
-            if (response.data.status === (200 || 201)) {
+            )
+            console.log(response);
+            if (response.status === (200 || 201)) {
                 token.value = null;
             }
         } catch (error) {

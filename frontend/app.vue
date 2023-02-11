@@ -20,7 +20,7 @@ import TheHeader from "./components/frontend/TheHeader";
 
 const loginStore = useLoginStore();
 onMounted(() => {
-  loginStore.getLocalStorageToken();
+  loginStore.getLocalStorageToken()
 })
 const getData = async () => {
   try {
