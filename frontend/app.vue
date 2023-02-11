@@ -19,9 +19,6 @@ import LoginForm from './components/frontend/forms/LoginForm.vue';
 import TheHeader from "./components/frontend/TheHeader";
 
 const loginStore = useLoginStore();
-onMounted(() => {
-  loginStore.getLocalStorageToken()
-})
 
 </script>
 

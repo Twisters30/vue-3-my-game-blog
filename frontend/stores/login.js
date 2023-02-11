@@ -26,7 +26,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
     }
 
     const getLocalStorageToken = () => {
-        token.value = localStorage.getItem('token') || null;
+        token.value = sessionStorage.getItem('token') || false;
     }
 
     const showLoginPage = () => isLoginPageShow.value = !isLoginPageShow.value;
@@ -44,7 +44,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
             if (response.status === 200){
                 token.value = response.data.token;
                 if (response.data.token) {
-                    localStorage.setItem('token',response.data.token);
+                    sessionStorage.setItem('token',response.data.token);
                     const router = useRouter();
                     await router.push({ path: "/articles" });
                 }
@@ -63,8 +63,8 @@ export const useLoginStore = defineStore('LoginStore', () => {
                 }
             )
             if (response.status === 200) {
-                token.value = null;
-                localStorage.removeItem('token');
+                token.value = false;
+                sessionStorage.removeItem('token');
                 isLoginPageShow.value = false;
             }
         } catch (error) {

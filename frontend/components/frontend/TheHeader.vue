@@ -28,6 +28,10 @@ import axios from "axios";
 import AcceptForm from './forms/AcceptForm.vue';
 const loginStore = useLoginStore();
 
+onBeforeMount(() => {
+  loginStore.getLocalStorageToken();
+});
+
 const userActionWithToken = async () => {
   if (!loginStore.token) return;
   console.log(loginStore.token, 'АВТОРИЗИРОВАН')

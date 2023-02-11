@@ -7,5 +7,11 @@
 =================
 [2023-02-11 21:19:11] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 27
 =================
-[2023-02-11 22:35:52] Текст ошибки: Пользователь Tvist821@mail.ru уже существует | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\RegisterController.php | Строка: 21
+[2023-02-12 00:05:00] Текст ошибки: route posts does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 98
+=================
+[2023-02-12 00:07:44] Текст ошибки: route posts does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 98
+=================
+[2023-02-12 00:07:46] Текст ошибки: route posts does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 98
+=================
+[2023-02-12 00:07:53] Текст ошибки: route posts does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 98
 =================

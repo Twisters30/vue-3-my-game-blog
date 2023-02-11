@@ -5,6 +5,7 @@ namespace controllers;
 use Exception;
 use Firebase\JWT\Key;
 use Firebase\JWT\JWT;
+use models\User\User;
 
 
 abstract class BaseController
@@ -77,5 +78,10 @@ abstract class BaseController
             throw new Exception('Ошибка авторизации', 401);
         }
         return str_replace('Bearer ', '', $token);
+    }
+    public function checkRole(): string
+    {
+        $user = new User();
+
     }
 }
