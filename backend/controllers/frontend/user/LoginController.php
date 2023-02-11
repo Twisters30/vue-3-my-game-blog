@@ -31,11 +31,12 @@ class LoginController extends BaseController
         echo jsonWrite(['token' => $token]);
     }
 
-    public function logout() :void
+    public function logout(): void
     {
+        $this->allowMethod('patch');
+
         $user = new User();
         $token = $this->parseToken();
         $user->update(['token'=> null])->where('token', $token)->execute();
-        http_response_code(200);
     }
 }
