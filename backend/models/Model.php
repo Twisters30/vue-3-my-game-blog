@@ -2,8 +2,6 @@
 
 namespace models;
 
-use Symfony\Component\Config\Definition\Exception\Exception;
-
 abstract class Model
 {
     public $instance;
@@ -96,8 +94,7 @@ abstract class Model
     protected function checkErrors()
     {
         if (mysqli_error($this->instance->connect)) {
-            echo mysqli_error($this->instance->connect);
-            new Exception();
+            throw new \Exception(mysqli_error($this->instance->connect), 500);
         }
     }
 

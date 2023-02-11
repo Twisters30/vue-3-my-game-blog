@@ -2,16 +2,15 @@
 use errors\ErrorHandler;
 
 /**
- *
- * @var $errno ErrorHandler
- * @var $errstr ErrorHandler
- * @var $errfile ErrorHandler
- * @var $errline ErrorHandler
+ * @var $errorNo ErrorHandler
+ * @var $errorMsg ErrorHandler
+ * @var $errorFile ErrorHandler
+ * @var $errorLine ErrorHandler
  */
 
 echo jsonWrite([
-    'error_code' => $errno,
-    'message' => $errstr,
-    'file' => $errfile,
-    'line' => $errline
+    'error_code' => $errorNo,
+    'message' => $errorMsg,
+    'file' => $errorFile,
+    'line' => $errorLine
 ]);

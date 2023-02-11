@@ -19,6 +19,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 new \controllers\AppController();
 
-throw new Exception('PISA');
-
 

@@ -2,10 +2,14 @@
 
 namespace controllers\frontend\user;
 use controllers\BaseController;
+use Exception;
 use models\User\User;
 
 class RegisterController extends BaseController
 {
+    /**
+     * @throws Exception
+     */
     public function store($request): void
     {
         $this->allowMethod('POST');
@@ -14,12 +18,7 @@ class RegisterController extends BaseController
         $checkUser = $user->select()->where('email', $request['email'])->first();
 
         if ($checkUser) {
-            http_response_code(400);
-            echo json_encode(
-                ['error' => "Пользователь {$request['email']} уже существует"],
-                JSON_UNESCAPED_UNICODE
-            );
-            new \Exception();
+            throw new Exception("Пользователь {$request['email']} уже существует", 400);
         }
 
         $request['password'] = phash($request['password']);

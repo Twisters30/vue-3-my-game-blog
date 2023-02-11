@@ -72,19 +72,19 @@ class ErrorHandler
         $data = date('Y-m-d H:i:s');
 
         file_put_contents(
-             '../tmp/logs/errors.log',
+             ROOT.'/tmp/logs/errors.log',
             "[{$data}] Текст ошибки: {$message} | Файл: {$file} | Строка: {$line}\n=================\n",
             FILE_APPEND);
     }
 
-    protected function displayError($errno, $errstr, $errfile, $errline, $responce = 500)
+    protected function displayError($errorNo, $errorMsg, $errorFile, $errorLine, $responce = 500)
     {
         if ($responce == 0) {
             $responce = 500;
         }
         http_response_code($responce);
 
-        require '../public/errors/error.php';
+        require ROOT.'/public/errors/error.php';
 
         die;
     }
