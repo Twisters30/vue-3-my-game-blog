@@ -2,6 +2,7 @@
 
 namespace controllers;
 
+use Exception;
 use Firebase\JWT\Key;
 use Firebase\JWT\JWT;
 
@@ -15,17 +16,15 @@ abstract class BaseController
         $this->route = $route;
     }
 
-    public function allowMethod(string $method = 'GET'): void
+    /**
+     * @throws Exception
+     */
+    public static function allowMethod(string $method = 'GET'): void
     {
-        $ucMethod = strtoupper($method);
+        $upMethod = strtoupper($method);
 
-        if ($_SERVER['REQUEST_METHOD'] != strtoupper($ucMethod)) {
-            http_response_code(405);
-            echo json_encode(
-                ['error' => "Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$ucMethod}"],
-                JSON_UNESCAPED_UNICODE
-            );
-            exit();
+        if ($_SERVER['REQUEST_METHOD'] != strtoupper($upMethod)) {
+            throw new Exception("Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}", 405);
         }
     }
 
@@ -42,6 +41,9 @@ abstract class BaseController
         return JWT::encode($data, SECRET_KEY, JWT_ALGORITHM);
     }
 
+    /**
+     * @throws Exception
+     */
     public function checkToken(): bool
     {
         $jwt = $this->parseToken();
@@ -49,11 +51,8 @@ abstract class BaseController
 
         try {
             $token = JWT::decode($jwt, new Key(SECRET_KEY, JWT_ALGORITHM));
-        } catch (\Exception $exception) {
-
-            echo jsonWrite(['error' => 'Ошибка авторизации']);
-            http_response_code(401);
-            exit();
+        } catch (Exception $exception) {
+            throw new Exception('Ошибка авторизации', 401);
         }
 
         if ($token->iss !== DOMAIN ||
@@ -65,6 +64,9 @@ abstract class BaseController
         return true;
     }
 
+    /**
+     * @throws Exception
+     */
     public function parseToken(): string
     {
         $token = apache_request_headers()['Authorization'] ??
@@ -72,8 +74,7 @@ abstract class BaseController
             $_SERVER['HTTP_AUTHORIZATION'] ?? '';
 
         if (!$token) {
-            http_response_code(401);
-            exit();
+            throw new Exception('Ошибка авторизации', 401);
         }
         return str_replace('Bearer ', '', $token);
     }

@@ -94,8 +94,7 @@ abstract class Model
     protected function checkErrors()
     {
         if (mysqli_error($this->instance->connect)) {
-            echo mysqli_error($this->instance->connect);
-            exit();
+            throw new \Exception(mysqli_error($this->instance->connect), 500);
         }
     }
 

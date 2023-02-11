@@ -2,6 +2,8 @@
 
 namespace routes;
 
+use Exception;
+
 class Router
 {
     protected static array $routes = [];
@@ -17,6 +19,9 @@ class Router
         self::$routes[$path] = $route;
     }
 
+    /**
+     * @throws Exception
+     */
     public static function routeGroup(array $attributes, $callback): void
     {
         $prefix = $attributes['prefix'] ?? '';
@@ -31,14 +36,16 @@ class Router
     }
 
     // temporary code
+
+    /**
+     * @throws Exception
+     */
     public static function allowMethod(string $method = 'GET'): void
     {
         $upMethod = strtoupper($method);
 
         if ($_SERVER['REQUEST_METHOD'] != strtoupper($upMethod)) {
-            http_response_code(405);
-            echo json_encode(['error' => "Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}"]);
-            exit();
+            throw new Exception("Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}", 405);
         }
     }
 
@@ -64,6 +71,9 @@ class Router
         return '';
     }
 
+    /**
+     * @throws Exception
+     */
     public static function dispatch($url): void
     {
         $url = self::removeParams($url);
@@ -79,14 +89,13 @@ class Router
                 if (method_exists($controllerObject, $action)){
                     $controllerObject->$action(json_decode(file_get_contents('php://input'), true));
                 } else {
-                    exit("method $action does not exists");
+                    throw new Exception("method $action does not exists", 500);
                 }
             } else {
-                exit("class $controller does not exists");
+                throw new Exception("class $controller does not exists", 500);
             }
         } else {
-            http_response_code(404);
-            exit("route $url does not exists");
+            throw new Exception("route $url does not exists", 404);
         }
     }
 

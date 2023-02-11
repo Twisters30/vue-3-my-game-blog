@@ -19,9 +19,7 @@ class LoginController extends BaseController
         if (!$isUser ||
             !password_verify($request['password'], $isUser['password']))
         {
-            http_response_code(404);
-            echo jsonWrite(['error' => 'Пользователь или пароль не совпадают']);
-            exit();
+            throw new \Exception('Пользователь или пароль не совпадают', 404);
         }
 
         $token = $this->createToken();
