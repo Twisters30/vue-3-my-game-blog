@@ -16,7 +16,7 @@
             <button @click="loginStore.loginAction" class="form__btn-login btn btn-outline-success main-btn">Войти</button>
             <span class="form__link-wrapper">
                 <NuxtLink class="main-link text-danger" to="#">забыли пароль?</NuxtLink>
-                <NuxtLink @click="loginStore.showPage" class="main-link text-danger" to="/register">регистрация</NuxtLink>
+                <NuxtLink @click="loginStore.showLoginPage" class="main-link text-danger" to="/register">регистрация</NuxtLink>
             </span>
         </form>
     </div>

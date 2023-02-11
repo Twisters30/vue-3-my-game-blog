@@ -8,10 +8,12 @@
                         <li class="nav__item"><NuxtLink @click="userActionWithToken" class="btn main-link" to="/articles">Статьи</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/about">О нас</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/join">Стать автором</NuxtLink></li>
-                        <li v-if="!loginStore.token" class="nav__item"><button class="btn main-link" @click="loginStore.showPage">Войти</button></li>
+                        <li v-if="!loginStore.token" class="nav__item"><button class="btn main-link" @click="loginStore.showLoginPage">Войти</button></li>
                         <li v-else class="nav__item">
-                          <button class="btn main-link" @click="loginStore.logout">Выйти</button>
-                          <AcceptForm v-if="loginStore.acceptWindowShow" />
+                          <button class="btn main-link" @click="loginStore.acceptAction">Выйти</button>
+                          <AcceptForm
+                              :acceptAction="loginStore.acceptAction"
+                              v-if="loginStore.acceptWindowShow" />
                         </li>
                     </ul>
                 </nav>

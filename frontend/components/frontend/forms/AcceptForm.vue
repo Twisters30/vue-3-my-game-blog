@@ -2,16 +2,16 @@
   <div class="accept">
     <div class="accept__wrapper">
       <h5 class="mb-2">Вы Уверенны?</h5>
-      <button @click="loginStore.acceptAction(true)" class="accept__btn btn btn-primary mb-2">Выйти</button>
-      <button @click="loginStore.acceptAction(false)" class="accept__btn btn btn-primary">Отмена</button>
+      <button @click="acceptAction(true)" class="accept__btn btn btn-primary mb-2">Выйти</button>
+      <button @click="acceptAction(false)" class="accept__btn btn btn-primary">Отмена</button>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import { useLoginStore } from "../../../stores/login.js";
-const loginStore = useLoginStore();
+const props = defineProps(['acceptAction'])
+
 
 </script>
 

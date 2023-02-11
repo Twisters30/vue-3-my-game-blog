@@ -7,33 +7,47 @@ export const useLoginStore = defineStore('LoginStore', () => {
     const formData = reactive({});
     const token = ref(null);
     const acceptWindowShow = ref(false);
-    const accept = ref(false);
 
-    const acceptAction = (payloadAccept) => {
-        accept.value = payloadAccept;
-        isLoginPageShow.value = !acceptWindowShow.value;
+    const updateFormDataFromRegister = ({email, password}) => {
+        console.log(email,password)
+        formData.email = email;
+        formData.password = password;
+    }
+
+    const acceptAction = async (userAnswer = null) => {
+        if (userAnswer === null) {
+            acceptWindowShow.value = false;
+            return;
+        }
+        if (userAnswer === true) {
+           await logout();
+        }
+        acceptWindowShow.value = !acceptWindowShow.value;
     }
 
     const getLocalStorageToken = () => {
         token.value = localStorage.getItem('token') || null;
     }
 
-    const showPage = () => isLoginPageShow.value = !isLoginPageShow.value;
+    const showLoginPage = () => isLoginPageShow.value = !isLoginPageShow.value;
     const closeModalOutside = (event) => {
         if (event.target.id === 'modal-overlay') {
-            showPage();
+            showLoginPage();
         }
     }
     const loginAction = async () => {
         try {
-            const result = await axios.post(`${apiHost}/${apiLogin}`,{
+            const response = await axios.post(`${apiHost}/${apiLogin}`,{
                 email: formData.email,
                 password: formData.password
             });
-            console.log(result);
-            token.value = result.data.token;
-            if (result.data.token) {
-                localStorage.setItem('token',result.data.token);
+            if (response.status === 200){
+                token.value = response.data.token;
+                if (response.data.token) {
+                    localStorage.setItem('token',response.data.token);
+                    const router = useRouter();
+                    await router.push({ path: "/articles" });
+                }
             }
         } catch (error) {
             console.log(error);
@@ -42,7 +56,6 @@ export const useLoginStore = defineStore('LoginStore', () => {
 
     const logout = async () => {
         if (!token.value) return;
-        acceptWindowShow.value = true;
         try {
             const response = await axios.patch(`${apiHost}/${apiLogout}`,{},
                 {
@@ -61,7 +74,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
 
     return {
         isLoginPageShow,
-        showPage,
+        showLoginPage,
         loginAction,
         formData,
         closeModalOutside,
@@ -69,6 +82,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
         logout,
         getLocalStorageToken,
         acceptAction,
-        acceptWindowShow
+        acceptWindowShow,
+        updateFormDataFromRegister
     };
 })

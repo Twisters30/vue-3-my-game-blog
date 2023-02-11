@@ -22,13 +22,7 @@ const loginStore = useLoginStore();
 onMounted(() => {
   loginStore.getLocalStorageToken()
 })
-const getData = async () => {
-  try {
-    const response = await fetch('http://localhost:80');
-  } catch (err) {
-    console.log(err)
-  }
-}
+
 </script>
 
 <style lang="scss">

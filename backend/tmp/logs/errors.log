@@ -5,3 +5,7 @@
 =================
 [2023-02-11 21:16:33] Текст ошибки: PISA | Файл: D:\PHP\Projects\Blog\backend\public\index.php | Строка: 22
 =================
+[2023-02-11 21:19:11] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 27
+=================
+[2023-02-11 22:35:52] Текст ошибки: Пользователь Tvist821@mail.ru уже существует | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\RegisterController.php | Строка: 21
+=================
