@@ -19,4 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 new \controllers\AppController();
 
-//dd(\routes\Router::getRoutes());
+throw new Exception('PISA');
+
+

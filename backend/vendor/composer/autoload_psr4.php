@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'routes\\' => array($baseDir . '/routes'),
     'models\\' => array($baseDir . '/models'),
+    'errors\\' => array($baseDir . '/errors'),
     'controllers\\' => array($baseDir . '/controllers'),
     'Symfony\\Polyfill\\Php81\\' => array($vendorDir . '/symfony/polyfill-php81'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
