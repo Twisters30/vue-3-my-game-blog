@@ -1,9 +1,32 @@
-
-[2023-02-11 21:14:32] Текст ошибки: PISA | Файл: D:\PHP\Projects\Blog\backend\public\index.php | Строка: 22
+[2023-02-12 00:21:49] Текст ошибки: Trying to access array offset on value of type null | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 93
 =================
-[2023-02-11 21:14:32] Текст ошибки: Undefined variable: errno | Файл: D:\PHP\Projects\Blog\backend\public\errors\error.php | Строка: 13
+[2023-02-12 00:50:02] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 16 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 16
 =================
-[2023-02-11 21:16:33] Текст ошибки: PISA | Файл: D:\PHP\Projects\Blog\backend\public\index.php | Строка: 22
+[2023-02-12 00:50:47] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 16 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 16
 =================
-[2023-02-11 21:19:11] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 27
+[2023-02-12 00:50:49] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 16 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 16
+=================
+[2023-02-12 00:55:06] Текст ошибки: Пользователь admin@admin.com уже существует | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\RegisterController.php | Строка: 21
+=================
+[2023-02-12 01:24:08] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 86 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 15
+=================
+[2023-02-12 01:24:47] Текст ошибки: Undefined property: controllers\frontend\posts\PostController::$attributes | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\posts\PostController.php | Строка: 14
+=================
+[2023-02-12 01:40:28] Текст ошибки: class controllers\controller does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 99
+=================
+[2023-02-12 01:44:57] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================
+[2023-02-12 01:45:10] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================
+[2023-02-12 01:46:40] Текст ошибки: class controllers\posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 99
+=================
+[2023-02-12 01:47:22] Текст ошибки: Недопустимый метод POST, необходим GET | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================
+[2023-02-12 01:53:51] Текст ошибки: class controllers\{}posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 105
+=================
+[2023-02-12 01:54:36] Текст ошибки: class controllers\posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 105
+=================
+[2023-02-12 01:57:11] Текст ошибки: class controllers\posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 106
+=================
+[2023-02-12 01:57:38] Текст ошибки: Undefined index: namespace | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 88
 =================

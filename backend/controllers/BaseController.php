@@ -5,6 +5,7 @@ namespace controllers;
 use Exception;
 use Firebase\JWT\Key;
 use Firebase\JWT\JWT;
+use models\User\User;
 
 
 abstract class BaseController
@@ -77,5 +78,26 @@ abstract class BaseController
             throw new Exception('Ошибка авторизации', 401);
         }
         return str_replace('Bearer ', '', $token);
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function checkRole()
+    {
+        $token = $this->parseToken();
+        $user = new User();
+        $result = $user->executeRaw(
+            "SELECT u.email, u.role_id, r.id, r.name AS role_name
+                    FROM users AS u
+                    INNER JOIN roles AS r
+                    ON u.role_id = r.id
+                    WHERE u.token = '{$token}'"
+        );
+
+        if (!$result) {
+            throw new Exception('Ошибка авторизации', 401);
+        }
+        return $result['role_name'];
     }
 }

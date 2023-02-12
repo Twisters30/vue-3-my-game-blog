@@ -24,6 +24,7 @@ final class CreatePostsTable extends AbstractMigration
             ->addColumn('description', 'text', ['null' => false])
             ->addColumn('image', 'string',  ['null' => false])
             ->addColumn('icon', 'string',  ['null' => false])
+            //TODO добавить колонку статуса статьи (опубликована на рассмотрении и тд...Возможно сделать еще одну таблицу со статусами)
             ->addColumn('user_id', 'integer', ['null' => true, 'signed' => false])
             ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->addColumn('updated_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
