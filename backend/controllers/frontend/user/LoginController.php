@@ -3,10 +3,14 @@
 namespace controllers\frontend\user;
 
 use controllers\BaseController;
+use Exception;
 use models\User\User;
 
 class LoginController extends BaseController
 {
+    /**
+     * @throws Exception
+     */
     public function login($request)
     {
         $this->allowMethod('post');
@@ -19,7 +23,7 @@ class LoginController extends BaseController
         if (!$isUser ||
             !password_verify($request['password'], $isUser['password']))
         {
-            throw new \Exception('Пользователь или пароль не совпадают', 404);
+            throw new Exception('Пользователь или пароль не совпадают', 404);
         }
 
         $token = $this->createToken();
@@ -29,6 +33,9 @@ class LoginController extends BaseController
         echo jsonWrite(['token' => $token]);
     }
 
+    /**
+     * @throws Exception
+     */
     public function logout(): void
     {
         $this->allowMethod('patch');

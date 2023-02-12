@@ -2,13 +2,17 @@
 
 use routes\Router;
 
-Router::addRoute('register', ['frontend\user\RegisterController' => 'store']);
-Router::addRoute('login', ['frontend\user\LoginController' => 'login']);
-Router::addRoute('logout', ['frontend\user\LoginController' => 'logout']);
 
-Router::routeGroup(['role' => 'Admin', 'prefix' => 'admin'], fn () => [
-    'posts' => ['admin\posts\PostController' => 'index'],
-    'testss' => ['admin\posts\PostController' => 'index']
+Router::addRoute('register', ['controller' => 'frontend\user\RegisterController', 'action' => 'store']);
+Router::addRoute('login', ['controller' => 'frontend\user\LoginController', 'action' => 'login']);
+Router::addRoute('logout', ['controller' => 'frontend\user\LoginController', 'action' => 'logout']);
+Router::addRoute('posts', ['controller' => 'frontend\posts\PostController', 'action' => 'index']);
+
+Router::routeGroup(['role' => 'Admin', 'prefix' => 'admin', 'namespace' => 'admin'], fn () => [
+    'posts' => ['controller' =>'posts\PostController', 'action' => 'index'],
+    'testss' => ['controller' =>'posts\PostController', 'action' => 'index']
 ]);
+
+
 
 

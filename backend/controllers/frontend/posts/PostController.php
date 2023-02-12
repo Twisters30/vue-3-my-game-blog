@@ -9,9 +9,6 @@ class PostController extends BaseController
 {
     public function index()
     {
-        $postModel = new Post();
-
-        echo dirname(__DIR__).'\db\migrations';
-
+        dd(1, 'front post index');
     }
 }

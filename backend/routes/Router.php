@@ -14,9 +14,9 @@ class Router
         'namespace'
     ];
 
-    public static function addRoute($path, $route = [])
+    public static function addRoute(string $path, array $route, array $attributes = []): void
     {
-        self::$routes[$path] = $route;
+        self::$routes[$path] = array_merge($route, ['attributes' => $attributes]);
     }
 
     /**
@@ -24,10 +24,14 @@ class Router
      */
     public static function routeGroup(array $attributes, $callback): void
     {
-        $prefix = $attributes['prefix'] ?? '';
+        $prefix = '';
+        if (isset($attributes['prefix'])) {
+            $prefix = $attributes['prefix'];
+            unset($attributes['prefix']);
+        }
 
         foreach ($callback() as $url => $route) {
-            self::addRoute("{$prefix}/{$url}", $route);
+            self::addRoute("{$prefix}/{$url}", $route, $attributes);
         }
 
         if (isset($attributes['method'])) {
@@ -48,6 +52,8 @@ class Router
             throw new Exception("Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}", 405);
         }
     }
+
+    //end of temporary code
 
     public static function getRoutes(): array
     {
@@ -79,12 +85,18 @@ class Router
         $url = self::removeParams($url);
 
         if (self::matchRoute($url)){
-            $controller = 'controllers\\'. key(self::$route);
+
+            $namespace = '';
+            if (isset(self::$route['attributes']['namespace'])) {
+                $namespace = self::$route['attributes']['namespace'] . '\\';
+                unset(self::$route['attributes']['namespace']);
+            }
+            $controller = "controllers\\{$namespace}" . self::$route['controller'];
 
             if (class_exists($controller)){
 
                 $controllerObject = new $controller(self::$route);
-                $action = self::$route[key(self::$route)];
+                $action = self::$route['action'];
 
                 if (method_exists($controllerObject, $action)){
                     $controllerObject->$action(json_decode(file_get_contents('php://input'), true));
@@ -125,4 +137,6 @@ class Router
         }
         return false;
     }
+
+    //TODO добавить метод проверки атрибутов
 }
