@@ -30,3 +30,9 @@
 =================
 [2023-02-12 01:57:38] Текст ошибки: Undefined index: namespace | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 88
 =================
+[2023-02-13 12:45:49] Текст ошибки: route  does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 106
+=================
+[2023-02-13 12:46:04] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 78
+=================
+[2023-02-13 12:46:23] Текст ошибки: Недопустимый метод POST, необходим GET | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================

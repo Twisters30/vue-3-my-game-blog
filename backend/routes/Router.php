@@ -3,19 +3,18 @@
 namespace routes;
 
 use Exception;
+use routes\RouteAttributeService;
 
 class Router
 {
     protected static array $routes = [];
     protected static array $route = [];
-    protected static array $availableAttributes = [
-        'prefix',
-        'role',
-        'namespace'
-    ];
+
 
     public static function addRoute(string $path, array $route, array $attributes = []): void
     {
+        RouteAttributeService::checkAttributes($attributes);
+
         self::$routes[$path] = array_merge($route, ['attributes' => $attributes]);
     }
 
@@ -24,36 +23,12 @@ class Router
      */
     public static function routeGroup(array $attributes, $callback): void
     {
-        $prefix = '';
-        if (isset($attributes['prefix'])) {
-            $prefix = $attributes['prefix'];
-            unset($attributes['prefix']);
-        }
+        $prefix = RouteAttributeService::prefix($attributes);
 
         foreach ($callback() as $url => $route) {
             self::addRoute("{$prefix}/{$url}", $route, $attributes);
         }
-
-        if (isset($attributes['method'])) {
-            self::allowMethod($attributes['method']);
-        }
     }
-
-    // temporary code
-
-    /**
-     * @throws Exception
-     */
-    public static function allowMethod(string $method = 'GET'): void
-    {
-        $upMethod = strtoupper($method);
-
-        if ($_SERVER['REQUEST_METHOD'] != strtoupper($upMethod)) {
-            throw new Exception("Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}", 405);
-        }
-    }
-
-    //end of temporary code
 
     public static function getRoutes(): array
     {
@@ -86,11 +61,7 @@ class Router
 
         if (self::matchRoute($url)){
 
-            $namespace = '';
-            if (isset(self::$route['attributes']['namespace'])) {
-                $namespace = self::$route['attributes']['namespace'] . '\\';
-                unset(self::$route['attributes']['namespace']);
-            }
+            $namespace = RouteAttributeService::namespace(self::$route['attributes']);
             $controller = "controllers\\{$namespace}" . self::$route['controller'];
 
             if (class_exists($controller)){
@@ -137,6 +108,4 @@ class Router
         }
         return false;
     }
-
-    //TODO добавить метод проверки атрибутов
 }
