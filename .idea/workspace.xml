@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
-    </list>
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675722829794</updated>
       <workItem from="1675722831257" duration="16201000" />
-      <workItem from="1675876760091" duration="112299000" />
+      <workItem from="1675876760091" duration="113096000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -267,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676152702373</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <created>1676164184930</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676164184930</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
