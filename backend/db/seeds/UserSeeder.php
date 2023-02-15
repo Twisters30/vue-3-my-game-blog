@@ -19,7 +19,7 @@ class UserSeeder extends AbstractSeed
             [
                 'name' => 'Admin',
                 'email' => 'admin@admin.com',
-                'password' => phash('password'),
+                'password' => password_hash('password', PASSWORD_DEFAULT),
                 'role_id' => 1
             ]
         ];

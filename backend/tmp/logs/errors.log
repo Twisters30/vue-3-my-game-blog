@@ -36,3 +36,55 @@
 =================
 [2023-02-13 12:46:23] Текст ошибки: Недопустимый метод POST, необходим GET | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
 =================
+[2023-02-14 18:08:53] Текст ошибки: Call to undefined method controllers\admin\posts\PostController::checkToken() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 17
+=================
+[2023-02-14 18:09:12] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 26
+=================
+[2023-02-14 21:29:44] Текст ошибки: Undefined property: stdClass::$exp | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 53
+=================
+[2023-02-14 21:36:40] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:38:06] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:40:48] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:42:36] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:47:11] Текст ошибки: Class 'controllers\Exception' not found | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:47:39] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 21:51:00] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:51:01] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:51:28] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:51:34] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:53:04] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:53:06] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:53:18] Текст ошибки: Signature verification failed | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 140
+=================
+[2023-02-14 21:54:04] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:57:41] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 21:57:55] Текст ошибки: Signature verification failed | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 140
+=================
+[2023-02-14 21:58:21] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 21:59:25] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 22:04:47] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-15 16:40:47] Текст ошибки: route  does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 81
+=================
+[2023-02-15 16:40:56] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 64
+=================
+[2023-02-15 16:40:57] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 64
+=================
+[2023-02-15 16:43:50] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 64
+=================

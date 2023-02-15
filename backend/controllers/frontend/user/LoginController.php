@@ -5,32 +5,38 @@ namespace controllers\frontend\user;
 use controllers\BaseController;
 use Exception;
 use models\User\User;
+use controllers\TokenService;
+use models\User\RefreshToken;
 
 class LoginController extends BaseController
 {
     /**
      * @throws Exception
      */
-    public function login($request)
+    public function login($request): void
     {
         $this->allowMethod('post');
 
-        $user = new User();
-        $isUser = $user->select()
+        $userModel = new User();
+        $user = $userModel->select()
             ->where('email', $request['email'])
             ->first();
 
-        if (!$isUser ||
-            !password_verify($request['password'], $isUser['password']))
+        if (!$user ||
+            !password_verify($request['password'], $user['password']))
         {
             throw new Exception('Пользователь или пароль не совпадают', 404);
         }
+        $accessToken = TokenService::createAccessToken();
+        $refreshToken = TokenService::createRefreshToken($user['id']);
 
-        $token = $this->createToken();
+        $token = new RefreshToken();
+        $token->create(['token' => $refreshToken, 'user_id' => $user['id']]);
 
-        $user->update(['token' => $token])->execute();
-
-        echo jsonWrite(['token' => $token]);
+        echo jsonWrite([
+            'accessToken' => $accessToken,
+            'refreshToken' => $refreshToken
+        ]);
     }
 
     /**
@@ -38,10 +44,15 @@ class LoginController extends BaseController
      */
     public function logout(): void
     {
-        $this->allowMethod('patch');
+        $this->allowMethod('post');
 
-        $user = new User();
-        $token = $this->parseToken();
-        $user->update(['token'=> null])->where('token', $token)->execute();
+        $refreshToken = TokenService::parseToken();
+        $refreshTokenModel = new RefreshToken();
+        $refreshTokenModel->delete('token', $refreshToken);
+    }
+
+    public function reissueTokens(): void
+    {
+        TokenService::updateTokens();
     }
 }

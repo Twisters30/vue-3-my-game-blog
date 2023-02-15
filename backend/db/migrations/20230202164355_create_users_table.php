@@ -23,7 +23,6 @@ final class CreateUsersTable extends AbstractMigration
         $table->addColumn('name', 'string', ['null' => false])
             ->addColumn('email', 'string', ['null' => false,])
             ->addColumn('password', 'string', ['null' => false])
-            ->addColumn('token', 'string', ['null' => true])
             ->addColumn('avatar', 'string', ['default' => '../frontend/assets/images/avatar.png'])
             ->addColumn('description', 'text', ['null' => true])
             ->addColumn('phone', 'string', ['null' => true])
