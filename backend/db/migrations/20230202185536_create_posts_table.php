@@ -24,7 +24,7 @@ final class CreatePostsTable extends AbstractMigration
             ->addColumn('description', 'text', ['null' => false])
             ->addColumn('image', 'string',  ['null' => false])
             ->addColumn('icon', 'string',  ['null' => false])
-            ->addColumn('post_status_id', 'integer',  ['null' => true, 'signed' => false])
+            ->addColumn('post_status_id', 'integer', ['null' => true, 'signed' => false])
             ->addColumn('user_id', 'integer', ['null' => true, 'signed' => false])
             ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->addColumn('updated_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])

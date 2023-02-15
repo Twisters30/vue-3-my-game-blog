@@ -26,4 +26,6 @@ abstract class BaseController
             throw new Exception("Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}", 405);
         }
     }
+
+
 }

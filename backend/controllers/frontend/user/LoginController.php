@@ -13,7 +13,7 @@ class LoginController extends BaseController
     /**
      * @throws Exception
      */
-    public function login($request)
+    public function login($request): void
     {
         $this->allowMethod('post');
 
@@ -27,18 +27,15 @@ class LoginController extends BaseController
         {
             throw new Exception('Пользователь или пароль не совпадают', 404);
         }
-
         $accessToken = TokenService::createAccessToken();
         $refreshToken = TokenService::createRefreshToken($user['id']);
 
         $token = new RefreshToken();
         $token->create(['token' => $refreshToken, 'user_id' => $user['id']]);
 
-//        $user->update(['refreshToken' => $refreshToken])->execute();
-
         echo jsonWrite([
-            'refreshToken' => $refreshToken,
-            'accessToken' => $accessToken
+            'accessToken' => $accessToken,
+            'refreshToken' => $refreshToken
         ]);
     }
 
@@ -52,10 +49,10 @@ class LoginController extends BaseController
         $refreshToken = TokenService::parseToken();
         $refreshTokenModel = new RefreshToken();
         $refreshTokenModel->delete('token', $refreshToken);
-
     }
+
     public function reissueTokens(): void
     {
-        TokenService::updateToken();
+        TokenService::updateTokens();
     }
 }

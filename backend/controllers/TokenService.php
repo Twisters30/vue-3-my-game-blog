@@ -1,22 +1,22 @@
 <?php
 
-
 namespace controllers;
 
+use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
-use Firebase\JWT\ExpiredException;
+use Exception;
 use models\User\RefreshToken;
 
 class TokenService
 {
     public static function createAccessToken(): string
     {
-        $now   = new \DateTimeImmutable();
+        $now = new \DateTimeImmutable();
 
         $data = [
             'iat'  => $now->getTimestamp(),
-            'exp'  => $now->modify('+1 second')->getTimestamp(),
+            'exp' => $now->modify('+1 second')->getTimestamp(),
             'nbf'  => $now->getTimestamp(),
             'iss'  => DOMAIN,
         ];
@@ -24,16 +24,16 @@ class TokenService
         return JWT::encode($data, SECRET_KEY, JWT_ALGORITHM);
     }
 
-    public static function createRefreshToken(string $userId): string
+    public static function createRefreshToken(int $userId): string
     {
-        $now   = new \DateTimeImmutable();
+        $now = new \DateTimeImmutable();
 
         $data = [
             'iat'  => $now->getTimestamp(),
             'nbf'  => $now->getTimestamp(),
             'iss'  => $userId,
         ];
-
+        
         return JWT::encode($data, SECRET_KEY, JWT_ALGORITHM);
     }
 
@@ -65,32 +65,30 @@ class TokenService
         }
         return str_replace('Bearer ', '', $token);
     }
+
     public static function checkRefreshToken(): int
     {
         $token = self::parseToken();
         $refreshTokenModel = new RefreshToken();
 
         $refreshToken = $refreshTokenModel->select()->where('token', $token)->first();
-        if(!$refreshToken) {
-            throw new \Exception('refresh token не валиден', 401);
+
+        if (!$refreshToken) {
+            throw new Exception('refresh token не валиден', 401);
         }
         return $refreshToken['id'];
-
     }
 
-    /**
-     * @throws \Exception
-     */
-    public static function updateToken(int $userId): void
+    public static function updateTokens(int $userId): void
     {
-       $refreshTokenId = self::checkRefreshToken();
+        $refreshTokenId = self::checkRefreshToken();
 
-       $refreshTokenModel = new RefreshToken();
-       $refreshTokenModel->delete('id', $refreshTokenId);
+        $refreshTokenModel = new RefreshToken();
+        $refreshTokenModel->delete('id', $refreshTokenId);
 
-       echo jsonWrite([
-           'accessToken' => self::createAccessToken(),
-           'refreshToken' => self::createRefreshToken($userId)
-       ]);
+        echo jsonWrite([
+            'accessToken' => self::createAccessToken(),
+            'refreshToken' => self::createRefreshToken($userId)
+        ]);
     }
 }

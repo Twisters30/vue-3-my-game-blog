@@ -13,6 +13,9 @@ abstract class Model
         $this->instance = DB::getInstance();
     }
 
+    /**
+     * @throws \Exception
+     */
     public function get(): array
     {
         $result = [];
@@ -74,6 +77,9 @@ abstract class Model
 
     }
 
+    /**
+     * @throws \Exception
+     */
     public function create(array $data): array
     {
         $columns = implode(', ', array_keys($data));
@@ -91,6 +97,9 @@ abstract class Model
         return $this->instance->connect->query($query)->fetch_assoc();
     }
 
+    /**
+     * @throws \Exception
+     */
     protected function checkErrors()
     {
         if (mysqli_error($this->instance->connect)) {
@@ -98,6 +107,9 @@ abstract class Model
         }
     }
 
+    /**
+     * @throws \Exception
+     */
     final public function execute()
     {
         $executeResult = mysqli_query($this->instance->connect, $this->query);
@@ -121,6 +133,10 @@ abstract class Model
 
         return $this;
     }
+
+    /**
+     * @throws \Exception
+     */
     public function delete($column, $value, $condition = '='): bool
     {
         $this->query = "DELETE FROM {$this->table}";
