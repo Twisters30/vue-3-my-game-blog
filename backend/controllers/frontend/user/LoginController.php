@@ -5,6 +5,8 @@ namespace controllers\frontend\user;
 use controllers\BaseController;
 use Exception;
 use models\User\User;
+use controllers\TokenService;
+use models\User\RefreshToken;
 
 class LoginController extends BaseController
 {
@@ -15,22 +17,29 @@ class LoginController extends BaseController
     {
         $this->allowMethod('post');
 
-        $user = new User();
-        $isUser = $user->select()
+        $userModel = new User();
+        $user = $userModel->select()
             ->where('email', $request['email'])
             ->first();
 
-        if (!$isUser ||
-            !password_verify($request['password'], $isUser['password']))
+        if (!$user ||
+            !password_verify($request['password'], $user['password']))
         {
             throw new Exception('Пользователь или пароль не совпадают', 404);
         }
 
-        $token = $this->createToken();
+        $accessToken = TokenService::createAccessToken();
+        $refreshToken = TokenService::createRefreshToken($user['id']);
 
-        $user->update(['token' => $token])->execute();
+        $token = new RefreshToken();
+        $token->create(['token' => $refreshToken, 'user_id' => $user['id']]);
 
-        echo jsonWrite(['token' => $token]);
+//        $user->update(['refreshToken' => $refreshToken])->execute();
+
+        echo jsonWrite([
+            'refreshToken' => $refreshToken,
+            'accessToken' => $accessToken
+        ]);
     }
 
     /**
@@ -38,10 +47,15 @@ class LoginController extends BaseController
      */
     public function logout(): void
     {
-        $this->allowMethod('patch');
+        $this->allowMethod('post');
 
-        $user = new User();
-        $token = $this->parseToken();
-        $user->update(['token'=> null])->where('token', $token)->execute();
+        $refreshToken = TokenService::parseToken();
+        $refreshTokenModel = new RefreshToken();
+        $refreshTokenModel->delete('token', $refreshToken);
+
+    }
+    public function reissueTokens(): void
+    {
+        TokenService::updateToken();
     }
 }

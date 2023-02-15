@@ -1,5 +1,5 @@
 <template>
-    <div class="form__wrapper" id="modal-overlay" @click="loginStore.closeModalOutside($event)" v-if="!loginStore.token">
+    <div class="form__wrapper" id="modal-overlay" @click="loginStore.closeModalOutside($event)">
         <form class="form__main" @submit.prevent action="index.php" >
             <div class="form__input-wrapper my-3">
                 <span class="form__input-name">Email</span>

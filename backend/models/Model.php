@@ -121,12 +121,12 @@ abstract class Model
 
         return $this;
     }
-    public function delete($column, $value, $condition = '='): Model
+    public function delete($column, $value, $condition = '='): bool
     {
         $this->query = "DELETE FROM {$this->table}";
         $this->where($column, $value, $condition);
         $this->execute();
 
-        return $this;
+        return true;
     }
 }

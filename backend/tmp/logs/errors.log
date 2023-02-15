@@ -36,3 +36,17 @@
 =================
 [2023-02-13 12:46:23] Текст ошибки: Недопустимый метод POST, необходим GET | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
 =================
+[2023-02-14 18:14:50] Текст ошибки: Too few arguments to function controllers\TokenService::createRefreshToken(), 0 passed in D:\PHP\Projects\Blog\backend\controllers\frontend\user\LoginController.php on line 31 and exactly 1 expected | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 26
+=================
+[2023-02-14 18:21:19] Текст ошибки: Unknown column 'token' in 'where clause' | Файл: D:\PHP\Projects\Blog\backend\models\Model.php | Строка: 97
+=================
+[2023-02-14 18:51:43] Текст ошибки: Call to undefined method controllers\admin\posts\PostController::checkToken() | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 17
+=================
+[2023-02-14 21:34:51] Текст ошибки: Unknown column 'token' in 'where clause' | Файл: D:\PHP\Projects\Blog\backend\models\Model.php | Строка: 97
+=================
+[2023-02-14 21:35:04] Текст ошибки: Unknown column 'token' in 'where clause' | Файл: D:\PHP\Projects\Blog\backend\models\Model.php | Строка: 97
+=================
+[2023-02-14 22:11:34] Текст ошибки: Unknown column 'token' in 'where clause' | Файл: D:\PHP\Projects\Blog\backend\models\Model.php | Строка: 97
+=================
+[2023-02-15 16:19:17] Текст ошибки: Undefined index: password | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\RegisterController.php | Строка: 24
+=================

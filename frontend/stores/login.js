@@ -5,7 +5,12 @@ import { apiHost, apiLogin, apiLogout} from "~/config/api.js";
 export const useLoginStore = defineStore('LoginStore', () => {
     const isLoginPageShow = ref(false);
     const formData = reactive({});
-    const token = ref(null);
+    let token = reactive({
+        refreshToken:false,
+        accessToken:false
+    });
+    const userRole = ref(null);
+
     const acceptWindowShow = ref(false);
 
     const updateFormDataFromRegister = ({email, password}) => {
@@ -14,22 +19,22 @@ export const useLoginStore = defineStore('LoginStore', () => {
         formData.password = password;
     }
 
-    const acceptAction = async (userAnswer = null) => {
-        if (userAnswer === null) {
-            acceptWindowShow.value = false;
-            return;
-        }
+    const acceptAction = async (userAnswer) => {
         if (userAnswer === true) {
            await logout();
         }
         acceptWindowShow.value = !acceptWindowShow.value;
     }
 
-    const getLocalStorageToken = () => {
-        token.value = sessionStorage.getItem('token') || false;
+    const getStorageToken = () => {
+        const { accessToken, refreshToken } = JSON.parse(sessionStorage.getItem('token')) || false;
+        token.accessToken = accessToken;
+        token.refreshToken = refreshToken;
+        console.log(token);
     }
 
     const showLoginPage = () => isLoginPageShow.value = !isLoginPageShow.value;
+
     const closeModalOutside = (event) => {
         if (event.target.id === 'modal-overlay') {
             showLoginPage();
@@ -42,9 +47,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
                 password: formData.password
             });
             if (response.status === 200){
-                token.value = response.data.token;
-                if (response.data.token) {
-                    sessionStorage.setItem('token',response.data.token);
+                showLoginPage();
+                token.accessToken = response.data.accessToken;
+                token.refreshToken = response.data.refreshToken;
+                if (response.data.accessToken) {
+                    sessionStorage.setItem('token',JSON.stringify(token));
                     const router = useRouter();
                     await router.push({ path: "/articles" });
                 }
@@ -55,15 +62,16 @@ export const useLoginStore = defineStore('LoginStore', () => {
     }
 
     const logout = async () => {
-        if (!token.value) return;
+        if (!token.accessToken) return;
         try {
-            const response = await axios.patch(`${apiHost}/${apiLogout}`,{},
+            const response = await axios.post(`${apiHost}/${apiLogout}`,{},
                 {
-                    headers: {'Authorization': `Bearer ${token.value}`}
+                    headers: {'Authorization': `Bearer ${token.refreshToken}`}
                 }
             )
             if (response.status === 200) {
-                token.value = false;
+                token.accessToken = false;
+                token.refreshToken = false;
                 sessionStorage.removeItem('token');
                 isLoginPageShow.value = false;
             }
@@ -80,7 +88,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
         closeModalOutside,
         token,
         logout,
-        getLocalStorageToken,
+        getStorageToken,
         acceptAction,
         acceptWindowShow,
         updateFormDataFromRegister
