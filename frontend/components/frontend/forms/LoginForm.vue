@@ -4,13 +4,15 @@
             <div class="form__input-wrapper my-3">
                 <span class="form__input-name">Email</span>
                 <label class="form__label">
-                    <input v-model="loginStore.formData.email" type="text" name="email" class="form__input" placeholder="Введите email">
+                  <input @input="validateForm" v-model="loginStore.formData.email" type="text" name="email" class="form__input" placeholder="Введите email">
+                  <span>{{ loginStore.v$.formData.email.$message }}</span>
                 </label>
             </div>
             <div class="form__input-wrapper my-3">
                 <span class="form__input-name">Пароль</span>
                 <label class="form__label">
-                    <input v-model="loginStore.formData.password" type="password" name="password" class="form__input" placeholder="Введите пароль">
+                  <input v-model="loginStore.formData.password" type="password" name="password" class="form__input" placeholder="Введите пароль">
+<!--                  <span>{{ loginStore.v$.$errors }}</span>-->
                 </label>
             </div>
             <button @click="loginStore.loginAction" class="form__btn-login btn btn-outline-success main-btn">Войти</button>
@@ -26,6 +28,19 @@
 import { useLoginStore } from '../../../stores/login.js';
 
 const loginStore = useLoginStore();
+// watch(
+//     () => loginStore.formData,
+//     (currentValue,prevValue) => {
+//     console.log(currentValue, loginStore.v$)
+// }, {deep: true},
+// )
+
+const validateForm = ($event) => {
+  // loginStore.v$.formData.email.$touch();
+  // loginStore.v$.formData.email.validate();
+  console.log(loginStore.v$.formData)
+}
+
 </script>
 
 <style lang="scss" scoped>

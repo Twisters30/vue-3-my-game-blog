@@ -1,20 +1,31 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 import { apiHost, apiLogin, apiLogout} from "~/config/api.js";
+import { useVuelidate } from '@vuelidate/core'
+import { required, email, minLength } from '@vuelidate/validators'
 
 export const useLoginStore = defineStore('LoginStore', () => {
     const isLoginPageShow = ref(false);
     const formData = reactive({});
+    let isUserDataLoading = ref(true);
     let token = reactive({
         refreshToken:false,
         accessToken:false
     });
     const userRole = ref(null);
-
+    const rules = {
+         formData: {
+            email: { required, email },
+            password: { required, minLength: minLength(2) }
+        }
+    }
+    const v$ = useVuelidate(rules, formData);
     const acceptWindowShow = ref(false);
+    // const validateForm = () => ({
+    //     v$.validate();
+    // })
 
     const updateFormDataFromRegister = ({email, password}) => {
-        console.log(email,password)
         formData.email = email;
         formData.password = password;
     }
@@ -28,9 +39,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
 
     const getStorageToken = () => {
         const { accessToken, refreshToken } = JSON.parse(sessionStorage.getItem('token')) || false;
+        console.log(accessToken);
         token.accessToken = accessToken;
         token.refreshToken = refreshToken;
         console.log(token);
+        isUserDataLoading.value = false;
     }
 
     const showLoginPage = () => isLoginPageShow.value = !isLoginPageShow.value;
@@ -91,6 +104,8 @@ export const useLoginStore = defineStore('LoginStore', () => {
         getStorageToken,
         acceptAction,
         acceptWindowShow,
-        updateFormDataFromRegister
+        updateFormDataFromRegister,
+        isUserDataLoading,
+        v$
     };
 })

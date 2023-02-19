@@ -1,12 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: {
+    enabled: false,
+  },
   app: {
     head: {
       charset: 'utf-8',
       viewport: 'width=500, initial-scale=1',
       title: 'My GameBlog',
-      link: [{rel:'stylesheet', href:'ldld.css', type: 'text/css'}],
-      script: [{src: 'ldld.js',}],
+      link: [{}],
+      script: [{}],
       meta: [
         // <meta name="description" content="My amazing site">
         { name: 'Пет проект', content: 'Пет проет с использованием технологий Nuxt 3,PHP' }
@@ -14,7 +17,7 @@ export default defineNuxtConfig({
     }
   },
   // ssr: false,
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt','@nuxt/devtools'],
   css: ['normalize.css/normalize.css','bootstrap/dist/css/bootstrap.min.css'],
   vite: {
     server: {
