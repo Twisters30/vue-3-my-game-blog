@@ -88,3 +88,35 @@
 =================
 [2023-02-15 16:43:50] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 64
 =================
+[2023-02-15 20:20:54] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 52
+=================
+[2023-02-15 20:26:45] Текст ошибки: Too few arguments to function controllers\TokenService::checkAccessToken(), 0 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 18 and exactly 1 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 44
+=================
+[2023-02-15 20:27:35] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-15 20:28:17] Текст ошибки: Cannot use object of type stdClass as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 54
+=================
+[2023-02-15 20:29:30] Текст ошибки: маршрут не доступен для вашей роли | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 55
+=================
+[2023-02-15 20:29:35] Текст ошибки: маршрут не доступен для вашей роли | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 55
+=================
+[2023-02-15 20:29:54] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-15 20:32:03] Текст ошибки: маршрут не доступен для вашей роли | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 55
+=================
+[2023-02-16 00:32:17] Текст ошибки: date() expects at least 1 parameter, 0 given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 96
+=================
+[2023-02-16 00:33:51] Текст ошибки: Call to undefined function controllers\now() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 96
+=================
+[2023-02-16 00:37:46] Текст ошибки: Return value of models\User\RefreshToken::tokenOwner() must be of the type array, null returned | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\models\User\RefreshToken.php | Строка: 20
+=================
+[2023-02-16 00:39:14] Текст ошибки: Return value of models\User\RefreshToken::tokenOwner() must be of the type array, null returned | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\models\User\RefreshToken.php | Строка: 20
+=================
+[2023-02-16 00:41:25] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-02-16 00:43:03] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-02-16 00:43:05] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-02-16 00:43:52] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================

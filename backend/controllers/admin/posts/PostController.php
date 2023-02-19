@@ -15,7 +15,7 @@ class PostController extends BaseController
     public function __construct($route)
     {
         parent::__construct($route);
-        TokenService::checkAccessToken();
+        TokenService::checkAccessToken($this->route['attributes']['role']);
     }
 
     /**

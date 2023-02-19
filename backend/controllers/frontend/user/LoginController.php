@@ -18,24 +18,22 @@ class LoginController extends BaseController
         $this->allowMethod('post');
 
         $userModel = new User();
-        $user = $userModel->select()
-            ->where('email', $request['email'])
-            ->first();
+        $user = $userModel->userWithRole('email', $request['email']);
 
         if (!$user ||
             !password_verify($request['password'], $user['password']))
         {
             throw new Exception('Пользователь или пароль не совпадают', 404);
         }
-        $accessToken = TokenService::createAccessToken();
         $refreshToken = TokenService::createRefreshToken($user['id']);
 
         $token = new RefreshToken();
         $token->create(['token' => $refreshToken, 'user_id' => $user['id']]);
 
         echo jsonWrite([
-            'accessToken' => $accessToken,
-            'refreshToken' => $refreshToken
+            'accessToken' => TokenService::createAccessToken($user['role_name']),
+            'refreshToken' => $refreshToken,
+            'role' => $user['role_name']
         ]);
     }
 
@@ -53,6 +51,8 @@ class LoginController extends BaseController
 
     public function reissueTokens(): void
     {
+        $this->allowMethod('get');
+
         TokenService::updateTokens();
     }
 }
