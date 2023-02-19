@@ -10,15 +10,16 @@ use models\User\RefreshToken;
 
 class TokenService
 {
-    public static function createAccessToken(): string
+    public static function createAccessToken(string $userRole): string
     {
         $now = new \DateTimeImmutable();
 
         $data = [
             'iat'  => $now->getTimestamp(),
-            'exp' => $now->modify('+1 second')->getTimestamp(),
+            'exp' => $now->modify('+120 minute')->getTimestamp(),
             'nbf'  => $now->getTimestamp(),
             'iss'  => DOMAIN,
+            'role' => strtolower($userRole)
         ];
 
         return JWT::encode($data, SECRET_KEY, JWT_ALGORITHM);
@@ -40,15 +41,29 @@ class TokenService
     /**
      * @throws Exception
      */
-    public static function checkAccessToken(): void
+    public static function checkAccessToken(string $role): void
     {
         $jwt = self::parseToken();
+        $data = self::decodeToken($jwt);
 
-        try {
-            JWT::decode($jwt, new Key(SECRET_KEY, JWT_ALGORITHM));
-        } catch (ExpiredException $exception) {
-            throw new Exception('Токен более не валиден', 403);
+        if ($data->role !== strtolower($role)) {
+            throw new Exception('Маршрут не доступен для вашей роли', 403);
         }
+    }
+
+    private static function decodeToken(string $jwt): stdClass
+    {
+        try {
+            $data = JWT::decode($jwt, new Key(SECRET_KEY, JWT_ALGORITHM));
+        } catch (ExpiredException $e) {
+            throw new Exception('Токен более не валиден', 403);
+        } catch (SignatureInvalidException $e) {
+            throw new Exception('Недействительный токен', 403);
+        } catch (Exception $e) {
+            throw new Exception('Ошибка при декодировании токена', 500);
+        }
+
+        return $data;
     }
 
     /**
@@ -66,29 +81,35 @@ class TokenService
         return str_replace('Bearer ', '', $token);
     }
 
-    public static function checkRefreshToken(): int
+    public static function checkRefreshToken(): array
     {
         $token = self::parseToken();
         $refreshTokenModel = new RefreshToken();
 
-        $refreshToken = $refreshTokenModel->select()->where('token', $token)->first();
+        $tokenWithUser = $refreshTokenModel->tokenOwner('token', $token);
 
-        if (!$refreshToken) {
+        if (!$tokenWithUser) {
             throw new Exception('refresh token не валиден', 401);
         }
-        return $refreshToken['id'];
+        return $tokenWithUser;
     }
 
-    public static function updateTokens(int $userId): void
+    public static function updateTokens(): void
     {
-        $refreshTokenId = self::checkRefreshToken();
+        $tokenWithUser = self::checkRefreshToken();
+
+        $refreshToken = self::createRefreshToken($tokenWithUser['user_id']);
 
         $refreshTokenModel = new RefreshToken();
-        $refreshTokenModel->delete('id', $refreshTokenId);
+        $refreshTokenModel->update([
+            'token' => $refreshToken,
+            'created_at' => date('Y-m-d H:i:s')
+        ])->where('token', $tokenWithUser['token'])->execute();
 
         echo jsonWrite([
-            'accessToken' => self::createAccessToken(),
-            'refreshToken' => self::createRefreshToken($userId)
+            'accessToken' => self::createAccessToken($tokenWithUser['role_name']),
+            'refreshToken' => $refreshToken,
+            'role' => $tokenWithUser['role_name']
         ]);
     }
 }

@@ -92,9 +92,9 @@ abstract class Model
         return $this->select()->where('id', mysqli_insert_id($this->instance->connect))->first();
     }
 
-    final public function executeRaw($query)
+    final public function executeRaw(string $query): array
     {
-        return $this->instance->connect->query($query)->fetch_assoc();
+        return $this->instance->connect->query($query)->fetch_assoc() ?? [];
     }
 
     /**
