@@ -28,12 +28,6 @@
 import { useLoginStore } from '../../../stores/login.js';
 
 const loginStore = useLoginStore();
-// watch(
-//     () => loginStore.formData,
-//     (currentValue,prevValue) => {
-//     console.log(currentValue, loginStore.v$)
-// }, {deep: true},
-// )
 
 const validateForm = ($event) => {
   // loginStore.v$.formData.email.$touch();
