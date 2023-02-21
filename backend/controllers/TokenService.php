@@ -49,6 +49,10 @@ class TokenService
         if ($data->role !== strtolower($role)) {
             throw new Exception('Маршрут не доступен для вашей роли', 403);
         }
+
+        echo jsonWrite([
+            'role' => $data->role
+        ]);
     }
 
     private static function decodeToken(string $jwt): stdClass
