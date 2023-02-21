@@ -4,6 +4,7 @@ namespace routes;
 
 use Exception;
 use routes\RouteAttributeService;
+use validation\Validator;
 
 class Router
 {
@@ -66,7 +67,7 @@ class Router
 
             if (class_exists($controller)){
 
-                $controllerObject = new $controller(self::$route);
+                $controllerObject = new $controller(self::$route, new Validator());
                 $action = self::$route['action'];
 
                 if (method_exists($controllerObject, $action)){

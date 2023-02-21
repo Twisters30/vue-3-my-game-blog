@@ -21,6 +21,10 @@ class ComposerStaticInit28cd15787bee5aa895af96da9791f197
     );
 
     public static $prefixLengthsPsr4 = array (
+        'v' => 
+        array (
+            'validation\\' => 11,
+        ),
         'r' => 
         array (
             'routes\\' => 7,
@@ -73,6 +77,10 @@ class ComposerStaticInit28cd15787bee5aa895af96da9791f197
     );
 
     public static $prefixDirsPsr4 = array (
+        'validation\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/validation',
+        ),
         'routes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/routes',
@@ -671,17 +679,18 @@ class ComposerStaticInit28cd15787bee5aa895af96da9791f197
         'controllers\\AppController' => __DIR__ . '/../..' . '/controllers/AppController.php',
         'controllers\\BaseController' => __DIR__ . '/../..' . '/controllers/BaseController.php',
         'controllers\\SingletonTrait' => __DIR__ . '/../..' . '/controllers/SingletonTrait.php',
+        'controllers\\TokenService' => __DIR__ . '/../..' . '/controllers/TokenService.php',
         'controllers\\admin\\posts\\PostController' => __DIR__ . '/../..' . '/controllers/admin/posts/PostController.php',
         'controllers\\frontend\\posts\\PostController' => __DIR__ . '/../..' . '/controllers/frontend/posts/PostController.php',
         'controllers\\frontend\\user\\LoginController' => __DIR__ . '/../..' . '/controllers/frontend/user/LoginController.php',
         'controllers\\frontend\\user\\RegisterController' => __DIR__ . '/../..' . '/controllers/frontend/user/RegisterController.php',
-        'errors\\Error' => __DIR__ . '/../..' . '/errors/Error.php',
         'errors\\ErrorHandler' => __DIR__ . '/../..' . '/errors/ErrorHandler.php',
-        'errors\\Exception' => __DIR__ . '/../..' . '/errors/Exception.php',
         'models\\DB' => __DIR__ . '/../..' . '/models/DB.php',
         'models\\Model' => __DIR__ . '/../..' . '/models/Model.php',
         'models\\Post\\Post' => __DIR__ . '/../..' . '/models/Post/Post.php',
+        'models\\User\\RefreshToken' => __DIR__ . '/../..' . '/models/User/RefreshToken.php',
         'models\\User\\User' => __DIR__ . '/../..' . '/models/User/User.php',
+        'routes\\RouteAttributeService' => __DIR__ . '/../..' . '/routes/RouteAttributeService.php',
         'routes\\Router' => __DIR__ . '/../..' . '/routes/Router.php',
     );
 

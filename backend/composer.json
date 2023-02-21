@@ -4,7 +4,8 @@
             "controllers\\": "controllers",
             "routes\\": "routes",
             "models\\": "models",
-            "errors\\": "errors"
+            "errors\\": "errors",
+            "validation\\": "validation"
         }
     },
     "require": {
