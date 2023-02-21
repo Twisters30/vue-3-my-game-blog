@@ -1,104 +1,135 @@
 <template>
     <div class="form__wrapper" id="modal-overlay" @click="loginStore.closeModalOutside($event)">
-        <form class="form__main" @submit.prevent action="index.php" >
-            <div class="form__input-wrapper my-3">
-                <span class="form__input-name">Email</span>
-                <label class="form__label">
-                  <input @input="validateForm" v-model="loginStore.formData.email" type="text" name="email" class="form__input" placeholder="Введите email">
-                  <span>{{ loginStore.v$.formData.email.$message }}</span>
-                </label>
+        <Form class="form__main" @submit="loginStore.loginAction" :validation-schema="schemaLogin" v-slot="{ meta }">
+          <pre>{{ meta }}</pre>
+            <div class="form__input-wrapper">
+                <div class="form__input__sub-wrap">
+                  <span class="form__input-name">Email</span>
+                  <label class="form__label">
+                    <Field
+                        v-model.trim="loginStore.formData.email"
+                        type="email"
+                        name="email"
+                        class="form__input"
+                        :class="{ 'validate-success' :meta.valid && meta.touched}"
+                        placeholder="Введите email"
+                    />
+                  </label>
+                </div>
+              <ErrorMessage class="form__input-error text-danger" name="email"/>
             </div>
-            <div class="form__input-wrapper my-3">
-                <span class="form__input-name">Пароль</span>
-                <label class="form__label">
-                  <input v-model="loginStore.formData.password" type="password" name="password" class="form__input" placeholder="Введите пароль">
-<!--                  <span>{{ loginStore.v$.$errors }}</span>-->
-                </label>
+            <div class="form__input-wrapper">
+                <div class="form__input__sub-wrap">
+                  <span class="form__input-name">Пароль</span>
+                  <label class="form__label">
+                    <Field
+                        v-model.trim="loginStore.formData.password"
+                        type="password"
+                        name="password"
+                        class="form__input"
+                        :class="{ 'validate-success' :meta.valid && meta.touched}"
+                        placeholder="Введите пароль"
+                    />
+                  </label>
+                </div>
+              <ErrorMessage class="form__input-error text-danger" name="password" />
             </div>
-            <button @click="loginStore.loginAction" class="form__btn-login btn btn-outline-success main-btn">Войти</button>
+            <button type="submit" class="form__btn-login btn btn-outline-success main-btn">Войти</button>
             <span class="form__link-wrapper">
                 <NuxtLink class="main-link text-danger" to="#">забыли пароль?</NuxtLink>
                 <NuxtLink @click="loginStore.showLoginPage" class="main-link text-danger" to="/register">регистрация</NuxtLink>
             </span>
-        </form>
+        </Form>
     </div>
 </template>
 
 <script setup>
-import { useLoginStore } from '../../../stores/login.js';
+import { useLoginStore } from '@/stores/login.js';
+import { Form, Field, ErrorMessage } from 'vee-validate';
+import { schemaLogin } from "@/helpers/validatorRules.js";
 
 const loginStore = useLoginStore();
-
-const validateForm = ($event) => {
-  // loginStore.v$.formData.email.$touch();
-  // loginStore.v$.formData.email.validate();
-  console.log(loginStore.v$.formData)
-}
 
 </script>
 
 <style lang="scss" scoped>
 .form {
-    &__wrapper {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: rgba(121, 110, 116, 0.8);
+  &__input__sub-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input-error {
+    position: absolute;
+    bottom: -25px;
+    align-self: center;
+  }
+  &__label{
+    display: flex;
+    flex-direction: column;
+  }
+  &__wrapper {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(121, 110, 116, 0.8);
+  }
+  &__main {
+    max-width: 450px;
+    position: fixed;
+    z-index: 99;
+    top: calc(50% - 138px);
+    left: calc(50% - 225px);
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    align-self: center;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
+    box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
+    & div:last-of-type {
+        //margin-bottom: 2rem !important;
     }
-    &__main {
-        max-width: 450px;
-        position: fixed;
-        z-index: 99;
-        top: calc(50% - 138px);
-        left: calc(50% - 225px);
-        display: flex;
-        flex-direction: column;
-        background: #fff;
-        padding: 25px;
-        border-radius: 15px;
-        align-self: center;
-        -webkit-box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
-        -moz-box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
-        box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
-        & div:last-of-type {
-            margin-bottom: 2rem !important;
-        }
-    }
-    &__input-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__input {
-        width: 300px;
-        padding: 3px 10px;
-        border-radius: 5px;
-        border-color: transparent;
-        -webkit-box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
-        -moz-box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
-        box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
-    }
-    &__input-name {
-        display: block;
-        margin-right: 15px;
-    }
-    &__btn-login {
-        min-width: 150px;
-        margin-bottom: 1rem;
-    }
-    &__link-wrapper {
-        display: flex;
-        justify-content: flex-end;
-        & a {
-            margin-right: 5px;
-        }
-        & a:last-of-type {
-            margin-right: 0;
-        }
-    }
+  }
+  &__input-wrapper {
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__input {
+    width: 300px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border-color: transparent;
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
+    -moz-box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
+    box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
+  }
+  &__input-name {
+    display: block;
+    align-self: center;
+    margin-right: 15px;
+  }
+  &__btn-login {
+    min-width: 150px;
+    margin-bottom: 1rem;
+  }
+  &__link-wrapper {
+    display: flex;
+    justify-content: flex-end;
+      & a {
+        margin-right: 5px;
+      }
+      & a:last-of-type {
+        margin-right: 0;
+      }
+  }
 }
     
 </style>

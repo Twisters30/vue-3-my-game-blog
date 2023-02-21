@@ -24,7 +24,6 @@ const loginStore = useLoginStore();
 </script>
 
 <style lang="scss">
-
 .wrapper-content {
   position: relative;
   z-index: 10;

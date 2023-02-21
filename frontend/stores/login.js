@@ -1,8 +1,7 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 import { apiHost, apiLogin, apiLogout} from "~/config/api.js";
-import { useVuelidate } from '@vuelidate/core'
-import { required, email, minLength } from '@vuelidate/validators'
+
 
 export const useLoginStore = defineStore('LoginStore', () => {
     const isLoginPageShow = ref(false);
@@ -13,17 +12,8 @@ export const useLoginStore = defineStore('LoginStore', () => {
         accessToken:false
     });
     const userRole = ref(null);
-    const rules = {
-         formData: {
-            email: { required, email },
-            password: { required, minLength: minLength(2) }
-        }
-    }
-    const v$ = useVuelidate(rules, formData);
+
     const acceptWindowShow = ref(false);
-    // const validateForm = () => ({
-    //     v$.validate();
-    // })
 
     const updateFormDataFromRegister = ({email, password}) => {
         formData.email = email;
@@ -39,10 +29,8 @@ export const useLoginStore = defineStore('LoginStore', () => {
 
     const getStorageToken = () => {
         const { accessToken, refreshToken } = JSON.parse(sessionStorage.getItem('token')) || false;
-        console.log(accessToken);
         token.accessToken = accessToken;
         token.refreshToken = refreshToken;
-        console.log(token);
         isUserDataLoading.value = false;
     }
 
@@ -53,7 +41,8 @@ export const useLoginStore = defineStore('LoginStore', () => {
             showLoginPage();
         }
     }
-    const loginAction = async () => {
+    const loginAction = async (valueForm) => {
+        console.log(valueForm, 'данные из метода LOGINACTION');
         try {
             const response = await axios.post(`${apiHost}/${apiLogin}`,{
                 email: formData.email,
@@ -106,6 +95,5 @@ export const useLoginStore = defineStore('LoginStore', () => {
         acceptWindowShow,
         updateFormDataFromRegister,
         isUserDataLoading,
-        v$
     };
 })

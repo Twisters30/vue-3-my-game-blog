@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
-      <change afterPath="$PROJECT_DIR$/frontend/components/Loader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/dashboard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/posts.vue" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="layouts update">
+      <change afterPath="$PROJECT_DIR$/backend/validation/Validator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/validation/interfaces/ValidatorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/helpers/validatorRules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/frontend/user/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/frontend/user/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/scss/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
@@ -29,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -41,6 +49,14 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -127,6 +143,9 @@
       <workItem from="1676467006319" duration="21180000" />
       <workItem from="1676733066978" duration="11007000" />
       <workItem from="1676766488564" duration="5137000" />
+      <workItem from="1676822612249" duration="2669000" />
+      <workItem from="1676825855987" duration="28529000" />
+      <workItem from="1676940809222" duration="6763000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -310,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676476990502</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <created>1676822673294</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1676822673294</updated>
+    </task>
+    <task id="LOCAL-00028" summary="layouts update">
+      <created>1676822800606</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1676822800606</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +380,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/controllers/frontend/user/RegisterController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/models/DB.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php&#10;#&#9;backend/tmp/logs/errors.log" />
     <MESSAGE value="git ignore frontend штуки" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
+    <MESSAGE value="layouts update" />
+    <option name="LAST_COMMIT_MESSAGE" value="layouts update" />
   </component>
 </project>

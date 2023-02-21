@@ -7,15 +7,27 @@ use Exception;
 use models\User\User;
 use controllers\TokenService;
 use models\User\RefreshToken;
+use validation\interfaces\ValidatorInterface;
+use validation\Validator;
 
 class LoginController extends BaseController
 {
+
+    private object $validator;
+    public function __construct($route,ValidatorInterface $validator)
+    {
+        parent::__construct($route);
+        $this->validator = $validator;
+    }
+
     /**
      * @throws Exception
      */
     public function login($request): void
     {
         $this->allowMethod('post');
+
+        $this->validator->validate([],['password' => 'required|numeric|min:18|max:99']);
 
         $userModel = new User();
         $user = $userModel->userWithRole('email', $request['email']);
