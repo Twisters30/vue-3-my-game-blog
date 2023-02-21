@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="frontend validator added">
-      <change afterPath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/stores/layout.js" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="fix">
+      <change afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/validation/Validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/validation/Validator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/assets/images/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/images/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,11 +93,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP\Projects\Blog\frontend\pages\admin\posts" />
       <recent name="D:\PHP\Projects\Blog\frontend\pages\guest" />
       <recent name="D:\PHP\Projects\Blog\backend\controllers" />
       <recent name="D:\PHP\Projects\Blog\frontend\components\frontend" />
       <recent name="D:\PHP\Projects\Blog\backend\config" />
-      <recent name="D:\PHP\Projects\Blog\backend" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -146,7 +142,7 @@
       <workItem from="1676766488564" duration="5137000" />
       <workItem from="1676822612249" duration="2669000" />
       <workItem from="1676825855987" duration="28529000" />
-      <workItem from="1676940809222" duration="22608000" />
+      <workItem from="1676940809222" duration="25210000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -351,7 +347,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676996966070</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="middleware">
+      <created>1677015818739</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1677015818739</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix">
+      <created>1677015896340</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1677015896340</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,6 +400,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
     <MESSAGE value="layouts update" />
     <MESSAGE value="frontend validator added" />
-    <option name="LAST_COMMIT_MESSAGE" value="frontend validator added" />
+    <MESSAGE value="middleware" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

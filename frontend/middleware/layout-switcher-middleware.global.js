@@ -8,7 +8,7 @@ export default defineNuxtRouteMiddleware((to) => {
     let isAdminRole = loginStore.getRole();
     const layoutStore = useLayoutStore();
     console.log(loginStore.getRole(), 'userRole')
-    if (isAdminRoute && isAdminRole === 'Admin') {
+    if (isAdminRoute) {
         layoutStore.switchLayout('admin');
     }
 })

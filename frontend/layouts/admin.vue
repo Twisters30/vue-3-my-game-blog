@@ -326,6 +326,7 @@
     </div>
     </body>
   </div>
+  <slot />
 </template>
 
 <script setup>

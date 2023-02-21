@@ -146,3 +146,13 @@
 =================
 [2023-02-21 22:05:47] Текст ошибки: Пользователь или пароль не совпадают | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 37
 =================
+[2023-02-21 23:25:00] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:25:03] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:26:29] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:26:42] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:26:47] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================

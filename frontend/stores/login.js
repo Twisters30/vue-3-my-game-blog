@@ -37,6 +37,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
         token.accessToken = accessToken;
         token.refreshToken = refreshToken;
         isUserDataLoading.value = false;
+        return accessToken;
     }
 
     const showLoginPage = () => isLoginPageShow.value = !isLoginPageShow.value;
