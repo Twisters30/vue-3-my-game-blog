@@ -15,6 +15,7 @@ export const useAdminStore = defineStore('adminStore', () => {
                 }
             )
             if (response.status === 200) {
+
             }
         } catch (error) {
             console.log(error);

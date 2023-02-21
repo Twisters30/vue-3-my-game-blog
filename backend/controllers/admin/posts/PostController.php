@@ -24,6 +24,5 @@ class PostController extends BaseController
     public function index()
     {
         $this->allowMethod();
-        dd(1, $this->route);
     }
 }

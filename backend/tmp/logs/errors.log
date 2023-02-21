@@ -156,3 +156,17 @@
 =================
 [2023-02-21 23:26:47] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
 =================
+[2023-02-21 23:34:57] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:35:33] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:36:32] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:37:29] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:37:42] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:38:30] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:40:14] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
