@@ -21,3 +21,14 @@ function jsonWrite(array $data): string
 {
     return json_encode($data, JSON_UNESCAPED_UNICODE);
 }
+
+function config($path)
+{
+    $pathToFile = ROOT.$path.'.php';
+
+    if (!file_exists($pathToFile)) {
+        throw new Exception("файла {$pathToFile} не существует", 500);
+    }
+
+    return require_once $pathToFile;
+}

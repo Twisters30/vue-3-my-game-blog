@@ -8,13 +8,12 @@ use models\User\User;
 use controllers\TokenService;
 use models\User\RefreshToken;
 use validation\interfaces\ValidatorInterface;
-use validation\Validator;
 
 class LoginController extends BaseController
 {
-
     private object $validator;
-    public function __construct($route,ValidatorInterface $validator)
+
+    public function __construct($route, ValidatorInterface $validator)
     {
         parent::__construct($route);
         $this->validator = $validator;
@@ -27,7 +26,7 @@ class LoginController extends BaseController
     {
         $this->allowMethod('post');
 
-        $this->validator->validate([],['password' => 'required|numeric|min:18|max:99']);
+        $this->validator->validate(['password' => 'randompassword'], config('validation\rules\login\LoginRules'));
 
         $userModel = new User();
         $user = $userModel->userWithRole('email', $request['email']);
