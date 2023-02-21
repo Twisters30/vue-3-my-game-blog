@@ -11,7 +11,7 @@ Router::addRoute('posts', ['controller' => 'frontend\posts\PostController', 'act
 
 Router::routeGroup(['role' => 'Admin', 'prefix' => 'admin', 'namespace' => 'admin'], fn () => [
     'posts' => ['controller' =>'posts\PostController', 'action' => 'index'],
-    'testss' => ['controller' =>'posts\PostController', 'action' => 'index']
+    'testss' => ['controller' =>'posts\  PostController', 'action' => 'index']
 ]);
 
 

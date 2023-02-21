@@ -55,7 +55,7 @@ class TokenService
         ]);
     }
 
-    private static function decodeToken(string $jwt): stdClass
+    private static function decodeToken(string $jwt): object
     {
         try {
             $data = JWT::decode($jwt, new Key(SECRET_KEY, JWT_ALGORITHM));
