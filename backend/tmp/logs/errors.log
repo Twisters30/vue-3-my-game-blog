@@ -144,3 +144,5 @@
 =================
 [2023-02-19 23:38:03] Текст ошибки: файла validation\rules\login\LoginRules.php не существует | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\helpers\helpers.php | Строка: 28
 =================
+[2023-02-21 22:05:47] Текст ошибки: Пользователь или пароль не совпадают | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 37
+=================

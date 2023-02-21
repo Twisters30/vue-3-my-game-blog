@@ -13,6 +13,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
     });
     const userRole = ref(null);
 
+    const setUserRole = (role) => {
+        userRole.value = role;
+    };
+    const getRole = () => userRole.value;
+
     const acceptWindowShow = ref(false);
 
     const updateFormDataFromRegister = ({email, password}) => {
@@ -44,6 +49,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
     const loginAction = async (valueForm) => {
         console.log(valueForm, 'данные из метода LOGINACTION');
         try {
+            console.log(formData)
             const response = await axios.post(`${apiHost}/${apiLogin}`,{
                 email: formData.email,
                 password: formData.password
@@ -56,6 +62,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
                     sessionStorage.setItem('token',JSON.stringify(token));
                     const router = useRouter();
                     await router.push({ path: "/articles" });
+                    setUserRole(response.data.role);
                 }
             }
         } catch (error) {
@@ -95,5 +102,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
         acceptWindowShow,
         updateFormDataFromRegister,
         isUserDataLoading,
+        getRole,
+        userRole
     };
 })

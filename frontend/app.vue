@@ -1,11 +1,15 @@
 <template>
-  <NuxtLayout :name="layout">
+  <Loader />
+  <NuxtLayout :name="layoutStore.layout">
     <NuxtPage />
   </NuxtLayout >
 </template>
 
 <script setup>
-const layout = 'default';
+import { useLayoutStore } from "@/stores/layout.js";
+
+const layoutStore = useLayoutStore();
+
 </script>
 
 <style></style>

@@ -49,6 +49,6 @@ class Validator implements ValidatorInterface
 
     private function validateMax($data, $param)
     {
-        dd(1, $data, $param);
+
     }
 }
