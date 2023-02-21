@@ -1,35 +1,53 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 import { apiHost, apiLogin, apiLogout} from "~/config/api.js";
+import { useVuelidate } from '@vuelidate/core'
+import { required, email, minLength } from '@vuelidate/validators'
 
 export const useLoginStore = defineStore('LoginStore', () => {
     const isLoginPageShow = ref(false);
     const formData = reactive({});
-    const token = ref(null);
+    let isUserDataLoading = ref(true);
+    let token = reactive({
+        refreshToken:false,
+        accessToken:false
+    });
+    const userRole = ref(null);
+    const rules = {
+         formData: {
+            email: { required, email },
+            password: { required, minLength: minLength(2) }
+        }
+    }
+    const v$ = useVuelidate(rules, formData);
     const acceptWindowShow = ref(false);
+    // const validateForm = () => ({
+    //     v$.validate();
+    // })
 
     const updateFormDataFromRegister = ({email, password}) => {
-        console.log(email,password)
         formData.email = email;
         formData.password = password;
     }
 
-    const acceptAction = async (userAnswer = null) => {
-        if (userAnswer === null) {
-            acceptWindowShow.value = false;
-            return;
-        }
+    const acceptAction = async (userAnswer) => {
         if (userAnswer === true) {
            await logout();
         }
         acceptWindowShow.value = !acceptWindowShow.value;
     }
 
-    const getLocalStorageToken = () => {
-        token.value = localStorage.getItem('token') || null;
+    const getStorageToken = () => {
+        const { accessToken, refreshToken } = JSON.parse(sessionStorage.getItem('token')) || false;
+        console.log(accessToken);
+        token.accessToken = accessToken;
+        token.refreshToken = refreshToken;
+        console.log(token);
+        isUserDataLoading.value = false;
     }
 
     const showLoginPage = () => isLoginPageShow.value = !isLoginPageShow.value;
+
     const closeModalOutside = (event) => {
         if (event.target.id === 'modal-overlay') {
             showLoginPage();
@@ -42,9 +60,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
                 password: formData.password
             });
             if (response.status === 200){
-                token.value = response.data.token;
-                if (response.data.token) {
-                    localStorage.setItem('token',response.data.token);
+                showLoginPage();
+                token.accessToken = response.data.accessToken;
+                token.refreshToken = response.data.refreshToken;
+                if (response.data.accessToken) {
+                    sessionStorage.setItem('token',JSON.stringify(token));
                     const router = useRouter();
                     await router.push({ path: "/articles" });
                 }
@@ -55,16 +75,17 @@ export const useLoginStore = defineStore('LoginStore', () => {
     }
 
     const logout = async () => {
-        if (!token.value) return;
+        if (!token.accessToken) return;
         try {
-            const response = await axios.patch(`${apiHost}/${apiLogout}`,{},
+            const response = await axios.post(`${apiHost}/${apiLogout}`,{},
                 {
-                    headers: {'Authorization': `Bearer ${token.value}`}
+                    headers: {'Authorization': `Bearer ${token.refreshToken}`}
                 }
             )
             if (response.status === 200) {
-                token.value = null;
-                localStorage.removeItem('token');
+                token.accessToken = false;
+                token.refreshToken = false;
+                sessionStorage.removeItem('token');
                 isLoginPageShow.value = false;
             }
         } catch (error) {
@@ -80,9 +101,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
         closeModalOutside,
         token,
         logout,
-        getLocalStorageToken,
+        getStorageToken,
         acceptAction,
         acceptWindowShow,
-        updateFormDataFromRegister
+        updateFormDataFromRegister,
+        isUserDataLoading,
+        v$
     };
 })

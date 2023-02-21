@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/controllers/frontend/user/RegisterController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/models/DB.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php&#10;#&#9;backend/tmp/logs/errors.log">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <change afterPath="$PROJECT_DIR$/frontend/components/Loader.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/dashboard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/posts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/forms/AcceptForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/forms/AcceptForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +88,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP\Projects\Blog\frontend\pages\guest" />
+      <recent name="D:\PHP\Projects\Blog\backend\controllers" />
       <recent name="D:\PHP\Projects\Blog\frontend\components\frontend" />
       <recent name="D:\PHP\Projects\Blog\backend\config" />
       <recent name="D:\PHP\Projects\Blog\backend" />
@@ -112,7 +121,12 @@
       <option name="presentableId" value="Default" />
       <updated>1675722829794</updated>
       <workItem from="1675722831257" duration="16201000" />
-      <workItem from="1675876760091" duration="103589000" />
+      <workItem from="1675876760091" duration="113096000" />
+      <workItem from="1676295938001" duration="3030000" />
+      <workItem from="1676382336812" duration="17139000" />
+      <workItem from="1676467006319" duration="21180000" />
+      <workItem from="1676733066978" duration="11007000" />
+      <workItem from="1676766488564" duration="5137000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -254,7 +268,49 @@
       <option name="project" value="LOCAL" />
       <updated>1676146688956</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="git ignore frontend штуки">
+      <created>1676152668152</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676152668152</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <created>1676152702373</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676152702373</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <created>1676164184930</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676164184930</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <created>1676296029327</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676296029327</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <created>1676296041034</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676296041034</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log">
+      <created>1676476990502</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676476990502</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +345,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/frontend/user/LoginController.php" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/admin/posts/PostController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/public/errors/error.php" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/controllers/frontend/user/RegisterController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/models/DB.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php&#10;#&#9;backend/tmp/logs/errors.log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/controllers/frontend/user/RegisterController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/models/DB.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php&#10;#&#9;backend/tmp/logs/errors.log" />
+    <MESSAGE value="git ignore frontend штуки" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
   </component>
 </project>

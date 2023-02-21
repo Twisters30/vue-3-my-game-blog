@@ -5,12 +5,16 @@
                 <div class="header__logo logo">MY GameBLoG</div>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item"><NuxtLink @click="userActionWithToken" class="btn main-link" to="/articles">Статьи</NuxtLink></li>
+                        <li class="nav__item"><NuxtLink class="btn main-link" to="/articles">Статьи</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/about">О нас</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/join">Стать автором</NuxtLink></li>
-                        <li v-if="!loginStore.token" class="nav__item"><button class="btn main-link" @click="loginStore.showLoginPage">Войти</button></li>
-                        <li v-else class="nav__item">
-                          <button class="btn main-link" @click="loginStore.acceptAction">Выйти</button>
+                        <li v-if="!loginStore.token.accessToken" class="nav__item item-login">
+                          <Loader v-if="loginStore.isUserDataLoading"/>
+                          <button v-else class="btn main-link" @click="loginStore.showLoginPage">Войти</button>
+                        </li>
+                        <li v-else class="nav__item item-login">
+                          <Loader v-if="loginStore.isUserDataLoading"/>
+                          <button v-else class="btn main-link" @click="loginStore.acceptAction">Выйти</button>
                           <AcceptForm
                               :acceptAction="loginStore.acceptAction"
                               v-if="loginStore.acceptWindowShow" />
@@ -24,28 +28,21 @@
 
 <script setup>
 import { useLoginStore } from '../../stores/login.js';
-import axios from "axios";
+import Loader from "@/components/Loader.vue";
 import AcceptForm from './forms/AcceptForm.vue';
 const loginStore = useLoginStore();
 
-const userActionWithToken = async () => {
-  if (!loginStore.token) return;
-  console.log(loginStore.token, 'АВТОРИЗИРОВАН')
-  try {
-    const result = await axios.get('http://localhost:80/admin/posts', {
-      headers: {
-        'Authorization': `Bearer ${loginStore.token}`
-      }
-    })
-    console.log(result);
-  } catch (error) {
-    console.log(error);
-  }
-}
 
+onBeforeMount(() => {
+  loginStore.getStorageToken();
+});
 </script>
 
 <style lang="scss">
+
+.item-login {
+  width: 71.69px;
+}
 
 .line{
     text-align:center;
