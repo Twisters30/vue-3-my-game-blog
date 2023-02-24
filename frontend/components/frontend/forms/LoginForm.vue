@@ -1,7 +1,7 @@
 <template>
     <div class="form__wrapper" id="modal-overlay" @click="loginStore.closeModalOutside($event)">
         <Form class="form__main" @submit="loginStore.loginAction" :validation-schema="schemaLogin" v-slot="{ meta }">
-          <pre>{{ meta }}</pre>
+            <h5 class="form__title main-title"></h5>
             <div class="form__input-wrapper">
                 <div class="form__input__sub-wrap">
                   <span class="form__input-name">Email</span>
@@ -16,7 +16,7 @@
                     />
                   </label>
                 </div>
-              <ErrorMessage class="form__input-error text-danger" name="email"/>
+              <ErrorMessage class="form__input-error" name="email"/>
             </div>
             <div class="form__input-wrapper">
                 <div class="form__input__sub-wrap">
@@ -32,12 +32,12 @@
                     />
                   </label>
                 </div>
-              <ErrorMessage class="form__input-error text-danger" name="password" />
+              <ErrorMessage class="form__input-error" name="password" />
             </div>
             <button type="submit" class="form__btn-login btn btn-outline-success main-btn">Войти</button>
             <span class="form__link-wrapper">
-                <NuxtLink class="main-link text-danger" to="#">забыли пароль?</NuxtLink>
-                <NuxtLink @click="loginStore.showLoginPage" class="main-link text-danger" to="/register">регистрация</NuxtLink>
+                <NuxtLink class="main-link form__link" to="#">забыли пароль?</NuxtLink>
+                <NuxtLink @click="loginStore.showLoginPage" class="main-link form__link" to="/register">регистрация</NuxtLink>
             </span>
         </Form>
     </div>
@@ -54,6 +54,18 @@ const loginStore = useLoginStore();
 
 <style lang="scss" scoped>
 .form {
+  &__link {
+    color: #fff;
+    &:hover {
+      color: #00a87d;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    padding-bottom: 30px;
+    color: transparent;
+    pointer-events: none;
+  }
   &__input__sub-wrap {
     display: flex;
     justify-content: space-between;
@@ -62,6 +74,7 @@ const loginStore = useLoginStore();
     position: absolute;
     bottom: -25px;
     align-self: center;
+    color: gold;
   }
   &__label{
     display: flex;
@@ -75,6 +88,7 @@ const loginStore = useLoginStore();
     right: 0;
     left: 0;
     background: rgba(121, 110, 116, 0.8);
+    backdrop-filter: blur(15px);
   }
   &__main {
     max-width: 450px;
@@ -84,8 +98,11 @@ const loginStore = useLoginStore();
     left: calc(50% - 225px);
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    color: #fff;
     padding: 25px;
+    border: 2px solid rgba(255,255,255,0.5);
     border-radius: 15px;
     align-self: center;
     -webkit-box-shadow: 1px 1px 10px 0px rgba(34, 60, 80, 0.05);
@@ -105,11 +122,13 @@ const loginStore = useLoginStore();
   &__input {
     width: 300px;
     padding: 3px 10px;
-    border-radius: 5px;
     border-color: transparent;
-    -webkit-box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
-    -moz-box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
-    box-shadow: 0px 0px 1px 1px rgba(34, 60, 80, 0.75);
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    &:focus {
+      outline: none;
+    }
   }
   &__input-name {
     display: block;
@@ -119,6 +138,13 @@ const loginStore = useLoginStore();
   &__btn-login {
     min-width: 150px;
     margin-bottom: 1rem;
+    color: #000;
+    background: #fff;
+    border: transparent;
+    &:hover {
+      border-color: #00a87d !important;
+      color: #00a87d;
+    }
   }
   &__link-wrapper {
     display: flex;

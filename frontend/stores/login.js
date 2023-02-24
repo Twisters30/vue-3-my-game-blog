@@ -1,9 +1,12 @@
 import { defineStore } from "pinia";
 import axios from "axios";
+import { useUserRoleStore } from "~/stores/userRole.js";
 import { apiHost, apiLogin, apiLogout} from "~/config/api.js";
 
 
 export const useLoginStore = defineStore('LoginStore', () => {
+    const userRoleStore = useUserRoleStore();
+
     const isLoginPageShow = ref(false);
     const formData = reactive({});
     let isUserDataLoading = ref(true);
@@ -11,12 +14,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
         refreshToken:false,
         accessToken:false
     });
-    const userRole = ref(null);
 
-    const setUserRole = (role) => {
-        userRole.value = role;
-    };
-    const getRole = () => userRole.value;
 
     const acceptWindowShow = ref(false);
 
@@ -47,10 +45,16 @@ export const useLoginStore = defineStore('LoginStore', () => {
             showLoginPage();
         }
     }
+
+    const removeDataUserStore = () => {
+        token.accessToken = false;
+        token.refreshToken = false;
+        sessionStorage.removeItem('token');
+        userRoleStore.removeUserRole();
+    }
+
     const loginAction = async (valueForm) => {
-        console.log(valueForm, 'данные из метода LOGINACTION');
         try {
-            console.log(formData)
             const response = await axios.post(`${apiHost}/${apiLogin}`,{
                 email: formData.email,
                 password: formData.password
@@ -63,7 +67,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
                     sessionStorage.setItem('token',JSON.stringify(token));
                     const router = useRouter();
                     await router.push({ path: "/articles" });
-                    setUserRole(response.data.role);
+                    userRoleStore.setUserRole(response.data.role);
+                    if (response.data.role.toLocaleLowerCase() === 'admin' || response.data.role.toLocaleLowerCase() === 'author') {
+                        await router.push({ path: "/admin/dashboard" });
+                    }
+
                 }
             }
         } catch (error) {
@@ -80,9 +88,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
                 }
             )
             if (response.status === 200) {
-                token.accessToken = false;
-                token.refreshToken = false;
-                sessionStorage.removeItem('token');
+                removeDataUserStore();
                 isLoginPageShow.value = false;
             }
         } catch (error) {
@@ -103,7 +109,5 @@ export const useLoginStore = defineStore('LoginStore', () => {
         acceptWindowShow,
         updateFormDataFromRegister,
         isUserDataLoading,
-        getRole,
-        userRole
     };
 })

@@ -170,3 +170,15 @@
 =================
 [2023-02-21 23:40:14] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
 =================
+[2023-02-21 23:51:19] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 63
+=================
+[2023-02-21 23:52:25] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 63
+=================
+[2023-02-24 17:15:25] Текст ошибки: route favicon.ico does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-24 23:31:26] Текст ошибки: route 123_s.jpg does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-24 23:31:33] Текст ошибки: route favicon.ico does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-24 23:32:02] Текст ошибки: route 123_s.jpg does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
