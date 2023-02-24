@@ -1,16 +1,21 @@
-
-import { useLayoutStore } from "~/stores/layout.js";
-import { useLoginStore } from "~/stores/login.js";
-import { useAdminStore } from "@/stores/admin/posts.js";
-
 export default defineNuxtRouteMiddleware(async (to) => {
-    const adminStore = useAdminStore();
-    const userRole = await adminStore.getPosts()
     const isAdminRoute = to.fullPath.startsWith('/admin');
-    const loginStore = useLoginStore();
-    let isAdminRole = loginStore.getRole();
-    const layoutStore = useLayoutStore();
-    if (isAdminRoute && userRole === 'admin') {
-        layoutStore.switchLayout('admin');
-    }
+    onNuxtReady( async () => {
+        const { useUserRoleStore } = await import('~/stores/userRole.js')
+        const { useLayoutStore } = await import('~/stores/layout.js')
+        const { useLoginStore } = await import('~/stores/login.js')
+        const userRoleStore =  useUserRoleStore();
+        const layoutStore =  useLayoutStore();
+        const loginStore = useLoginStore();
+
+        const userRole = sessionStorage.getItem('userRole') || userRoleStore.getUserRole();
+        console.log(userRole)
+        if (isAdminRoute && userRole === 'admin') {
+            layoutStore.switchLayout('admin');
+        }
+        if (isAdminRoute && userRole !== 'admin') {
+            loginStore.showLoginPage();
+            // return navigateTo('/register');
+        }
+    })
 })

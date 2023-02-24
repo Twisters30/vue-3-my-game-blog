@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="fix2">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="fix3">
+      <change afterPath="$PROJECT_DIR$/frontend/components/backend/SideBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/stores/userRole.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/forms/RegisterForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/forms/RegisterForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/js/adminlte.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/js/adminlte.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +148,9 @@
       <workItem from="1676766488564" duration="5137000" />
       <workItem from="1676822612249" duration="2669000" />
       <workItem from="1676825855987" duration="28529000" />
-      <workItem from="1676940809222" duration="25826000" />
+      <workItem from="1676940809222" duration="56754000" />
+      <workItem from="1677110319546" duration="19934000" />
+      <workItem from="1677163592564" duration="14269000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -366,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677018500759</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fix3">
+      <created>1677019223743</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1677019223743</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +425,7 @@
     <MESSAGE value="middleware" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix2" />
+    <MESSAGE value="fix3" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix3" />
   </component>
 </project>

@@ -12,6 +12,12 @@ export default defineNuxtConfig({
         // <meta name="description" content="My amazing site">
         { name: 'Пет проект', content: 'Пет проет с использованием технологий Nuxt 3,PHP' }
       ],
+      // script: [
+      //   { src: '/js/jquery/jquery.min.js' },
+      //   { src: '/js/bootstrap.bundle.min.js'},
+      //   { src: '/js/adminlte.min.js' },
+      //   { src: '/js/demo.js' },
+      // ]
     }
   },
   // ssr: false,

@@ -170,3 +170,7 @@
 =================
 [2023-02-21 23:40:14] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
 =================
+[2023-02-21 23:51:19] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 63
+=================
+[2023-02-21 23:52:25] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 63
+=================

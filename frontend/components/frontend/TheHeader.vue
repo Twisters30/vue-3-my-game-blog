@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { useLoginStore } from '../../stores/login.js';
+import { useLoginStore } from '@/stores/login.js';
 import Loader from "@/components/Loader.vue";
 import AcceptForm from './forms/AcceptForm.vue';
 const loginStore = useLoginStore();

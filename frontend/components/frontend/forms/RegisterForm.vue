@@ -34,7 +34,7 @@
     </div>
 </template>
 <script setup>
-import { useRegisterStore } from "../../../stores/register.js";
+import { useRegisterStore } from "@/stores/register.js";
 
 const registerStore = useRegisterStore();
 
