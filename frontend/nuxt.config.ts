@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         { src: '/js/jquery/jquery.min.js' },
         { src: '/js/bootstrap.bundle.min.js'},
         { src: '/js/adminlte.min.js' },
-        // { src: '/js/demo.js' },
+        { src: '/js/summernote-bs4.min.js' },
       ]
     }
   },

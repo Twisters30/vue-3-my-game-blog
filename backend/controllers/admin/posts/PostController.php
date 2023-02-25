@@ -25,4 +25,11 @@ class PostController extends BaseController
     {
         $this->allowMethod();
     }
+    public function create(): void
+    {
+        $this->allowMethod();
+        echo jsonWrite([
+           'postStatuses' => ''
+        ]);
+    }
 }

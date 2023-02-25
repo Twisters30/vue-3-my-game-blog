@@ -4,11 +4,15 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
+        <div class="mb-4">
+          <NuxtLink to="/admin/posts/create" class="btn btn-success">Создать</NuxtLink>
+        </div>
         <div class="row mb-2">
           <BaseTable
-              :tableHeaders="tableHeaders"
-              :tableTitle="tableTitle"
-              :posts="posts"
+              :tableHeaders="adminPostsStore.tableHeaders"
+              :tableTitle="adminPostsStore.tableTitle"
+              :tableContent="adminPostsStore.posts"
+              :pathUrl="adminPostsStore.pathUrl"
           />
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -28,36 +32,9 @@
 
 <script setup>
 import BaseTable  from "@/components/BaseTable.vue";
+import { useAdminPostsStore } from "@/stores/admin/posts.js";
+const  adminPostsStore = useAdminPostsStore();
 
-const posts = reactive([
-  {
-    id:1,
-    name: 'testName',
-    description: 'test lorem test loremtest lorem test lorem test lorem test lorem test lorem test lorem test lorem',
-    image: '/img/test.jpg',
-    icon:'/icons/gameIcon.jpg',
-    post_status_id:1,
-    user_id:1,
-    created_at: new Date(),
-    updated_at: new Date()
-  },{
-    id:2,
-    name: 'testName',
-    description: 'test lorem test loremtest lorem test lorem test lorem test lorem test lorem test lorem test lorem',
-    image: '/img/test.jpg',
-    icon:'/icons/gameIcon.jpg',
-    post_status_id:2,
-    user_id:2,
-    created_at: new Date(),
-    updated_at: new Date()
-  },
-]);
-const tableTitle = 'Редактирование статей';
-const tableHeaders = reactive(
-    [
-      'id','name','description','image','icon','post_status_id','user_id','created_at','updated_at'
-    ]
-)
 
 </script>
 

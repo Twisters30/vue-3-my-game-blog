@@ -193,7 +193,9 @@ onMounted(() => {
     link: [
       { rel:'stylesheet',href:'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback'},
       { rel:'stylesheet',href:'/css/all.min.css'},
-      { rel:'stylesheet',type:'text/css',href:'/css/adminlte.min.css'},
+      { rel:'stylesheet',href:'/css/adminlte.min.css'},
+      { rel:'stylesheet',href:'/css/summernote-bs4.min.css'},
+      { rel:'stylesheet',href:'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'},
     ],
   });
   $('ul[data-widget="treeview"]').Treeview('init');

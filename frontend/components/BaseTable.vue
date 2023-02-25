@@ -11,8 +11,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="(post,i) of props.posts" :key="i">
-          <td v-for="item in post" :key="item.id">{{ item }}</td>
+        <tr v-for="(content,i) of props.tableContent" :key="i">
+          <td v-for="item in content" :key="item.id">{{ item }}</td>
+          <i class="fa-solid fa-trash icon-transparent"></i>
+          <NuxtLink :to="props.pathUrl + content.id">
+            <i class="fa-solid fa-file-pen"></i>
+          </NuxtLink>
         </tr>
         </tbody>
       </table>
@@ -24,11 +28,10 @@
 const props = defineProps({
   tableTitle: String,
   tableHeaders: Array,
-  posts: Object
+  tableContent: Object,
+  pathUrl: String,
 })
-console.log(props)
 </script>
 
 <style scoped>
-
 </style>

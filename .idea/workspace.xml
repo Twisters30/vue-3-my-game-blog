@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="lte hell">
-      <change afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="admin/posts added">
+      <change afterPath="$PROJECT_DIR$/frontend/components/Editor.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/backend/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/backend/SideBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,11 +97,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP\Projects\Blog\frontend\components\backend\forms" />
       <recent name="D:\PHP\Projects\Blog\frontend\pages\admin\posts" />
       <recent name="D:\PHP\Projects\Blog\frontend\pages\guest" />
       <recent name="D:\PHP\Projects\Blog\backend\controllers" />
       <recent name="D:\PHP\Projects\Blog\frontend\components\frontend" />
-      <recent name="D:\PHP\Projects\Blog\backend\config" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -146,7 +149,7 @@
       <workItem from="1676940809222" duration="56754000" />
       <workItem from="1677110319546" duration="19934000" />
       <workItem from="1677163592564" duration="28717000" />
-      <workItem from="1677281003452" duration="2510000" />
+      <workItem from="1677281003452" duration="40737000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -386,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677197285344</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="admin/posts added">
+      <created>1677284868612</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1677284868612</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +415,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="'nuxt/axios DELETE from dependencies and added backend models'" />
     <MESSAGE value="'models'" />
     <MESSAGE value="'models-&gt;create method return array'" />
     <MESSAGE value="'change gitignore - vendors'" />
@@ -430,6 +439,7 @@
     <MESSAGE value="fix2" />
     <MESSAGE value="fix3" />
     <MESSAGE value="lte hell" />
-    <option name="LAST_COMMIT_MESSAGE" value="lte hell" />
+    <MESSAGE value="admin/posts added" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin/posts added" />
   </component>
 </project>
