@@ -74,7 +74,13 @@ abstract class Model
         $this->query .= " LIMIT 1";
 
         return $this->execute()->fetch_assoc();
+    }
 
+    public function all(): array
+    {
+        $this->query = "SELECT * FROM {$this->table}";
+
+        return $this->get();
     }
 
     /**
