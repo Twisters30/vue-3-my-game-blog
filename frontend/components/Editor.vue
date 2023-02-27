@@ -1,22 +1,33 @@
 <template>
   <div>
-    <textarea id="summernote" @input="$emit('update:content', $event.target.value)">
-      {{ props.content }}
+    <textarea id="summernote" type="text" ref="editor" v-model="data.description">
+      {{ data.description }}
     </textarea>
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
-  content: String,
-})
-const emits = defineEmits(['update:content']);
-console.log(props.content)
-onMounted(() => {
-  $('#summernote').summernote({
-    height: 300
+let props = defineProps(['content','modelValue']);
+let emit = defineEmits(['update:modelValue', 'update-editor']);
+const editor = ref(null)
+const data = computed(() => {
+  return new Proxy(props.modelValue, {
+    set (obj, key, value) {
+      emit('update:modelValue', { ...obj, [key]: value });
+      return true;
+    }
   });
-})
+});
+onMounted(() => {
+  $(editor.value).summernote({
+    height: 300,
+    callbacks: {
+      onChange: (content) => {
+        data.value.description = content;
+      }
+    }
+  });
+});
 onBeforeUnmount(() => {
   $('#summernote').summernote('destroy');
 })

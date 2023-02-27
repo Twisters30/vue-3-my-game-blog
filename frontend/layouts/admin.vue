@@ -1,6 +1,6 @@
 <template>
   <div>
-    <body class="hold-transition sidebar-mini">
+    <div class="hold-transition sidebar-mini">
     <div class="wrapper">
 
       <div class="preloader flex-column justify-content-center align-items-center" ref="preloader">
@@ -171,7 +171,7 @@
         <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
       </footer>
     </div>
-    </body>
+    </div>
   </div>
 </template>
 

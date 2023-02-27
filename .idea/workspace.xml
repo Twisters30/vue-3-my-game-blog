@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="admin/posts added">
-      <change afterPath="$PROJECT_DIR$/frontend/components/Editor.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="posts/id&#10;posts/create">
+      <change afterPath="$PROJECT_DIR$/frontend/components/buttons/ButtonBorderAnimate.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Post/PostStatuses.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Post/PostStatuses.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/Editor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Editor.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +152,9 @@
       <workItem from="1676940809222" duration="56754000" />
       <workItem from="1677110319546" duration="19934000" />
       <workItem from="1677163592564" duration="28717000" />
-      <workItem from="1677281003452" duration="40737000" />
+      <workItem from="1677281003452" duration="53829000" />
+      <workItem from="1677363207340" duration="3405000" />
+      <workItem from="1677429441923" duration="17353000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -396,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677284868612</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="posts/id&#10;posts/create">
+      <created>1677338773466</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1677338773466</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +427,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="'models'" />
     <MESSAGE value="'models-&gt;create method return array'" />
     <MESSAGE value="'change gitignore - vendors'" />
     <MESSAGE value="'model-&gt;update'" />
@@ -440,6 +451,7 @@
     <MESSAGE value="fix3" />
     <MESSAGE value="lte hell" />
     <MESSAGE value="admin/posts added" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin/posts added" />
+    <MESSAGE value="posts/id&#10;posts/create" />
+    <option name="LAST_COMMIT_MESSAGE" value="posts/id&#10;posts/create" />
   </component>
 </project>

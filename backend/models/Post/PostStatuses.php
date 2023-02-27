@@ -4,7 +4,9 @@
 namespace models\Post;
 
 
-class PostStatuses
-{
+use models\Model;
 
+class PostStatuses extends Model
+{
+    public string $table = 'post_statuses';
 }

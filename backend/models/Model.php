@@ -29,6 +29,12 @@ abstract class Model
         return $result;
     }
 
+    public function all(): array
+    {
+        $this->query = "SELECT * FROM {$this->table}";
+        return $this->get();
+    }
+
     public function select(array $columns = []): Model
     {
         if (empty($columns)){

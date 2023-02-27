@@ -4,7 +4,12 @@
       <div class="container-fluid">
         <div class="row">
           <div class="row col-md-6">
-            <AdminBaseForm :post="null" :postStatuses="postStatuses "/>
+            <AdminBaseForm
+                :post="adminPostsStore.createFormData"
+                :createFormData="adminPostsStore.createFormData"
+                :postStatuses="postStatuses"
+                @create-post="adminPostsStore.createPost"
+            />
           </div>
         </div>
         <div class="row mb-2">
@@ -18,9 +23,6 @@
                     </h3>
                   </div>
                   <!-- /.card-header -->
-                  <div class="card-body">
-                    <Editor v-model:content="content" />
-                  </div>
                   <div class="card-footer">
                     Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
                   </div>
@@ -37,8 +39,15 @@
 
 <script setup>
 import AdminBaseForm from "@/components/backend/forms/AdminBaseForm.vue";
-const postStatuses = ref([1,2,3]);
-const content = ref('Введите текст');
+import { useAdminPostsStore } from "@/stores/admin/posts.js";
+
+const postStatuses = ref(null);
+const adminPostsStore = useAdminPostsStore();
+const post = reactive({});
+onMounted(async () => {
+  postStatuses.value = await adminPostsStore.getPostStatuses();
+  console.log(postStatuses)
+})
 </script>
 
 <style scoped>

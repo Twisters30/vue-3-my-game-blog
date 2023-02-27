@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-import { apiHost, apiAdminPostsIndex } from "~/config/api.js";
+import { apiHost, apiAdminPostsIndex, apiAdminGetPostStatuses, apiAdminCreatePost } from "~/config/api.js";
 import { useLoginStore } from "~/stores/login.js";
 
 export const useAdminPostsStore = defineStore('adminPostsStore', () => {
@@ -38,7 +38,50 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         ]
     )
     const pathUrl = '/admin/posts/';
-
+    const getPostStatuses = async () => {
+        const accessToken = loginStore.getStorageToken();
+        try {
+            const response = await axios.get(`${apiHost}/${apiAdminGetPostStatuses}`,
+                {
+                    headers: {'Authorization': `Bearer ${accessToken}`}
+                }
+            )
+            if (response.status === 200) {
+                console.log(response.data)
+                return response.data;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const createPost = async (data) => {
+        const accessToken = loginStore.getStorageToken();
+        const bodyFormData = new FormData();
+        const parseData = Object.entries(data);
+        // parseData.forEach(el => {
+        //     console.log(el)
+        // })
+        for (const [key,value] of Object.entries(data)) {
+            console.log(key,value)
+            bodyFormData.append(key, value);
+        }
+        console.log(bodyFormData);
+        try {
+            const response = await axios.post(`${apiHost}/${apiAdminCreatePost}`,
+                    bodyFormData,
+                {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`,
+                        'Content-Type': 'multipart/form-data'},
+                }
+            )
+            if (response.status === 200) {
+                console.log('Статья создана');
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
     const getPosts = async () => {
         const accessToken = loginStore.getStorageToken();
         console.log(accessToken, 'storeAdminPosts');
@@ -49,11 +92,10 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
                 }
             )
             if (response.status === 200) {
-
             }
         } catch (error) {
             console.log(error);
         }
     }
-    return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, posts };
+    return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, posts, getPostStatuses, createPost };
 })

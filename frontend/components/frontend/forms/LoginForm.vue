@@ -34,7 +34,7 @@
                 </div>
               <ErrorMessage class="form__input-error" name="password" />
             </div>
-            <button type="submit" class="form__btn-login btn btn-outline-success main-btn">Войти</button>
+            <ButtonBorderAnimate btnText="Войти" btnType="submit" class="form__submit-login" :class="{ 'btn-animate' :meta.valid && meta.touched }"/>
             <span class="form__link-wrapper">
                 <NuxtLink class="main-link form__link" to="#">забыли пароль?</NuxtLink>
                 <NuxtLink @click="loginStore.showLoginPage" class="main-link form__link" to="/register">регистрация</NuxtLink>
@@ -44,16 +44,19 @@
 </template>
 
 <script setup>
+import ButtonBorderAnimate from '@/components/buttons/ButtonBorderAnimate.vue';
 import { useLoginStore } from '@/stores/login.js';
 import { Form, Field, ErrorMessage } from 'vee-validate';
 import { schemaLogin } from "@/helpers/validatorRules.js";
-
 const loginStore = useLoginStore();
 
 </script>
 
 <style lang="scss" scoped>
 .form {
+  &__submit-login {
+    margin-bottom: 20px;
+  }
   &__link {
     color: #fff;
     &:hover {

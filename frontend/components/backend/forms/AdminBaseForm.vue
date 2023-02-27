@@ -3,7 +3,7 @@
     <div class="card-header">
       <h3 class="card-title">{{ props.titleForm  || 'Название формы'}}</h3>
     </div>
-    <form>
+    <form @submit.prevent="$emit('createPost', data)">
       <div class="card-body">
         <div class="form-group">
           <label for="inputName">Название Статьи</label>
@@ -13,7 +13,7 @@
           <label for="imageInputFile">Загрузить изображение</label>
           <div class="input-group d-flex">
             <div class="custom-file">
-              <input ref="postImage" @change="onFileChange($event)" type="file" class="form-control" id="imageInputFile">
+              <input ref="postImage" @change="onFileChange($event, 'image')" type="file" class="form-control" id="imageInputFile">
               <label class="custom-file-label" for="imageInputFile">Choose file</label>
             </div>
           </div>
@@ -21,7 +21,7 @@
           <label for="iconInputFile">Загрузить  иконку</label>
           <div class="input-group d-flex">
             <div class="custom-file">
-              <input ref="postIcon" @change="onFileChange($event)" type="file" class="form-control" id="iconInputFile">
+              <input ref="postIcon" @change="onFileChange($event,'icon')" type="file" class="form-control" id="iconInputFile">
               <label class="custom-file-label" for="iconInputFile">Choose file</label>
             </div>
           </div>
@@ -29,12 +29,11 @@
         <div class="form-group" v-if="props.postStatuses">
           <label for="exampleFormControlSelect1">Example select</label>
           <select class="form-control" id="exampleFormControlSelect1">
-            <option :value="status" v-for="status of props.postStatuses" :key="status">{{ status }}</option>
+            <option :value="status.id" v-for="status of props.postStatuses" :key="status">{{ status.name }}</option>
           </select>
         </div>
       </div>
-      <!-- /.card-body -->
-
+      <Editor v-model="data" />
       <div class="card-footer">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
@@ -43,14 +42,15 @@
 </template>
 
 <script setup>
-const props = defineProps(['titleForm', 'postStatuses', 'post']);
-console.log(props.postStatuses)
+const props = defineProps(['titleForm', 'postStatuses', 'post','adminPostsStore']);
+const emits = defineEmits(['createPost']);
 const postImage = ref(null);
 const postIcon = ref(null);
 const data = ref(props.post || {});
-const onFileChange = (e) => {
+const onFileChange = (e,flag) => {
   const files = e.target.files || e.dataTransfer.files;
-  console.log(files)
+  data.value[flag] = files[0];
+  console.log(data.value);
 }
 const preloadImageFile = (imagePath, ref) => {
   let imgBlob = new Blob([""], {type: 'text/plain'});
@@ -62,9 +62,6 @@ const preloadImageFile = (imagePath, ref) => {
 onMounted(() => {
   preloadImageFile(data.value.icon, postImage);
   preloadImageFile(data.value.image, postIcon);
-
-  // postIcon.value.files = props.post.icon;
-  // console.log(props.post.image)
 })
 </script>
 

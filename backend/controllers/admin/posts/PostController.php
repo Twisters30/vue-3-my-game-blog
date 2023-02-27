@@ -5,6 +5,7 @@ namespace controllers\admin\posts;
 use controllers\BaseController;
 use Exception;
 use controllers\TokenService;
+use models\Post\PostStatuses;
 
 class PostController extends BaseController
 {
@@ -25,11 +26,15 @@ class PostController extends BaseController
     {
         $this->allowMethod();
     }
-    public function create(): void
+    public function getPostStatuses(): void
     {
         $this->allowMethod();
-        echo jsonWrite([
-           'postStatuses' => ''
-        ]);
+        $postStatusesModel = new PostStatuses();
+        echo jsonWrite($postStatusesModel->all());
+    }
+    public function store():void
+    {
+        $this->allowMethod('POST');
+        dd(1, $_POST, $_FILES);
     }
 }

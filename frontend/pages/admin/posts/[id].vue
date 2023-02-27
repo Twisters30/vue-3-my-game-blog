@@ -17,10 +17,6 @@
                       Summernote
                     </h3>
                   </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                    <Editor v-model:content="post.description" />
-                  </div>
                   <div class="card-footer">
                     Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
                   </div>
