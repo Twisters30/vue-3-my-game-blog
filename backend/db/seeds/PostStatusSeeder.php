@@ -16,7 +16,7 @@ class PostStatusSeeder extends AbstractSeed
     public function run(): void
     {
         $data = [
-            ['name' => 'Опубликованно'],
+            ['name' => 'Опубликовано'],
             ['name' => 'Ожидает'],
             ['name' => 'Исправить'],
             ['name' => 'Отклонено']

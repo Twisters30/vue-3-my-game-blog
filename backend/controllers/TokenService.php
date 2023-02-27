@@ -16,7 +16,7 @@ class TokenService
 
         $data = [
             'iat'  => $now->getTimestamp(),
-            'exp' => $now->modify('+120 minute')->getTimestamp(),
+            'exp' => $now->modify('+15 minute')->getTimestamp(),
             'nbf'  => $now->getTimestamp(),
             'iss'  => DOMAIN,
             'role' => strtolower($userRole)
@@ -51,6 +51,9 @@ class TokenService
         }
     }
 
+    /**
+     * @throws Exception
+     */
     private static function decodeToken(string $jwt): object
     {
         try {
@@ -81,6 +84,9 @@ class TokenService
         return str_replace('Bearer ', '', $token);
     }
 
+    /**
+     * @throws Exception
+     */
     public static function checkRefreshToken(): array
     {
         $token = self::parseToken();
@@ -94,6 +100,9 @@ class TokenService
         return $tokenWithUser;
     }
 
+    /**
+     * @throws Exception
+     */
     public static function updateTokens(): void
     {
         $tokenWithUser = self::checkRefreshToken();
