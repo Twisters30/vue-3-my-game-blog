@@ -258,3 +258,35 @@
 =================
 [2023-02-28 00:22:17] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
 =================
+[2023-02-28 15:11:51] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 15:13:11] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 15:13:11] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 15:13:23] Текст ошибки: Cannot use object of type routes\Request as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 33
+=================
+[2023-02-28 15:13:24] Текст ошибки: Cannot use object of type routes\Request as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 33
+=================
+[2023-02-28 15:13:29] Текст ошибки: Cannot use object of type routes\Request as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 33
+=================
+[2023-02-28 15:14:37] Текст ошибки: Undefined property: routes\Request::$email | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 15
+=================
+[2023-02-28 15:18:26] Текст ошибки: Invalid argument supplied for foreach() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 13
+=================
+[2023-02-28 15:18:26] Текст ошибки: Invalid argument supplied for foreach() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 13
+=================
+[2023-02-28 15:26:23] Текст ошибки: array_merge(): Expected parameter 3 to be an array, null given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 12
+=================
+[2023-02-28 17:45:21] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 17:45:43] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:45:53] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:46:01] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:46:13] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:46:22] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================

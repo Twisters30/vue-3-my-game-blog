@@ -16,7 +16,7 @@ class TokenService
 
         $data = [
             'iat'  => $now->getTimestamp(),
-            'exp' => $now->modify('+15 minute')->getTimestamp(),
+            'exp' => $now->modify(TOKEN_LIFETIME)->getTimestamp(),
             'nbf'  => $now->getTimestamp(),
             'iss'  => DOMAIN,
             'role' => strtolower($userRole)
