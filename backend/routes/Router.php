@@ -4,7 +4,7 @@ namespace routes;
 
 use Exception;
 use routes\RouteAttributeService;
-use sevices\image_compression\TinifyService;
+
 
 class Router
 {
@@ -72,7 +72,7 @@ class Router
 
                 if (method_exists($controllerObject, $action)){
                     $controllerObject->$action(
-                        json_decode(file_get_contents('php://input'), true)
+                        json_decode(file_get_contents('php://input'), true),
                     );
                 } else {
                     throw new Exception("method $action does not exists", 500);

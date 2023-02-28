@@ -6,12 +6,12 @@ use controllers\BaseController;
 use Exception;
 use controllers\TokenService;
 use models\Post\PostStatus;
-use services\interfaces\image_compression\imageCompressionInterface;
+use services\interfaces\image_compression\ImageCompressionInterface;
 use services\ServiceContainer;
 
 class PostController extends BaseController
 {
-    public imageCompressionInterface $compressor;
+    private ImageCompressionInterface $compressor;
 
     /**
      * @throws Exception
@@ -20,7 +20,7 @@ class PostController extends BaseController
     {
         parent::__construct($route);
         TokenService::checkAccessToken($this->route['attributes']['role']);
-        $this->compressor = ServiceContainer::getService(imageCompressionInterface::class);
+        $this->compressor = ServiceContainer::getService(ImageCompressionInterface::class);
     }
 
     /**
@@ -50,8 +50,9 @@ class PostController extends BaseController
     {
         $this->allowMethod('post');
 
-        $result = $this->compressor->compress($_FILES['image']);
-        dd(1, $_POST, $_FILES, $result);
+        $result = $this->compressor->compress($_FILES['image']['tmp_name']);
+
+        dd(1, $_POST, $_FILES);
 
     }
 }

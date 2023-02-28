@@ -6,15 +6,12 @@
             "models\\": "models",
             "errors\\": "errors",
             "validation\\": "validation",
-            "services\\": "services"
+            "services\\":  "services"
         }
     },
     "require": {
         "robmorgan/phinx": "^0.13.4",
         "firebase/php-jwt": "^6.3",
         "tinify/tinify": "^1.6"
-    },
-    "config": {
-        "disable-tls": false
     }
 }

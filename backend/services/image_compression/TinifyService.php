@@ -1,22 +1,20 @@
 <?php
 
+namespace services\image_compression;
 
-namespace sevices\image_compression;
+use services\interfaces\image_compression\ImageCompressionInterface;
 
-
-use services\interfaces\image_compression\imageCompressionInterface;
-
-class TinifyService implements imageCompressionInterface
+class TinifyService implements ImageCompressionInterface
 {
+
     public function __construct()
     {
         self::setKey();
     }
-
     public function compress($file)
     {
-        $sourceData = file_get_contents("unoptimized.jpg");
-        $resultData = \Tinify\fromBuffer($sourceData)->toBuffer();
+        $source = \Tinify\fromFile($file);
+        return $source->toFile(ROOT.'public/images/compressed_image.jpg');
     }
 
     private static function setKey(): void

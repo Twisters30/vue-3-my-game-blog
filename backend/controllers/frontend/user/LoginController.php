@@ -12,7 +12,7 @@ use services\ServiceContainer;
 
 class LoginController extends BaseController
 {
-    private ValidatorInterface $validator;
+    public ValidatorInterface $validator;
 
     public function __construct($route)
     {

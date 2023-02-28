@@ -1,21 +1,20 @@
 <?php
 
-
 namespace services;
-
 
 class ServiceContainer
 {
     private static array $services = [];
 
-    public static  function register($interface, $resolver): void
+    public static function register($interface, $resolver): void
     {
         self::$services[$interface] = $resolver;
     }
+
     public static function getService($interface): object
     {
         if (!isset(self::$services[$interface])) {
-            throw new \Exception("Сервис {$interface} не найден");
+            throw new \Exception("Сервис {$interface} не найден", 500);
         }
 
         $resolver = self::$services[$interface];
