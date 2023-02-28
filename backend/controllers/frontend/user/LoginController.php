@@ -7,6 +7,7 @@ use Exception;
 use models\User\User;
 use controllers\TokenService;
 use models\User\RefreshToken;
+use routes\Request;
 use validation\interfaces\ValidatorInterface;
 use services\ServiceContainer;
 
@@ -23,17 +24,20 @@ class LoginController extends BaseController
     /**
      * @throws Exception
      */
-    public function login($request): void
+    public function login(Request $request): void
     {
         $this->allowMethod('post');
 
-        $this->validator->validate(['password' => 'randompassword'], config('validation\rules\login\LoginRules'));
+        $this->validator->validate(
+            ['password' => 'randompassword'],
+            config('validation\rules\login\LoginRules')
+        );
 
         $userModel = new User();
-        $user = $userModel->userWithRole('email', $request['email']);
+        $user = $userModel->userWithRole('email', $request->email);
 
         if (!$user ||
-            !password_verify($request['password'], $user['password']))
+            !password_verify($request->password, $user['password']))
         {
             throw new Exception('Пользователь или пароль не совпадают', 404);
         }

@@ -6,6 +6,7 @@ use controllers\BaseController;
 use Exception;
 use controllers\TokenService;
 use models\Post\PostStatus;
+use routes\Request;
 use services\interfaces\image_compression\ImageCompressionInterface;
 use services\ServiceContainer;
 
@@ -46,8 +47,10 @@ class PostController extends BaseController
     /**
      * @throws Exception
      */
-    public function store()
+    public function store(Request $request)
     {
+        dd(1, $request->files());
+
         $this->allowMethod('post');
 
         $result = $this->compressor->compress($_FILES['image']['tmp_name']);
