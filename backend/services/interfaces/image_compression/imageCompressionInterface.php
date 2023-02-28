@@ -1,8 +1,7 @@
 <?php
 
 namespace services\interfaces\image_compression;
-
-interface imageCompressionInterface
+interface ImageCompressionInterface
 {
     public function compress($file);
 }
