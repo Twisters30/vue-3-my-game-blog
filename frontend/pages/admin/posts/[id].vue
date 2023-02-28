@@ -7,25 +7,6 @@
             <AdminBaseForm :post="post" />
           </div>
         </div>
-        <div class="row mb-2">
-          <section class="content">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-outline card-info">
-                  <div class="card-header">
-                    <h3 class="card-title">
-                      Summernote
-                    </h3>
-                  </div>
-                  <div class="card-footer">
-                    Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
-                  </div>
-                </div>
-              </div>
-              <!-- /.col-->
-            </div>
-          </section>
-        </div>
       </div>
     </section>
   </div>

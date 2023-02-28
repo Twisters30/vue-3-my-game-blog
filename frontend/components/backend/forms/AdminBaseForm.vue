@@ -34,7 +34,7 @@
         </div>
       </div>
       <Editor v-model="data" />
-      <div class="card-footer">
+      <div class="card-footer bg-transparent">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>

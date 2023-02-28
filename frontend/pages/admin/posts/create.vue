@@ -2,8 +2,9 @@
   <div class="content-wrapper">
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row">
-          <div class="row col-md-6">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6 col-sm-12">
+            <BaseTitle />
             <AdminBaseForm
                 :post="adminPostsStore.createFormData"
                 :createFormData="adminPostsStore.createFormData"
@@ -11,26 +12,6 @@
                 @create-post="adminPostsStore.createPost"
             />
           </div>
-        </div>
-        <div class="row mb-2">
-          <section class="content">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-outline card-info">
-                  <div class="card-header">
-                    <h3 class="card-title">
-                      Summernote
-                    </h3>
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-footer">
-                    Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
-                  </div>
-                </div>
-              </div>
-              <!-- /.col-->
-            </div>
-          </section>
         </div>
       </div>
     </section>
@@ -40,7 +21,7 @@
 <script setup>
 import AdminBaseForm from "@/components/backend/forms/AdminBaseForm.vue";
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
-
+import BaseTitle from "@/components/backend/titles/BaseTitle.vue";
 const postStatuses = ref(null);
 const adminPostsStore = useAdminPostsStore();
 const post = reactive({});

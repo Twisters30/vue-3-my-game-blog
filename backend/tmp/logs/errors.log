@@ -200,3 +200,187 @@
 =================
 [2023-02-27 02:59:39] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
 =================
+[2023-02-27 20:36:36] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 20:46:05] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 20:46:05] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 20:52:22] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 20:52:22] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 20:58:27] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 20:58:27] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:03:38] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:03:39] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:11:00] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:11:00] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:11:49] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:11:49] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:14:43] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:14:43] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:20:08] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:37:35] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:37:35] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:38:11] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:38:22] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:43:15] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:43:15] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:45:38] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:45:39] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:46:46] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:46:47] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:57:27] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:57:27] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:57:51] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:57:51] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:05:05] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:05:05] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:06:24] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:06:24] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:21:20] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:21:20] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:21:40] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:21:40] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:22:09] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:22:09] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:22:21] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:22:21] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:27:53] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:28:01] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:28:01] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:28:36] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:28:40] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:28:40] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:30:58] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:31:17] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:32:04] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:32:10] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:32:10] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:32:47] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:32:54] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:32:54] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:33:27] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:33:36] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:33:36] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:34:22] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:34:22] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:34:29] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:34:34] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:34:34] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:35:12] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:35:12] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:36:40] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:38:14] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:39:02] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:39:02] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:42:36] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:42:36] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:44:08] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:44:08] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:45:06] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:46:14] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:47:17] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:47:17] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:47:45] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:47:45] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:48:56] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:49:01] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 22:49:01] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\imageCompressionInterface, instance of validation\Validator given, called in D:\PHP\Projects\Blog\backend\routes\Router.php on line 71 | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 23:31:43] Текст ошибки: Сервис validation\interfaces\ValidatorInterface не найден | Файл: D:\PHP\Projects\Blog\backend\services\ServiceContainer.php | Строка: 18
+=================
+[2023-02-27 23:32:51] Текст ошибки: Undefined index: validation\interfaces\ValidatorInterface | Файл: D:\PHP\Projects\Blog\backend\services\ServiceContainer.php | Строка: 21
+=================
+[2023-02-27 23:35:16] Текст ошибки: Return value of services\ServiceContainer::getService() must be of the type array, object returned | Файл: D:\PHP\Projects\Blog\backend\services\ServiceContainer.php | Строка: 27
+=================
+[2023-02-27 23:35:21] Текст ошибки: Return value of services\ServiceContainer::getService() must be of the type array, object returned | Файл: D:\PHP\Projects\Blog\backend\services\ServiceContainer.php | Строка: 27
+=================
+[2023-02-27 23:39:42] Текст ошибки: Class 'sevices\image_compression\TinifyService' not found | Файл: D:\PHP\Projects\Blog\backend\services\services.php | Строка: 9
+=================
+[2023-02-28 00:26:05] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 00:26:12] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 00:26:20] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 00:26:20] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================

@@ -4,22 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="posts/id&#10;posts/create">
-      <change afterPath="$PROJECT_DIR$/frontend/components/buttons/ButtonBorderAnimate.vue" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="admin/posts/create">
+      <change afterPath="$PROJECT_DIR$/backend/services/ServiceContainer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/services/image_compression/TinifyService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/services/interfaces/image_compression/imageCompressionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/services/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/components/backend/titles/BaseTitle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/init.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/frontend/user/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/frontend/user/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/Post/PostStatuses.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Post/PostStatuses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/Editor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/Editor.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/backend/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/backend/SideBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/forms/LoginForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +95,7 @@
       <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/backend/vendor/psr/container" />
       <path value="$PROJECT_DIR$/backend/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/backend/vendor/tinify/tinify" />
     </include_path>
   </component>
   <component name="ProjectId" id="2LNsMu8e60XZX9NcbwHHIwKPoQr" />
@@ -95,16 +112,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP\Projects\Blog\backend\services\image_compression" />
       <recent name="D:\PHP\Projects\Blog\frontend\components\backend\forms" />
       <recent name="D:\PHP\Projects\Blog\frontend\pages\admin\posts" />
       <recent name="D:\PHP\Projects\Blog\frontend\pages\guest" />
       <recent name="D:\PHP\Projects\Blog\backend\controllers" />
-      <recent name="D:\PHP\Projects\Blog\frontend\components\frontend" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -154,7 +172,8 @@
       <workItem from="1677163592564" duration="28717000" />
       <workItem from="1677281003452" duration="53829000" />
       <workItem from="1677363207340" duration="3405000" />
-      <workItem from="1677429441923" duration="17353000" />
+      <workItem from="1677429441923" duration="20961000" />
+      <workItem from="1677517303903" duration="21396000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -408,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677338773466</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="admin/posts/create">
+      <created>1677513288464</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1677513288464</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +453,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="'models-&gt;create method return array'" />
     <MESSAGE value="'change gitignore - vendors'" />
     <MESSAGE value="'model-&gt;update'" />
     <MESSAGE value="'model-&gt;delete'" />
@@ -452,6 +477,7 @@
     <MESSAGE value="lte hell" />
     <MESSAGE value="admin/posts added" />
     <MESSAGE value="posts/id&#10;posts/create" />
-    <option name="LAST_COMMIT_MESSAGE" value="posts/id&#10;posts/create" />
+    <MESSAGE value="admin/posts/create" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin/posts/create" />
   </component>
 </project>
