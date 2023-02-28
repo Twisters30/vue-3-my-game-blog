@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9b88be2296c3f50b81fc263b3a53f8892a84f6c7',
+    'reference' => 'e6557ca6244458b2e898dc886206622515aa44d6',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9b88be2296c3f50b81fc263b3a53f8892a84f6c7',
+      'reference' => 'e6557ca6244458b2e898dc886206622515aa44d6',
     ),
     'cakephp/core' => 
     array (
@@ -237,6 +237,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '0a01071610fd861cc160dfb7e2682ceec66064cb',
+    ),
+    'tinify/tinify' => 
+    array (
+      'pretty_version' => '1.6.0',
+      'version' => '1.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fe422931c64d63ae0e1b5f29d7fa8627503e31cd',
     ),
   ),
 );

@@ -17,4 +17,6 @@ return array(
     '0d59ee240a4cd96ddbb4ff164fccea4d' => $vendorDir . '/symfony/polyfill-php73/bootstrap.php',
     'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
     '948ad5488880985ff1c06721a4e447fe' => $vendorDir . '/cakephp/utility/bootstrap.php',
+    '74ed299072414d276bb7568fe71d5b0c' => $vendorDir . '/tinify/tinify/lib/Tinify.php',
+    '9635627915aaea7a98d6d14d04ca5b56' => $vendorDir . '/tinify/tinify/lib/Tinify/Exception.php',
 );

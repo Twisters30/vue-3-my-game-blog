@@ -7,10 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'validation\\' => array($baseDir . '/validation'),
+    'services\\' => array($baseDir . '/services'),
     'routes\\' => array($baseDir . '/routes'),
     'models\\' => array($baseDir . '/models'),
     'errors\\' => array($baseDir . '/errors'),
     'controllers\\' => array($baseDir . '/controllers'),
+    'Tinify\\' => array($vendorDir . '/tinify/tinify/lib/Tinify'),
     'Symfony\\Polyfill\\Php81\\' => array($vendorDir . '/symfony/polyfill-php81'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Symfony\\Polyfill\\Php73\\' => array($vendorDir . '/symfony/polyfill-php73'),

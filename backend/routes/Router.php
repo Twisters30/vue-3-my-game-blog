@@ -4,7 +4,7 @@ namespace routes;
 
 use Exception;
 use routes\RouteAttributeService;
-use validation\Validator;
+
 
 class Router
 {
@@ -67,11 +67,13 @@ class Router
 
             if (class_exists($controller)){
 
-                $controllerObject = new $controller(self::$route, new Validator());
+                $controllerObject = new $controller(self::$route);
                 $action = self::$route['action'];
 
                 if (method_exists($controllerObject, $action)){
-                    $controllerObject->$action(json_decode(file_get_contents('php://input'), true));
+                    $controllerObject->$action(
+                        json_decode(file_get_contents('php://input'), true),
+                    );
                 } else {
                     throw new Exception("method $action does not exists", 500);
                 }

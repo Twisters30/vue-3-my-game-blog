@@ -8,15 +8,16 @@ use models\User\User;
 use controllers\TokenService;
 use models\User\RefreshToken;
 use validation\interfaces\ValidatorInterface;
+use services\ServiceContainer;
 
 class LoginController extends BaseController
 {
-    private object $validator;
+    public ValidatorInterface $validator;
 
-    public function __construct($route, ValidatorInterface $validator)
+    public function __construct($route)
     {
         parent::__construct($route);
-        $this->validator = $validator;
+        $this->validator = ServiceContainer::getService(ValidatorInterface::class);
     }
 
     /**

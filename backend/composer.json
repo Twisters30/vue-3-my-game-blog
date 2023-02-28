@@ -5,11 +5,13 @@
             "routes\\": "routes",
             "models\\": "models",
             "errors\\": "errors",
-            "validation\\": "validation"
+            "validation\\": "validation",
+            "services\\":  "services"
         }
     },
     "require": {
         "robmorgan/phinx": "^0.13.4",
-        "firebase/php-jwt": "^6.3"
+        "firebase/php-jwt": "^6.3",
+        "tinify/tinify": "^1.6"
     }
 }
