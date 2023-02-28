@@ -258,3 +258,9 @@
 =================
 [2023-02-28 00:22:17] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
 =================
+[2023-02-28 03:10:07] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 03:10:07] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 03:57:10] Текст ошибки: Undefined index: image | Файл: D:\PHP\Projects\Blog\backend\controllers\admin\posts\PostController.php | Строка: 53
+=================
