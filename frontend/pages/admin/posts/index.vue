@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="mb-4">
+        <div class="my-4">
           <NuxtLink to="/admin/posts/create" class="btn btn-success">Создать</NuxtLink>
         </div>
         <div class="row mb-2">
@@ -34,7 +34,9 @@
 import BaseTable  from "@/components/BaseTable.vue";
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
 const  adminPostsStore = useAdminPostsStore();
-
+onMounted(() => {
+  adminPostsStore.getPosts();
+})
 
 </script>
 
