@@ -290,3 +290,5 @@
 =================
 [2023-02-28 17:46:22] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
 =================
+[2023-03-01 04:20:15] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: /home/vers/PhpstormProjects/blog/Blog/backend/controllers/BaseController.php | Строка: 26
+=================
