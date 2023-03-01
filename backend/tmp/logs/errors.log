@@ -290,3 +290,321 @@
 =================
 [2023-02-28 17:46:22] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
 =================
+[2023-02-28 18:50:42] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 18:53:15] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 18:53:26] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 18:53:26] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 18:54:30] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 18:55:24] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 20:56:50] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 20:56:50] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:00:28] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:05:01] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:05:01] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:16:19] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:16:38] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:16:39] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:16:43] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:16:43] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:18:15] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:18:35] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:18:39] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:18:39] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:21:09] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:23:54] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:23:54] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:25:24] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:25:24] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:25:55] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:26:57] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:27:09] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:27:16] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:27:16] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:27:32] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:27:36] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:27:36] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:28:10] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:29:21] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:29:21] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:29:24] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:29:24] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:29:40] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:29:43] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:29:44] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:30:00] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:30:00] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:30:05] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:30:05] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-28 21:30:50] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 21:31:00] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 21:31:00] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 21:32:09] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 21:32:09] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 23:44:41] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 23:44:41] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 23:45:42] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 23:45:42] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-02-28 23:51:05] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 23:51:05] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-02-28 23:55:47] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 23:55:47] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 01:36:57] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 01:36:57] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 01:39:50] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 01:39:50] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 01:45:25] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 01:45:25] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:06:26] Текст ошибки: Undefined property: stdClass::$role | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-03-01 02:07:56] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:07:56] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:10:00] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:10:00] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:21:32] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:21:32] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:24:47] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:24:48] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:26:10] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 02:26:10] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 02:27:14] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 02:27:14] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 02:28:47] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:28:47] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:29:04] Текст ошибки: Ошибка авторизации | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-03-01 02:29:04] Текст ошибки: route favicon.ico does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 85
+=================
+[2023-03-01 02:30:21] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:30:21] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:30:21] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:30:21] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:30:22] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:30:22] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:32:07] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:32:07] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:32:07] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:32:07] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:33:36] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:33:37] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:35:11] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:35:11] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:35:11] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:35:11] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 02:42:40] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:42:40] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:46:50] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:46:50] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:47:52] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:47:52] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:51:13] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:51:13] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:52:28] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:52:28] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:53:55] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 02:53:55] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:04:33] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:04:34] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 03:09:09] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:09:09] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 03:15:11] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:15:11] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 03:22:28] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:24:28] Текст ошибки: Ошибка авторизации | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-03-01 03:24:39] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:25:58] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:42:27] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:44:58] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:47:33] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:48:35] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:50:32] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:50:34] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:54:20] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:57:10] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 03:59:24] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:01:41] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:01:41] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:02:19] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:02:19] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:08:46] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:08:46] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:08:54] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 04:10:55] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:12:19] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:19:26] Текст ошибки: Cannot use object of type routes\Request as array | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\RegisterController.php | Строка: 18
+=================
+[2023-03-01 04:23:23] Текст ошибки: Cannot use object of type routes\Request as array | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\RegisterController.php | Строка: 25
+=================
+[2023-03-01 04:23:59] Текст ошибки: Argument 1 passed to models\Model::create() must be of the type array, object given, called in D:\PHP\Projects\Blog\backend\controllers\frontend\user\RegisterController.php on line 26 | Файл: D:\PHP\Projects\Blog\backend\models\Model.php | Строка: 89
+=================
+[2023-03-01 04:25:24] Текст ошибки: array_keys() expects parameter 1 to be array, object given | Файл: D:\PHP\Projects\Blog\backend\models\Model.php | Строка: 91
+=================
+[2023-03-01 04:32:52] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:32:53] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:33:29] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 04:33:52] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 04:36:37] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:36:37] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:37:10] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 04:38:50] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:38:50] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:39:52] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:39:53] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:40:08] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:40:09] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:40:15] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:40:15] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:42:54] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:42:54] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 04:42:58] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
