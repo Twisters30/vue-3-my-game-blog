@@ -183,6 +183,7 @@ const preloader = ref(null);
 setTimeout(() => {
   preloader.value.style.height = 0 + 'px';
   preloader.value.firstChild.style.display = 'none';
+  $('ul[data-widget="treeview"]').Treeview('init');
 },100)
 onMounted(() => {
   useHead({
@@ -198,7 +199,6 @@ onMounted(() => {
       { rel:'stylesheet',href:'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css'},
     ],
   });
-  $('ul[data-widget="treeview"]').Treeview('init');
 })
 </script>
 

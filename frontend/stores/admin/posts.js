@@ -2,9 +2,13 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import { apiHost, apiAdminPostsIndex, apiAdminGetPostStatuses, apiAdminCreatePost } from "~/config/api.js";
 import { useLoginStore } from "~/stores/login.js";
+import { useAxiosStore } from "~/stores/axiosInstance.js";
+
 
 export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const loginStore = useLoginStore();
+    const axiosStore = useAxiosStore()
+    const axiosInstance = axiosStore.setConfigAxios();
     const posts = reactive([
         {
             id:1,
@@ -41,7 +45,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const getPostStatuses = async () => {
         const accessToken = loginStore.getStorageToken();
         try {
-            const response = await axios.get(`${apiHost}/${apiAdminGetPostStatuses}`,
+            const response = await axiosInstance.get(`${apiHost}/${apiAdminGetPostStatuses}`,
                 {
                     headers: {'Authorization': `Bearer ${accessToken}`}
                 }
@@ -57,17 +61,13 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const createPost = async (data) => {
         const accessToken = loginStore.getStorageToken();
         const bodyFormData = new FormData();
-        const parseData = Object.entries(data);
-        // parseData.forEach(el => {
-        //     console.log(el)
-        // })
         for (const [key,value] of Object.entries(data)) {
             console.log(key,value)
             bodyFormData.append(key, value);
         }
         console.log(bodyFormData);
         try {
-            const response = await axios.post(`${apiHost}/${apiAdminCreatePost}`,
+            const response = await axiosInstance.post(`${apiHost}/${apiAdminCreatePost}`,
                     bodyFormData,
                 {
                     headers: {
@@ -86,7 +86,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         const accessToken = loginStore.getStorageToken();
         console.log(accessToken, 'storeAdminPosts');
         try {
-            const response = await axios.get(`${apiHost}/${apiAdminPostsIndex}`,
+            const response = await axiosInstance.get(`${apiHost}/${apiAdminPostsIndex}`,
                 {
                     headers: {'Authorization': `Bearer ${accessToken}`}
                 }

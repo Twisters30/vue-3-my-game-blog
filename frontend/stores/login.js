@@ -1,21 +1,21 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 import { useUserRoleStore } from "~/stores/userRole.js";
-import { apiHost, apiLogin, apiLogout} from "~/config/api.js";
+import {apiHost, apiLogin, apiLogout, apiRefreshToken} from "~/config/api.js";
+import { useAxiosStore } from "~/stores/axiosInstance.js";
+import { useLayoutStore } from "~/stores/layout.js";
 
 
 export const useLoginStore = defineStore('LoginStore', () => {
     const userRoleStore = useUserRoleStore();
-
     const isLoginPageShow = ref(false);
+    const layoutStore = useLayoutStore()
     const formData = reactive({});
     let isUserDataLoading = ref(true);
     let token = reactive({
         refreshToken:false,
         accessToken:false
     });
-
-
     const acceptWindowShow = ref(false);
 
     const updateFormDataFromRegister = ({email, password}) => {
@@ -38,6 +38,9 @@ export const useLoginStore = defineStore('LoginStore', () => {
         return accessToken;
     }
 
+    const getRefreshToken = () => token.refreshToken;
+    const getAccessToken = () => token.accessToken;
+
     const showLoginPage = () => isLoginPageShow.value = !isLoginPageShow.value;
 
     const closeModalOutside = (event) => {
@@ -53,6 +56,10 @@ export const useLoginStore = defineStore('LoginStore', () => {
         userRoleStore.removeUserRole();
     }
 
+    const setStorageToken = (token) => {
+        sessionStorage.setItem('token',JSON.stringify(token));
+    }
+
     const loginAction = async (valueForm) => {
         try {
             const response = await axios.post(`${apiHost}/${apiLogin}`,{
@@ -63,16 +70,15 @@ export const useLoginStore = defineStore('LoginStore', () => {
                 showLoginPage();
                 token.accessToken = response.data.accessToken;
                 token.refreshToken = response.data.refreshToken;
-                if (response.data.accessToken) {
-                    sessionStorage.setItem('token',JSON.stringify(token));
-                    const router = useRouter();
-                    await router.push({ path: "/articles" });
-                    userRoleStore.setUserRole(response.data.role);
-                    if (response.data.role.toLocaleLowerCase() === 'admin' || response.data.role.toLocaleLowerCase() === 'author') {
-                        await router.push({ path: "/admin/dashboard" });
-                    }
-
+                sessionStorage.setItem('token',JSON.stringify(token));
+                const router = useRouter();
+                const userRole = response.data.role.toLocaleLowerCase()
+                userRoleStore.setUserRole(response.data.role);
+                if (userRole === 'admin' || userRole === 'author') {
+                    await router.push({ path: "/admin/dashboard" });
+                    return;
                 }
+                await router.push({ path: "/articles" });
             }
         } catch (error) {
             console.log(error);
@@ -109,5 +115,8 @@ export const useLoginStore = defineStore('LoginStore', () => {
         acceptWindowShow,
         updateFormDataFromRegister,
         isUserDataLoading,
+        setStorageToken,
+        getRefreshToken,
+        getAccessToken
     };
 })

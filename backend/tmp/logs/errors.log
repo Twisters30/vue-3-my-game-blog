@@ -1,0 +1,292 @@
+[2023-02-12 00:21:49] Текст ошибки: Trying to access array offset on value of type null | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 93
+=================
+[2023-02-12 00:50:02] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 16 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 16
+=================
+[2023-02-12 00:50:47] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 16 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 16
+=================
+[2023-02-12 00:50:49] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 16 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 16
+=================
+[2023-02-12 00:55:06] Текст ошибки: Пользователь admin@admin.com уже существует | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\RegisterController.php | Строка: 21
+=================
+[2023-02-12 01:24:08] Текст ошибки: Too few arguments to function controllers\BaseController::__construct(), 1 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 86 and exactly 2 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 15
+=================
+[2023-02-12 01:24:47] Текст ошибки: Undefined property: controllers\frontend\posts\PostController::$attributes | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\posts\PostController.php | Строка: 14
+=================
+[2023-02-12 01:40:28] Текст ошибки: class controllers\controller does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 99
+=================
+[2023-02-12 01:44:57] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================
+[2023-02-12 01:45:10] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================
+[2023-02-12 01:46:40] Текст ошибки: class controllers\posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 99
+=================
+[2023-02-12 01:47:22] Текст ошибки: Недопустимый метод POST, необходим GET | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================
+[2023-02-12 01:53:51] Текст ошибки: class controllers\{}posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 105
+=================
+[2023-02-12 01:54:36] Текст ошибки: class controllers\posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 105
+=================
+[2023-02-12 01:57:11] Текст ошибки: class controllers\posts\PostController does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 106
+=================
+[2023-02-12 01:57:38] Текст ошибки: Undefined index: namespace | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 88
+=================
+[2023-02-13 12:45:49] Текст ошибки: route  does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 106
+=================
+[2023-02-13 12:46:04] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 78
+=================
+[2023-02-13 12:46:23] Текст ошибки: Недопустимый метод POST, необходим GET | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 28
+=================
+[2023-02-14 18:08:53] Текст ошибки: Call to undefined method controllers\admin\posts\PostController::checkToken() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 17
+=================
+[2023-02-14 18:09:12] Текст ошибки: Недопустимый метод GET, необходим POST | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\BaseController.php | Строка: 26
+=================
+[2023-02-14 21:29:44] Текст ошибки: Undefined property: stdClass::$exp | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 53
+=================
+[2023-02-14 21:36:40] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:38:06] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:40:48] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:42:36] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:47:11] Текст ошибки: Class 'controllers\Exception' not found | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:47:39] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 21:51:00] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:51:01] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:51:28] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:51:34] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 50
+=================
+[2023-02-14 21:53:04] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:53:06] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:53:18] Текст ошибки: Signature verification failed | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 140
+=================
+[2023-02-14 21:54:04] Текст ошибки: Expired token | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 162
+=================
+[2023-02-14 21:57:41] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 21:57:55] Текст ошибки: Signature verification failed | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\firebase\php-jwt\src\JWT.php | Строка: 140
+=================
+[2023-02-14 21:58:21] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 21:59:25] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-14 22:04:47] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-15 16:40:47] Текст ошибки: route  does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 81
+=================
+[2023-02-15 16:40:56] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 64
+=================
+[2023-02-15 16:40:57] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 64
+=================
+[2023-02-15 16:43:50] Текст ошибки: Ошибка авторизации | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 64
+=================
+[2023-02-15 20:20:54] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 52
+=================
+[2023-02-15 20:26:45] Текст ошибки: Too few arguments to function controllers\TokenService::checkAccessToken(), 0 passed in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php on line 18 and exactly 1 expected | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 44
+=================
+[2023-02-15 20:27:35] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-15 20:28:17] Текст ошибки: Cannot use object of type stdClass as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 54
+=================
+[2023-02-15 20:29:30] Текст ошибки: маршрут не доступен для вашей роли | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 55
+=================
+[2023-02-15 20:29:35] Текст ошибки: маршрут не доступен для вашей роли | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 55
+=================
+[2023-02-15 20:29:54] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 51
+=================
+[2023-02-15 20:32:03] Текст ошибки: маршрут не доступен для вашей роли | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 55
+=================
+[2023-02-16 00:32:17] Текст ошибки: date() expects at least 1 parameter, 0 given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 96
+=================
+[2023-02-16 00:33:51] Текст ошибки: Call to undefined function controllers\now() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 96
+=================
+[2023-02-16 00:37:46] Текст ошибки: Return value of models\User\RefreshToken::tokenOwner() must be of the type array, null returned | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\models\User\RefreshToken.php | Строка: 20
+=================
+[2023-02-16 00:39:14] Текст ошибки: Return value of models\User\RefreshToken::tokenOwner() must be of the type array, null returned | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\models\User\RefreshToken.php | Строка: 20
+=================
+[2023-02-16 00:41:25] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-02-16 00:43:03] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-02-16 00:43:05] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-02-16 00:43:52] Текст ошибки: refresh token не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 82
+=================
+[2023-02-19 22:08:46] Текст ошибки: ucfirst() expects parameter 1 to be string, array given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 15
+=================
+[2023-02-19 22:09:12] Текст ошибки: ucfirst() expects parameter 1 to be string, array given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 15
+=================
+[2023-02-19 22:09:13] Текст ошибки: ucfirst() expects parameter 1 to be string, array given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 15
+=================
+[2023-02-19 22:36:01] Текст ошибки: explode() expects parameter 2 to be string, array given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 40
+=================
+[2023-02-19 22:37:31] Текст ошибки: Undefined index: password | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 20
+=================
+[2023-02-19 22:37:48] Текст ошибки: Undefined index: password | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 20
+=================
+[2023-02-19 22:39:05] Текст ошибки: Undefined index: password | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 20
+=================
+[2023-02-19 22:39:36] Текст ошибки: Undefined index: password | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 21
+=================
+[2023-02-19 22:43:55] Текст ошибки: Undefined offset: 1 | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 18
+=================
+[2023-02-19 22:59:59] Текст ошибки: Undefined index: password | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\validation\Validator.php | Строка: 26
+=================
+[2023-02-19 23:37:46] Текст ошибки: файла validation/rules/login/LoginRules.php не существует | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\helpers\helpers.php | Строка: 28
+=================
+[2023-02-19 23:38:03] Текст ошибки: файла validation\rules\login\LoginRules.php не существует | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\helpers\helpers.php | Строка: 28
+=================
+[2023-02-21 22:05:47] Текст ошибки: Пользователь или пароль не совпадают | Файл: D:\PHP\Projects\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 37
+=================
+[2023-02-21 23:25:00] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:25:03] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:26:29] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:26:42] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:26:47] Текст ошибки: Return value of controllers\TokenService::decodeToken() must be an instance of controllers\stdClass, instance of stdClass returned | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 70
+=================
+[2023-02-21 23:34:57] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:35:33] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:36:32] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:37:29] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:37:42] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:38:30] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:40:14] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 67
+=================
+[2023-02-21 23:51:19] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 63
+=================
+[2023-02-21 23:52:25] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 63
+=================
+[2023-02-24 17:15:25] Текст ошибки: route favicon.ico does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-24 23:31:26] Текст ошибки: route 123_s.jpg does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-24 23:31:33] Текст ошибки: route favicon.ico does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-24 23:32:02] Текст ошибки: route 123_s.jpg does not exists | Файл: D:\PHP\Projects\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-25 17:05:06] Текст ошибки: route posts/create does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 82
+=================
+[2023-02-25 17:05:32] Текст ошибки: Undefined property: stdClass::$role | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-25 17:05:46] Текст ошибки: Undefined property: stdClass::$role | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 49
+=================
+[2023-02-26 22:42:09] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-26 22:56:13] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-26 23:21:07] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-26 23:21:19] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-27 00:27:20] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-27 02:59:39] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-27 16:59:26] Текст ошибки: Cannot redeclare models\Model::all() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\models\Model.php | Строка: 85
+=================
+[2023-02-27 20:02:51] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\ImageCompressionInterface, instance of validation\Validator given, called in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 71 | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 19
+=================
+[2023-02-27 20:03:15] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must be an instance of services\interfaces\image_compression\ImageCompressionInterface, instance of validation\Validator given, called in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 71 | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 19
+=================
+[2023-02-27 20:34:19] Текст ошибки: route  does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 89
+=================
+[2023-02-27 20:34:19] Текст ошибки: route favicon.ico does not exists | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php | Строка: 89
+=================
+[2023-02-27 20:34:27] Текст ошибки: Access level to controllers\frontend\user\LoginController::$validator must be public (as in class controllers\BaseController) | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 69
+=================
+[2023-02-27 20:34:29] Текст ошибки: Access level to controllers\frontend\user\LoginController::$validator must be public (as in class controllers\BaseController) | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 69
+=================
+[2023-02-27 20:35:32] Текст ошибки: Access level to controllers\frontend\user\LoginController::$validator must be public (as in class controllers\BaseController) | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 69
+=================
+[2023-02-27 20:35:35] Текст ошибки: Access level to controllers\frontend\user\LoginController::$validator must be public (as in class controllers\BaseController) | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 69
+=================
+[2023-02-27 20:36:35] Текст ошибки: Type of controllers\frontend\user\LoginController::$validator must be ?object (as in class controllers\BaseController) | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 69
+=================
+[2023-02-27 20:36:39] Текст ошибки: Type of controllers\frontend\user\LoginController::$validator must be ?object (as in class controllers\BaseController) | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 69
+=================
+[2023-02-27 20:37:41] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must implement interface services\interfaces\image_compression\ImageCompressionInterface, instance of validation\Validator given, called in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 74 | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 16
+=================
+[2023-02-27 20:37:55] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must implement interface services\interfaces\image_compression\ImageCompressionInterface, instance of validation\Validator given, called in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 74 | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 16
+=================
+[2023-02-27 21:52:07] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must implement interface services\interfaces\image_compression\ImageCompressionInterface, instance of validation\Validator given, called in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 74 | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 21:52:10] Текст ошибки: Argument 2 passed to controllers\admin\posts\PostController::__construct() must implement interface services\interfaces\image_compression\ImageCompressionInterface, instance of validation\Validator given, called in C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Router.php on line 74 | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\admin\posts\PostController.php | Строка: 18
+=================
+[2023-02-27 23:28:33] Текст ошибки: Class 'services\Exception' not found | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\ServiceContainer.php | Строка: 17
+=================
+[2023-02-27 23:28:37] Текст ошибки: Class 'services\Exception' not found | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\ServiceContainer.php | Строка: 17
+=================
+[2023-02-27 23:29:40] Текст ошибки: Сервис validation\interfaces\ValidatorInterface не найден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\ServiceContainer.php | Строка: 17
+=================
+[2023-02-27 23:29:43] Текст ошибки: Сервис validation\interfaces\ValidatorInterface не найден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\ServiceContainer.php | Строка: 17
+=================
+[2023-02-27 23:31:42] Текст ошибки: Сервис validation\interfaces\ValidatorInterface не найден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\ServiceContainer.php | Строка: 17
+=================
+[2023-02-27 23:31:52] Текст ошибки: Сервис validation\interfaces\ValidatorInterface не найден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\ServiceContainer.php | Строка: 17
+=================
+[2023-02-27 23:32:25] Текст ошибки: Сервис validation\interfaces\ValidatorInterface не найден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\ServiceContainer.php | Строка: 17
+=================
+[2023-02-27 23:36:21] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 38
+=================
+[2023-02-27 23:37:08] Текст ошибки: file_get_contents() expects parameter 1 to be a valid path, array given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\services\image_compression\TinifyService.php | Строка: 13
+=================
+[2023-02-27 23:49:53] Текст ошибки: file_get_contents() expects parameter 1 to be a valid path, array given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\tinify\tinify\lib\Tinify\Source.php | Строка: 9
+=================
+[2023-02-27 23:50:28] Текст ошибки: file_put_contents(/compressed_image.jpg): failed to open stream: Permission denied | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\vendor\tinify\tinify\lib\Tinify\Result.php | Строка: 22
+=================
+[2023-02-27 23:54:01] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 00:22:17] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 00:22:17] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 15:11:51] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 15:13:11] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 15:13:11] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 15:13:23] Текст ошибки: Cannot use object of type routes\Request as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 33
+=================
+[2023-02-28 15:13:24] Текст ошибки: Cannot use object of type routes\Request as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 33
+=================
+[2023-02-28 15:13:29] Текст ошибки: Cannot use object of type routes\Request as array | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 33
+=================
+[2023-02-28 15:14:37] Текст ошибки: Undefined property: routes\Request::$email | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 15
+=================
+[2023-02-28 15:18:26] Текст ошибки: Invalid argument supplied for foreach() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 13
+=================
+[2023-02-28 15:18:26] Текст ошибки: Invalid argument supplied for foreach() | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 13
+=================
+[2023-02-28 15:26:23] Текст ошибки: array_merge(): Expected parameter 3 to be an array, null given | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\routes\Request.php | Строка: 12
+=================
+[2023-02-28 17:45:21] Текст ошибки: Токен более не валиден | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-02-28 17:45:43] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:45:53] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:46:01] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:46:13] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
+[2023-02-28 17:46:22] Текст ошибки: Пользователь или пароль не совпадают | Файл: C:\Users\vers1\PhpstormProjects\twist\Blog\backend\controllers\frontend\user\LoginController.php | Строка: 42
+=================
