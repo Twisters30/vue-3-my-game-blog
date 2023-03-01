@@ -9,7 +9,7 @@ import { useLayoutStore } from "~/stores/layout.js";
 export const useLoginStore = defineStore('LoginStore', () => {
     const userRoleStore = useUserRoleStore();
     const isLoginPageShow = ref(false);
-    const layoutStore = useLayoutStore()
+    const layoutStore = useLayoutStore();
     const formData = reactive({});
     let isUserDataLoading = ref(true);
     let token = reactive({

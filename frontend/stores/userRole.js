@@ -14,8 +14,8 @@ export const useUserRoleStore = defineStore('userRole', () => {
 
     const getUserRoleStorage = () => {
         const userRoleInStorage = sessionStorage.getItem('userRole') || getUserRole();
-        console.log(userRoleInStorage)
         userRole.value = userRoleInStorage;
+        return userRoleInStorage
     }
     const removeUserRole = () => {
         userRole.value = null;

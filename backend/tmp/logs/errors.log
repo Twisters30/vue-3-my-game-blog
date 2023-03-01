@@ -608,3 +608,37 @@
 =================
 [2023-03-01 04:42:58] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
 =================
+[2023-03-01 12:12:08] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:12:08] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:14:12] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:14:12] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:19:42] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:52:45] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:52:45] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:52:46] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 12:52:46] Текст ошибки: refresh token не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 98
+=================
+[2023-03-01 12:53:50] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 12:54:22] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 12:54:37] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 12:56:51] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 12:56:58] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 13:00:43] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 13:00:55] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================
+[2023-03-01 13:01:21] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
+=================

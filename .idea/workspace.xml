@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="axios-jwt">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="intercept">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/frontend/user/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/frontend/user/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/layouts/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/refreshToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/userRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/userRole.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +151,8 @@
       <workItem from="1677429441923" duration="20961000" />
       <workItem from="1677517303903" duration="26213000" />
       <workItem from="1677602863385" duration="13232000" />
-      <workItem from="1677623429628" duration="12891000" />
+      <workItem from="1677623429628" duration="13003000" />
+      <workItem from="1677665250041" duration="11135000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -438,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677603961153</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="intercept">
+      <created>1677642399601</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1677642399601</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +460,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="'headers'" />
     <MESSAGE value="'RegisterController'" />
     <MESSAGE value="'fix'" />
     <MESSAGE value="'fix User uppercase'" />
@@ -482,6 +484,7 @@
     <MESSAGE value="admin/posts/fix" />
     <MESSAGE value="admin/posts/fix-2" />
     <MESSAGE value="axios-jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="axios-jwt" />
+    <MESSAGE value="intercept" />
+    <option name="LAST_COMMIT_MESSAGE" value="intercept" />
   </component>
 </project>
