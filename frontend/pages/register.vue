@@ -5,12 +5,11 @@
     </div>
 </template>
 
-<script>
+<script setup>
     import RegisterForm from '../components/frontend/forms/RegisterForm.vue'
-
-    export default {
-        components: { RegisterForm }
-    }
+    definePageMeta({
+      layout: 'default'
+    })
 </script>
 
 <style lang="scss">

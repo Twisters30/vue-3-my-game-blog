@@ -1,4 +1,4 @@
-import { defineStore } from "pinia";
+import {defineStore} from "pinia";
 
 export const useUserRoleStore = defineStore('userRole', () => {
     const userRole = ref('guest');
@@ -12,10 +12,9 @@ export const useUserRoleStore = defineStore('userRole', () => {
         sessionStorage.setItem('userRole',role);
     }
 
+
     const getUserRoleStorage = () => {
-        const userRoleInStorage = sessionStorage.getItem('userRole') || getUserRole();
-        userRole.value = userRoleInStorage;
-        return userRoleInStorage
+        userRole.value = sessionStorage.getItem('userRole') || getUserRole();
     }
     const removeUserRole = () => {
         userRole.value = null;

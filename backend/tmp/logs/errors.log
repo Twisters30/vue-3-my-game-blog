@@ -642,3 +642,25 @@
 =================
 [2023-03-01 13:01:21] Текст ошибки: Ошибка при декодировании токена | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 66
 =================
+[2023-03-01 18:24:11] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 18:24:11] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 18:24:14] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-01 18:24:14] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-02 15:08:55] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-02 15:08:55] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-02 15:45:55] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-02 15:45:56] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-02 15:45:56] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-02 15:45:56] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================
+[2023-03-02 17:06:40] Текст ошибки: Токен более не валиден | Файл: D:\PHP\Projects\Blog\backend\controllers\TokenService.php | Строка: 62
+=================

@@ -10,30 +10,30 @@
       <sourceFolder url="file://$MODULE_DIR$/backend/errors" isTestSource="false" packagePrefix="errors\" />
       <sourceFolder url="file://$MODULE_DIR$/backend/validation" isTestSource="false" packagePrefix="validation\" />
       <sourceFolder url="file://$MODULE_DIR$/backend/services" isTestSource="false" packagePrefix="services\" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/robmorgan/phinx" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/tinify/tinify" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-mbstring" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/filesystem" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/deprecation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/console" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php80" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php81" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/core" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/config" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/database" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/string" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/utility" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/service-contracts" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/datasource" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-ctype" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/simple-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/filesystem" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/log" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/polyfill-php73" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/robmorgan/phinx" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/firebase/php-jwt" />
-      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/tinify/tinify" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/utility" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/datasource" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/database" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/cakephp/core" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

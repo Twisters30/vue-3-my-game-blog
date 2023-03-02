@@ -95,6 +95,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
             )
             if (response.status === 200) {
                 removeDataUserStore();
+                userRoleStore.removeUserRole();
                 isLoginPageShow.value = false;
             }
         } catch (error) {

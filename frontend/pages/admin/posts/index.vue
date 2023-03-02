@@ -33,11 +33,16 @@
 <script setup>
 import BaseTable  from "@/components/BaseTable.vue";
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
+import { useRoutesGuard } from "@/stores/guards/routesGuard.js";
+const routesGuard = useRoutesGuard();
 const  adminPostsStore = useAdminPostsStore();
+routesGuard.useGuard();
 onMounted(() => {
   adminPostsStore.getPosts();
 })
-
+definePageMeta({
+  layout: 'admin'
+})
 </script>
 
 

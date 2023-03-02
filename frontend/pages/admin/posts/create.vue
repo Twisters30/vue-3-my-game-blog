@@ -22,12 +22,17 @@
 import AdminBaseForm from "@/components/backend/forms/AdminBaseForm.vue";
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
 import BaseTitle from "@/components/backend/titles/BaseTitle.vue";
+import { useRoutesGuard } from "@/stores/guards/routesGuard.js";
+
 const postStatuses = ref(null);
 const adminPostsStore = useAdminPostsStore();
 const post = reactive({});
 onMounted(async () => {
   postStatuses.value = await adminPostsStore.getPostStatuses();
   console.log(postStatuses)
+})
+definePageMeta({
+  layout: 'admin'
 })
 </script>
 
