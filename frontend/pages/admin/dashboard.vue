@@ -809,7 +809,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
+
+definePageMeta({
+  layout: 'admin'
+})
+
 </script>
 
 <style scoped>

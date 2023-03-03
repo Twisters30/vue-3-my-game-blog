@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="axios-jwt">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="layouts all page set definePageMeta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/frontend/user/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/frontend/user/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/middleware/route-middleware.global.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/route-middleware.global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/refreshToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/userRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/userRole.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,30 +51,30 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/backend/vendor/robmorgan/phinx" />
+      <path value="$PROJECT_DIR$/backend/vendor/tinify/tinify" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/backend/vendor/composer" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php81" />
-      <path value="$PROJECT_DIR$/backend/vendor/cakephp/core" />
       <path value="$PROJECT_DIR$/backend/vendor/symfony/config" />
-      <path value="$PROJECT_DIR$/backend/vendor/cakephp/database" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/backend/vendor/cakephp/utility" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/backend/vendor/cakephp/datasource" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/backend/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/backend/vendor/symfony/polyfill-php73" />
-      <path value="$PROJECT_DIR$/backend/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/backend/vendor/robmorgan/phinx" />
       <path value="$PROJECT_DIR$/backend/vendor/firebase/php-jwt" />
-      <path value="$PROJECT_DIR$/backend/vendor/tinify/tinify" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/backend/vendor/cakephp/utility" />
+      <path value="$PROJECT_DIR$/backend/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/backend/vendor/cakephp/datasource" />
+      <path value="$PROJECT_DIR$/backend/vendor/cakephp/database" />
+      <path value="$PROJECT_DIR$/backend/vendor/cakephp/core" />
+      <path value="$PROJECT_DIR$/backend/vendor/composer" />
     </include_path>
   </component>
   <component name="ProjectId" id="2LNsMu8e60XZX9NcbwHHIwKPoQr" />
@@ -99,11 +97,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PHP\Projects\Blog\frontend\server\api" />
       <recent name="D:\PHP\Projects\Blog\backend\services\image_compression" />
       <recent name="D:\PHP\Projects\Blog\frontend\components\backend\forms" />
       <recent name="D:\PHP\Projects\Blog\frontend\pages\admin\posts" />
       <recent name="D:\PHP\Projects\Blog\frontend\pages\guest" />
-      <recent name="D:\PHP\Projects\Blog\backend\controllers" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -156,7 +154,9 @@
       <workItem from="1677429441923" duration="20961000" />
       <workItem from="1677517303903" duration="26213000" />
       <workItem from="1677602863385" duration="13232000" />
-      <workItem from="1677623429628" duration="12891000" />
+      <workItem from="1677623429628" duration="13003000" />
+      <workItem from="1677665250041" duration="54782000" />
+      <workItem from="1677804906387" duration="5237000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -438,7 +438,28 @@
       <option name="project" value="LOCAL" />
       <updated>1677603961153</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="intercept">
+      <created>1677642399601</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1677642399601</updated>
+    </task>
+    <task id="LOCAL-00042" summary="middleware process">
+      <created>1677677076936</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1677677076936</updated>
+    </task>
+    <task id="LOCAL-00043" summary="layouts all page set definePageMeta">
+      <created>1677776729023</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1677776729023</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,9 +478,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="'headers'" />
-    <MESSAGE value="'RegisterController'" />
-    <MESSAGE value="'fix'" />
     <MESSAGE value="'fix User uppercase'" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/models/User/User.php" />
     <MESSAGE value="added useLoginStore" />
@@ -482,6 +500,9 @@
     <MESSAGE value="admin/posts/fix" />
     <MESSAGE value="admin/posts/fix-2" />
     <MESSAGE value="axios-jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="axios-jwt" />
+    <MESSAGE value="intercept" />
+    <MESSAGE value="middleware process" />
+    <MESSAGE value="layouts all page set definePageMeta" />
+    <option name="LAST_COMMIT_MESSAGE" value="layouts all page set definePageMeta" />
   </component>
 </project>

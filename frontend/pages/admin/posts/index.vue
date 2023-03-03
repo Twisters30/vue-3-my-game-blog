@@ -37,7 +37,9 @@ const  adminPostsStore = useAdminPostsStore();
 onMounted(() => {
   adminPostsStore.getPosts();
 })
-
+definePageMeta({
+  layout: 'admin'
+})
 </script>
 
 

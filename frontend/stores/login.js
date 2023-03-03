@@ -1,15 +1,13 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 import { useUserRoleStore } from "~/stores/userRole.js";
-import {apiHost, apiLogin, apiLogout, apiRefreshToken} from "~/config/api.js";
+import { apiHost, apiLogin, apiLogout } from "~/config/api.js";
 import { useAxiosStore } from "~/stores/axiosInstance.js";
-import { useLayoutStore } from "~/stores/layout.js";
 
 
 export const useLoginStore = defineStore('LoginStore', () => {
     const userRoleStore = useUserRoleStore();
     const isLoginPageShow = ref(false);
-    const layoutStore = useLayoutStore()
     const formData = reactive({});
     let isUserDataLoading = ref(true);
     let token = reactive({
@@ -18,7 +16,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
     });
     const acceptWindowShow = ref(false);
 
-    const updateFormDataFromRegister = ({email, password}) => {
+    const updateFormDataFromRegister = ({ email, password }) => {
         formData.email = email;
         formData.password = password;
     }
@@ -95,6 +93,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
             )
             if (response.status === 200) {
                 removeDataUserStore();
+                userRoleStore.removeUserRole();
                 isLoginPageShow.value = false;
             }
         } catch (error) {

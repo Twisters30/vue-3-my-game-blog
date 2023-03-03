@@ -7,7 +7,7 @@ import { useAxiosStore } from "~/stores/axiosInstance.js";
 
 export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const loginStore = useLoginStore();
-    const axiosStore = useAxiosStore()
+    const axiosStore = useAxiosStore();
     const axiosInstance = axiosStore.setConfigAxios();
     const posts = reactive([
         {
