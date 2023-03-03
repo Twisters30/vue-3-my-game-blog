@@ -1,25 +1,25 @@
 import {defineStore} from "pinia";
-
+// import { useLocalStorage,  } from '@vueuse/core'
 export const useUserRoleStore = defineStore('userRole', () => {
     const userRole = ref('guest');
 
     const setUserRole = (role) => {
         userRole.value = role.toLowerCase();
-        setUserRoleStorage(userRole.value);
     };
     const getUserRole = () => userRole.value;
-    const setUserRoleStorage = (role) => {
-        sessionStorage.setItem('userRole',role);
-    }
+    // const userStore = computed(() => {
+    //     return useLocalStorage(
+    //         'userRole',
+    //         {
+    //             userRole: userRole.value,
+    //         },
+    //     )
+    // })
 
-
-    const getUserRoleStorage = () => {
-        userRole.value = sessionStorage.getItem('userRole') || getUserRole();
-    }
     const removeUserRole = () => {
         userRole.value = null;
-        sessionStorage.removeItem('userRole');
+        localStorage.removeItem('userRole');
     }
 
-    return { userRole, setUserRole, getUserRole, setUserRoleStorage, getUserRoleStorage, removeUserRole };
+    return { userRole, setUserRole, getUserRole, removeUserRole };
 })

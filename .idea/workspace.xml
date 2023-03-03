@@ -4,25 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="middleware process">
-      <change afterPath="$PROJECT_DIR$/frontend/middleware/route-middleware.global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/stores/guards/routesGuard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="layouts all page set definePageMeta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/tmp/logs/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tmp/logs/errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/middleware/layout-switcher-middleware.global.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/about.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/middleware/route-middleware.global.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/middleware/route-middleware.global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/articles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/articles.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/join.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/join.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/userRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/userRole.js" afterDir="false" />
     </list>
@@ -165,7 +155,8 @@
       <workItem from="1677517303903" duration="26213000" />
       <workItem from="1677602863385" duration="13232000" />
       <workItem from="1677623429628" duration="13003000" />
-      <workItem from="1677665250041" duration="42519000" />
+      <workItem from="1677665250041" duration="54782000" />
+      <workItem from="1677804906387" duration="5237000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -461,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677677076936</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="layouts all page set definePageMeta">
+      <created>1677776729023</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1677776729023</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,7 +478,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="'fix'" />
     <MESSAGE value="'fix User uppercase'" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/models/User/User.php" />
     <MESSAGE value="added useLoginStore" />
@@ -505,6 +502,7 @@
     <MESSAGE value="axios-jwt" />
     <MESSAGE value="intercept" />
     <MESSAGE value="middleware process" />
-    <option name="LAST_COMMIT_MESSAGE" value="middleware process" />
+    <MESSAGE value="layouts all page set definePageMeta" />
+    <option name="LAST_COMMIT_MESSAGE" value="layouts all page set definePageMeta" />
   </component>
 </project>
