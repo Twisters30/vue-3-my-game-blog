@@ -23,7 +23,7 @@ class RegisterController extends BaseController
         }
 
         $request->password = phash($request->password);
-        $newUser = $user->create((array)$request);
+        $newUser = $user->create($request);
 
         echo json_encode($newUser);
     }

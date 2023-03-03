@@ -86,8 +86,9 @@ abstract class Model
     /**
      * @throws \Exception
      */
-    public function create(array $data): array
+    public function create($data): array
     {
+        (array)$data;
         $columns = implode(', ', array_keys($data));
         $values = implode('\', \'', array_values($data));
         $this->query = "INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')";
