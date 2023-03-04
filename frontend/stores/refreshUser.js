@@ -1,8 +1,8 @@
 import {defineStore} from "pinia";
 import axios from "axios";
-import {apiHost, apiRefreshToken} from "~/config/api.js";
-import {useLoginStore} from "~/stores/login.js";
-import {useUserRoleStore} from "~/stores/userRole.js";
+import { apiHost, apiRefreshToken } from "~/config/api.js";
+import { useLoginStore } from "~/stores/login.js";
+import { useUserRoleStore } from "~/stores/userRole.js";
 
 export const useRefreshUser = defineStore('refreshUser', () => {
     const loginStore = useLoginStore();
@@ -26,7 +26,7 @@ export const useRefreshUser = defineStore('refreshUser', () => {
                     accessToken: response.data.accessToken,
                     refreshToken: response.data.refreshToken
                 };
-
+                loginStore.disableLoader();
                 loginStore.setStorageToken(respoonseToken);
                 loginStore.setStateToken(respoonseToken);
                 userRoleStore.setUserRole(response.data.role);

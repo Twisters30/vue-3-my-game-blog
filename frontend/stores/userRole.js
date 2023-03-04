@@ -7,14 +7,6 @@ export const useUserRoleStore = defineStore('userRole', () => {
         userRole.value = role.toLowerCase();
     };
     const getUserRole = () => userRole.value;
-    // const userStore = computed(() => {
-    //     return useLocalStorage(
-    //         'userRole',
-    //         {
-    //             userRole: userRole.value,
-    //         },
-    //     )
-    // })
 
     const removeUserRole = () => {
         userRole.value = null;

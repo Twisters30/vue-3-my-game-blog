@@ -9,11 +9,11 @@
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/about">О нас</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/join">Стать автором</NuxtLink></li>
                         <li v-if="!loginStore.token.accessToken" class="nav__item item-login">
-                          <Loader v-if="loginStore.isUserDataLoading"/>
+                          <Loader v-if="loginStore.isUserDataLoading" />
                           <button v-else class="btn main-link" @click="loginStore.showLoginPage">Войти</button>
                         </li>
                         <li v-else class="nav__item item-login">
-                          <Loader v-if="loginStore.isUserDataLoading"/>
+                          <Loader v-if="loginStore.isUserDataLoading" />
                           <button v-else class="btn main-link" @click="loginStore.acceptAction">Выйти</button>
                           <AcceptForm
                               :acceptAction="loginStore.acceptAction"
@@ -31,11 +31,7 @@ import { useLoginStore } from '@/stores/login.js';
 import Loader from "@/components/Loader.vue";
 import AcceptForm from './forms/AcceptForm.vue';
 const loginStore = useLoginStore();
-
-
-onBeforeMount(() => {
-  loginStore.getStorageToken();
-});
+loginStore.disableLoader();
 </script>
 
 <style lang="scss">

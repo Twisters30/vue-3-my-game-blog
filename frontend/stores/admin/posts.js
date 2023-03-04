@@ -43,7 +43,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     )
     const pathUrl = '/admin/posts/';
     const getPostStatuses = async () => {
-        const accessToken = loginStore.getStorageToken();
+        const accessToken = loginStore.getAccessToken();
         try {
             const response = await axiosInstance.get(`${apiHost}/${apiAdminGetPostStatuses}`,
                 {
@@ -59,7 +59,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         }
     }
     const createPost = async (data) => {
-        const accessToken = loginStore.getStorageToken();
+        const accessToken = loginStore.getAccessToken();
         const bodyFormData = new FormData();
         for (const [key,value] of Object.entries(data)) {
             console.log(key,value)
@@ -83,7 +83,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         }
     }
     const getPosts = async () => {
-        const accessToken = loginStore.getStorageToken();
+        const accessToken = loginStore.getAccessToken();
         console.log(accessToken, 'storeAdminPosts');
         const router = useRouter();
         try {

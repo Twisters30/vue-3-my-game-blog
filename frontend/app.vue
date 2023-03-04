@@ -1,7 +1,7 @@
 <template>
   <Loader />
   <NuxtLayout >
-    <NuxtPage :name="'default'"/>
+    <NuxtPage />
   </NuxtLayout >
 </template>
 
@@ -13,10 +13,9 @@ import { useRefreshUser } from "~/stores/refreshUser.js";
 const layoutStore = useLayoutStore();
 const userRoleStore = useUserRoleStore();
 const refreshUser = useRefreshUser();
-
-onMounted(() => {
+onBeforeMount(() => {
   if (userRoleStore.userRole === 'guest') {
     refreshUser.refresh();
-  };
+  }
 });
 </script>

@@ -21,6 +21,10 @@ export const useLoginStore = defineStore('LoginStore', () => {
         formData.password = password;
     }
 
+    const disableLoader = () => {
+        isUserDataLoading.value = false;
+    }
+
     const acceptAction = async (userAnswer) => {
         if (userAnswer === true) {
            await logout();
@@ -28,22 +32,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
         acceptWindowShow.value = !acceptWindowShow.value;
     }
 
-    const getStorageToken = () => {
-        const { accessToken, refreshToken } = JSON.parse(sessionStorage.getItem('token')) || false;
-        token.accessToken = accessToken;
-        token.refreshToken = refreshToken;
-        isUserDataLoading.value = false;
-        return accessToken;
-    };
-
-
     const getRefreshTokenStorage = () => {
-         const { refreshToken } = JSON.parse(sessionStorage.getItem('token')) || false;
-
-         return refreshToken;
+        return JSON.parse(sessionStorage.getItem('token'))?.refreshToken || false;
     };
     const getAccessTokenStorage = () => {
-        return JSON.parse(sessionStorage.getItem('token')).accessToken || false;
+        return JSON.parse(sessionStorage.getItem('token'))?.accessToken || false;
     };
 
     const getRefreshToken = () => token.refreshToken;
@@ -124,7 +117,6 @@ export const useLoginStore = defineStore('LoginStore', () => {
         closeModalOutside,
         token,
         logout,
-        getStorageToken,
         acceptAction,
         acceptWindowShow,
         updateFormDataFromRegister,
@@ -134,6 +126,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
         getAccessToken,
         getAccessTokenStorage,
         getRefreshTokenStorage,
-        setStateToken
+        setStateToken,
+        disableLoader
     };
 })
