@@ -85,6 +85,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const getPosts = async () => {
         const accessToken = loginStore.getStorageToken();
         console.log(accessToken, 'storeAdminPosts');
+        const router = useRouter();
         try {
             const response = await axiosInstance.get(`${apiHost}/${apiAdminPostsIndex}`,
                 {
@@ -95,6 +96,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             }
         } catch (error) {
             console.log(error);
+            router.push({path: '/'});
         }
     }
     return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, posts, getPostStatuses, createPost };

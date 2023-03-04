@@ -34,7 +34,17 @@ export const useLoginStore = defineStore('LoginStore', () => {
         token.refreshToken = refreshToken;
         isUserDataLoading.value = false;
         return accessToken;
-    }
+    };
+
+
+    const getRefreshTokenStorage = () => {
+         const { refreshToken } = JSON.parse(sessionStorage.getItem('token')) || false;
+
+         return refreshToken;
+    };
+    const getAccessTokenStorage = () => {
+        return JSON.parse(sessionStorage.getItem('token')).accessToken || false;
+    };
 
     const getRefreshToken = () => token.refreshToken;
     const getAccessToken = () => token.accessToken;
@@ -58,6 +68,11 @@ export const useLoginStore = defineStore('LoginStore', () => {
         sessionStorage.setItem('token',JSON.stringify(token));
     }
 
+    const setStateToken = (newToken) => {
+        token.accessToken = newToken.accessToken;
+        token.refreshToken = newToken.refreshToken;
+    };
+
     const loginAction = async (valueForm) => {
         try {
             const response = await axios.post(`${apiHost}/${apiLogin}`,{
@@ -68,7 +83,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
                 showLoginPage();
                 token.accessToken = response.data.accessToken;
                 token.refreshToken = response.data.refreshToken;
-                sessionStorage.setItem('token',JSON.stringify(token));
+                setStorageToken(token);
                 const router = useRouter();
                 const userRole = response.data.role.toLocaleLowerCase()
                 userRoleStore.setUserRole(response.data.role);
@@ -116,6 +131,9 @@ export const useLoginStore = defineStore('LoginStore', () => {
         isUserDataLoading,
         setStorageToken,
         getRefreshToken,
-        getAccessToken
+        getAccessToken,
+        getAccessTokenStorage,
+        getRefreshTokenStorage,
+        setStateToken
     };
 })
