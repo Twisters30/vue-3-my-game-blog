@@ -13,6 +13,7 @@
               :tableTitle="adminPostsStore.tableTitle"
               :tableContent="adminPostsStore.posts"
               :pathUrl="adminPostsStore.pathUrl"
+              :post-statuses="postStatuses"
           />
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -33,7 +34,9 @@
 <script setup>
 import BaseTable  from "@/components/BaseTable.vue";
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
-const  adminPostsStore = useAdminPostsStore();
+
+const adminPostsStore = useAdminPostsStore();
+const postStatuses = await adminPostsStore.getPostStatuses();
 onMounted(() => {
   adminPostsStore.getPosts();
 })

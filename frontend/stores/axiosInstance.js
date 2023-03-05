@@ -2,37 +2,27 @@ import { defineStore } from "pinia";
 import { useLoginStore } from "~/stores/login";
 import axios from "axios";
 import { apiHost, apiRefreshToken } from "~/config/api.js";
+import { useRefreshUser } from "~/stores/refreshUser.js";
 
 export const useAxiosStore = defineStore('axiosStore', () => {
     const loginStore = useLoginStore();
-
+    const refreshUser = useRefreshUser();
     const setConfigAxios = () => {
         const tokenRefresh = loginStore.getRefreshToken();
         const tokenAccess = loginStore.getAccessToken();
 
-        const refreshToken = async () => {
-            const {useLoginStore} = await import("~/stores/login");
-            const loginStore = useLoginStore();
-            console.log(loginStore.getRefreshToken(), 'Токен из метода refreshToken')
-            return await axios.get(`${apiHost}/${apiRefreshToken}`,{
-                headers: {'Authorization': `Bearer ${ loginStore.getRefreshToken() }`}
-            });
-        }
-        const axiosInstance = axios.create({
-            headers: {  Authorization: `Bearer ${ tokenAccess }`}
-        });
+        const axiosInstance = axios.create();
 
-        axiosInstance.interceptors.request.use(
-            async config => {
-                if (tokenAccess) {
-                    config.headers.Authorization = `Bearer ${ tokenAccess }`;
-                }
-                return config;
-            },
-            error => {
-                return Promise.reject(error);
-            }
-        );
+        // axiosInstance.interceptors.request.use(
+        //     async config => {
+        //         if (tokenAccess) {
+        //         }
+        //         return config;
+        //     },
+        //     error => {
+        //         return Promise.reject(error);
+        //     }
+        // );
 
         axiosInstance.interceptors.response.use(
             response => {
@@ -43,10 +33,9 @@ export const useAxiosStore = defineStore('axiosStore', () => {
                 if (error.response.status === 403 && !originalRequest._retry) {
                     originalRequest._retry = true;
                     try {
-                        const newToken = await refreshToken();
-                        loginStore.setStorageToken(newToken.data);
-                        console.log(newToken.data.accessToken)
-                        originalRequest.headers.Authorization = `Bearer ${newToken.data.accessToken}`;
+                        const newToken = await refreshUser.refresh();
+                        originalRequest.headers.Authorization = `Bearer ${newToken.accessToken}`;
+                        console.log(axiosInstance(originalRequest))
                         return axiosInstance(originalRequest);
                     } catch (error) {
                         console.log(error);

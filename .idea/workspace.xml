@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="vueuse add">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="update getters token methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/assets/scss/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/refreshUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/refreshUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/userRole.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/userRole.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -153,7 +156,9 @@
       <workItem from="1677602863385" duration="13232000" />
       <workItem from="1677623429628" duration="13003000" />
       <workItem from="1677665250041" duration="54782000" />
-      <workItem from="1677804906387" duration="10344000" />
+      <workItem from="1677804906387" duration="11096000" />
+      <workItem from="1677936007996" duration="21517000" />
+      <workItem from="1678045082319" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="'nuxt/axios DELETE from dependencies and added backend models'">
       <created>1675804740639</created>
@@ -463,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677878020066</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="update getters token methods">
+      <created>1677900260552</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1677900260552</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +494,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/models/User/User.php" />
     <MESSAGE value="added useLoginStore" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/config/init.php&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/helpers/helpers.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/frontend/user/LoginController.php" />
@@ -507,6 +518,7 @@
     <MESSAGE value="middleware process" />
     <MESSAGE value="layouts all page set definePageMeta" />
     <MESSAGE value="vueuse add" />
-    <option name="LAST_COMMIT_MESSAGE" value="vueuse add" />
+    <MESSAGE value="update getters token methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="update getters token methods" />
   </component>
 </project>

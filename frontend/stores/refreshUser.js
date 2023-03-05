@@ -22,14 +22,16 @@ export const useRefreshUser = defineStore('refreshUser', () => {
 
             if (response.status === 200) {
 
-                const respoonseToken = {
+                const responseToken = {
                     accessToken: response.data.accessToken,
                     refreshToken: response.data.refreshToken
                 };
                 loginStore.disableLoader();
-                loginStore.setStorageToken(respoonseToken);
-                loginStore.setStateToken(respoonseToken);
+                loginStore.setStorageToken(responseToken);
+                loginStore.setStateToken(responseToken);
                 userRoleStore.setUserRole(response.data.role);
+
+                return responseToken;
             }
         } catch (error) {
             console.log(error);

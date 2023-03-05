@@ -56,3 +56,11 @@ img {
 .validate-success {
     background: #5fff9463;
 }
+
+.box {
+    transition: box-shadow .3s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+    }
+}

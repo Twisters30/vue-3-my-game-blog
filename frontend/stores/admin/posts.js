@@ -16,7 +16,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             description: 'test lorem test loremtest lorem test lorem test lorem test lorem test lorem test lorem test lorem',
             image: '/img/test.jpg',
             icon:'/icons/gameIcon.jpg',
-            post_status_id:1,
+            post_status_id:3,
             user_id:1,
             created_at: new Date(),
             updated_at: new Date()

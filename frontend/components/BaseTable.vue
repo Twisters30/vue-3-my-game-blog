@@ -1,20 +1,31 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">{{ props.tableTitle }}</h3>
+      <h3 class="card-title">{{ tableTitle }}</h3>
     </div>
     <div class="card-body">
       <table id="example1" class="table table-bordered table-striped">
         <thead>
         <tr>
-          <th v-for="header of props.tableHeaders">{{ header }}</th>
+          <th v-for="header of tableHeaders">{{ header }}</th>
         </tr>
         </thead>
+        <img src="../../backend/public/images/compressed_image.jpg" height="1280" width="1920"/>
         <tbody>
-        <tr v-for="(content,i) of props.tableContent" :key="i">
-          <td v-for="item in content" :key="item.id">{{ item }}</td>
+        <tr v-for="content of tableContent" :key="content.id" class="box">
+          <td v-for="(item, key) of content" :key="key">
+            <select v-if="key === 'post_status_id'">
+              <option
+                  :selected="Number(status.id) === Number(item)"
+                  v-for="status in postStatuses" :key="status.id"
+                  :value="status.id">
+                {{ status.name }}
+              </option>
+            </select>
+            <span v-else>{{ item }}</span>
+          </td>
           <i class="fa-solid fa-trash icon-transparent"></i>
-          <NuxtLink :to="props.pathUrl + content.id">
+          <NuxtLink :to="pathUrl + content.id">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
         </tr>
@@ -28,8 +39,9 @@
 const props = defineProps({
   tableTitle: String,
   tableHeaders: Array,
-  tableContent: Object,
+  tableContent: Array,
   pathUrl: String,
+  postStatuses: Array,
 })
 </script>
 

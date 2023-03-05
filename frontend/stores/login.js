@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 import axios from "axios";
 import { useUserRoleStore } from "~/stores/userRole.js";
 import { apiHost, apiLogin, apiLogout } from "~/config/api.js";
-import { useAxiosStore } from "~/stores/axiosInstance.js";
 
 
 export const useLoginStore = defineStore('LoginStore', () => {
