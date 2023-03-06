@@ -10,10 +10,14 @@ use models\Post\PostStatus;
 use routes\Request;
 use services\interfaces\image_compression\ImageCompressionInterface;
 use services\ServiceContainer;
+use validation\interfaces\ValidatorInterface;
 
 class PostController extends BaseController
 {
     private ImageCompressionInterface $compressor;
+
+    private Post $postModel;
+    private PostStatus $postStatusModel;
 
     /**
      * @throws Exception
@@ -23,6 +27,8 @@ class PostController extends BaseController
         parent::__construct($route);
         TokenService::checkAccessToken($this->route['attributes']['role']);
         $this->compressor = ServiceContainer::getService(ImageCompressionInterface::class);
+        $this->postModel = new Post();
+        $this->postStatusModel = new PostStatus();
     }
 
     /**
@@ -31,6 +37,8 @@ class PostController extends BaseController
     public function index()
     {
         $this->allowMethod();
+
+        echo jsonWrite($this->postModel->htmlDecode());
     }
 
     /**
@@ -40,9 +48,7 @@ class PostController extends BaseController
     {
         $this->allowMethod();
 
-        $postStatusesModel = new PostStatus();
-
-        echo jsonWrite($postStatusesModel->all());
+        echo jsonWrite($this->postStatusModel->all());
     }
 
     /**
@@ -61,8 +67,7 @@ class PostController extends BaseController
             $result[$key] = $this->compressor->compress($file, $tokenData->email);
         }
 
-        $postModel = new Post();
-        $postModel->create($result);
+        $this->postModel->create($result);
     }
 
     /**
@@ -71,5 +76,7 @@ class PostController extends BaseController
     public function delete(Request $request): void
     {
         $this->allowMethod('delete');
+
+        $this->postModel->delete('id', $request->id);
     }
 }
