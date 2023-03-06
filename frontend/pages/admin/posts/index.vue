@@ -34,11 +34,15 @@
 
 <script setup>
 import BaseTable  from "@/components/BaseTable.vue";
-import { useAdminPostsStore } from "@/stores/admin/posts.js";
-
+import { useAdminPostsStore} from "@/stores/admin/posts.js";
+import { storeToRefs } from 'Pinia';
 const adminPostsStore = useAdminPostsStore();
 const postStatuses = await adminPostsStore.getPostStatuses();
-const posts = await adminPostsStore.getPosts();
+await adminPostsStore.getPosts();
+const state = storeToRefs(adminPostsStore);
+const posts = state.getPostsStore;
+console.log(isReactive(state.getPostsStore))
+console.log(isRef(state.getPostsStore))
 definePageMeta({
   layout: 'admin'
 })

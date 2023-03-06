@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="post delete">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="post delete backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
     </list>
@@ -159,14 +155,7 @@
       <workItem from="1677804906387" duration="11096000" />
       <workItem from="1677936007996" duration="21517000" />
       <workItem from="1678045082319" duration="16586000" />
-      <workItem from="1678107646093" duration="12574000" />
-    </task>
-    <task id="LOCAL-00002" summary="'models'">
-      <created>1675804842535</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1675804842535</updated>
+      <workItem from="1678107646093" duration="22528000" />
     </task>
     <task id="LOCAL-00003" summary="'models-&gt;create method return array'">
       <created>1675815809914</created>
@@ -504,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678112682768</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="post delete backend">
+      <created>1678122009405</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1678122009405</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +519,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/controllers/frontend/user/RegisterController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/models/DB.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php&#10;#&#9;backend/tmp/logs/errors.log" />
     <MESSAGE value="git ignore frontend штуки" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
     <MESSAGE value="layouts update" />
@@ -548,6 +543,7 @@
     <MESSAGE value="merge backend" />
     <MESSAGE value="merge backend added" />
     <MESSAGE value="post delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="post delete" />
+    <MESSAGE value="post delete backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="post delete backend" />
   </component>
 </project>

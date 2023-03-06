@@ -2,7 +2,7 @@
   <div class="content-wrapper">
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
           <div class="row col-md-6">
             <AdminBaseForm :post="post" />
           </div>
@@ -19,10 +19,11 @@ import AdminBaseForm from "@/components/backend/forms/AdminBaseForm.vue";
 import { useRoutesGuard } from "@/stores/guards/routesGuard.js";
 const  adminPostsStore = useAdminPostsStore();
 const route = useRoute();
-const post = adminPostsStore.getByPostId(route.params.id);
- definePageMeta({
-   layout: 'admin'
- })
+const post = await adminPostsStore.getByPostId(route.params.id);
+console.log(post)
+definePageMeta({
+  layout: 'admin'
+})
 </script>
 
 <style scoped>

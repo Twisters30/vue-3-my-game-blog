@@ -10,30 +10,16 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const axiosStore = useAxiosStore();
     const axiosInstance = axiosStore.setConfigAxios();
     const router = useRouter();
-    const posts = reactive([
-        {
-            id:1,
-            name: 'testName',
-            description: 'test lorem test loremtest lorem test lorem test lorem test lorem test lorem test lorem test lorem',
-            image: '/img/test.jpg',
-            icon:'/icons/gameIcon.jpg',
-            post_status_id:3,
-            user_id:1,
-            created_at: new Date(),
-            updated_at: new Date()
-        },{
-            id:2,
-            name: 'testName',
-            description: 'test lorem test loremtest lorem test lorem test lorem test lorem test lorem test lorem test lorem',
-            image: '/img/test.jpg',
-            icon:'/icons/gameIcon.jpg',
-            post_status_id:2,
-            user_id:2,
-            created_at: new Date(),
-            updated_at: new Date()
-        },
-    ]);
-    const getByPostId = (payloadPostId) => {
+    let posts = ref(null);
+
+    const getPostsStore = computed(() => {
+        return posts;
+    })
+
+    const getByPostId = async (payloadPostId) => {
+        if (posts === null) {
+            posts = await getPosts();
+        }
         return posts.find(({id}) => Number(id) === Number(payloadPostId));
     }
     const tableTitle = 'Редактирование статей';
@@ -93,11 +79,12 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
                 }
             )
             if (response.status === 200) {
+                posts = response.data;
                 return response.data;
             }
         } catch (error) {
             console.log(error);
-            router.push({path: '/'});
+            // router.push({path: '/'});
         }
     }
 
@@ -111,8 +98,10 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
                 },
                 headers: {'Authorization': `Bearer ${accessToken}`}
             });
-            if (response.data.status === 200) {
+            if (response.status === 200) {
                 console.log('Стаья удалена');
+                posts.value = posts.filter((post) => post.id !== id);
+                console.log(posts, 'отфильтрованно')
             }
         } catch (error) {
             console.log(error);
@@ -120,5 +109,5 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         }
     }
 
-    return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, posts, getPostStatuses, createPost, deletePost };
+    return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, getPostStatuses, createPost, deletePost, getPostsStore, posts };
 })
