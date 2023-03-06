@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-import { apiHost, apiAdminPostsIndex, apiAdminGetPostStatuses, apiAdminCreatePost } from "~/config/api.js";
+import { apiHost, apiAdminPostsIndex, apiAdminGetPostStatuses, apiAdminPostCreate, apiAdminPostDelete } from "~/config/api.js";
 import { useLoginStore } from "~/stores/login.js";
 import { useAxiosStore } from "~/stores/axiosInstance.js";
 
@@ -99,5 +99,25 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             router.push({path: '/'});
         }
     }
-    return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, posts, getPostStatuses, createPost };
+
+    const deletePost = async (id) => {
+        const accessToken = loginStore.getAccessToken();
+        console.log(id)
+        try {
+            const response = await axiosInstance.delete(`$apiHost}/${apiAdminPostDelete}`,{
+                data: {
+                    id
+                },
+                headers: {'Authorization': `Bearer ${accessToken}`}
+            });
+            if (response.data.status === 200) {
+                console.log('Стаья удалена');
+            }
+        } catch (error) {
+            console.log(error);
+            console.log('Ошибка при удалении статьи')
+        }
+    }
+
+    return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, posts, getPostStatuses, createPost, deletePost };
 })
