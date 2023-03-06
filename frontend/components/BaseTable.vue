@@ -11,7 +11,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="content of tableContent" :key="content.id" class="box">
+        <tr @click="$router.push({path:content.id})" v-for="content of post" :key="content.id" class="box">
           <td v-for="(item, key) of content" :key="key">
             <select v-if="key === 'post_status_id'">
               <option
@@ -23,7 +23,7 @@
             </select>
             <span v-html="item" v-else></span>
           </td>
-          <i @click="$emit('deletePost',content.id)" class="fa-solid fa-trash icon-transparent"></i>
+          <i @click.stop="$emit('deletePost',content.id)" class="fa-solid fa-trash icon-transparent"></i>
           <NuxtLink :to="pathUrl + content.id">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
@@ -43,7 +43,10 @@ const props = defineProps({
   pathUrl: String,
   postStatuses: Array,
 })
+const post = computed(() => {
+  console.log(props.tableContent)
+  return props.tableContent;
+})
 </script>
-
 <style scoped>
 </style>
