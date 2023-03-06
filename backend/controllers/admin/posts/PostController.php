@@ -9,6 +9,8 @@ use models\Post\PostStatus;
 use routes\Request;
 use services\interfaces\image_compression\ImageCompressionInterface;
 use services\ServiceContainer;
+use models\Post\Post;
+use validation\interfaces\ValidatorInterface;
 
 class PostController extends BaseController
 {
@@ -47,19 +49,28 @@ class PostController extends BaseController
     /**
      * @throws Exception
      */
-    public function store(Request $request)
+    public function store(Request $request): void
     {
         $this->allowMethod('post');
-        $email = TokenService::getTokenData()->email;
+        $tokenData = TokenService::getTokenData();
 
         $result = $request->htmlEncode('name', 'description');
-        $result .= $request->post_status_id;
+        $result['post_status_id'] = $request->post_status_id;
+        $result['user_id'] = $tokenData->user_id;
 
         foreach ($request->files() as $key => $file) {
-            $result[$key] = $this->compressor->compress($file, $email);
+            $result[$key] = $this->compressor->compress($file, $tokenData->email);
         }
 
-        dd(1, $result);
+        $postModel = new Post();
+        $postModel->create($result);
+
+    }
+
+    public function delete(Request $request)
+    {
+        self::allowMethod('delete');
+
 
     }
 }

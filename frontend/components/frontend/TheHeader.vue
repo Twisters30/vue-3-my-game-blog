@@ -8,6 +8,7 @@
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/articles">Статьи</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/about">О нас</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/join">Стать автором</NuxtLink></li>
+                        <li class="nav__item"><NuxtLink class="btn main-link" to="/profile">Профиль</NuxtLink></li>
                         <li v-if="!loginStore.token.accessToken" class="nav__item item-login">
                           <Loader v-if="loginStore.isUserDataLoading" />
                           <button v-else class="btn main-link" @click="loginStore.showLoginPage">Войти</button>

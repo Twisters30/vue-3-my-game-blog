@@ -6,5 +6,5 @@ use models\Model;
 
 class Post extends Model
 {
-    public string $table = 'roles';
+    public string $table = 'posts';
 }

@@ -23,7 +23,7 @@
             </select>
             <span v-else>{{ item }}</span>
           </td>
-          <i class="fa-solid fa-trash icon-transparent"></i>
+          <i @click="$emit('deletePost',content.id)" class="fa-solid fa-trash icon-transparent"></i>
           <NuxtLink :to="pathUrl + content.id">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
@@ -35,6 +35,7 @@
 </template>
 
 <script setup>
+const emits = defineEmits(['deletePost'])
 const props = defineProps({
   tableTitle: String,
   tableHeaders: Array,
