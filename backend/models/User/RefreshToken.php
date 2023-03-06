@@ -11,7 +11,7 @@ class RefreshToken extends Model
     public function tokenOwner($column, $value, $condition = '='): array
     {
         return $this->executeRaw(
-            "SELECT rt.token, rt.id, u.email, u.id AS user_id, r.name AS role_name
+            "SELECT rt.token, rt.id AS token_id, u.email, u.id, r.name AS role_name
                     FROM refresh_tokens AS rt
                     LEFT JOIN users AS u
                     ON u.id = rt.user_id

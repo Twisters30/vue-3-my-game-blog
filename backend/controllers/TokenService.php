@@ -10,7 +10,7 @@ use models\User\RefreshToken;
 
 class TokenService
 {
-    public static function createAccessToken(string $userRole, string $userEmail): string
+    public static function createAccessToken(array $user): string
     {
         $now = new \DateTimeImmutable();
 
@@ -19,8 +19,9 @@ class TokenService
             'exp' => $now->modify(TOKEN_LIFETIME)->getTimestamp(),
             'nbf'  => $now->getTimestamp(),
             'iss'  => DOMAIN,
-            'role' => strtolower($userRole),
-            'email' => strtolower($userEmail)
+            'role' => strtolower($user['role_name']),
+            'email' => strtolower($user['email']),
+            'user_id' => $user['id']
         ];
 
         return JWT::encode($data, SECRET_KEY, JWT_ALGORITHM);
@@ -114,7 +115,7 @@ class TokenService
     {
         $tokenWithUser = self::checkRefreshToken();
 
-        $refreshToken = self::createRefreshToken($tokenWithUser['user_id']);
+        $refreshToken = self::createRefreshToken($tokenWithUser['id']);
 
         $refreshTokenModel = new RefreshToken();
         $refreshTokenModel->update([
@@ -123,7 +124,7 @@ class TokenService
         ])->where('token', $tokenWithUser['token'])->execute();
 
         echo jsonWrite([
-            'accessToken' => self::createAccessToken($tokenWithUser['role_name'], $tokenWithUser['email']),
+            'accessToken' => self::createAccessToken($tokenWithUser),
             'refreshToken' => $refreshToken,
             'role' => $tokenWithUser['role_name']
         ]);
