@@ -152,4 +152,13 @@ abstract class Model
 
         return true;
     }
+
+    public function htmlDecode(): array
+    {
+        $data = $this->all();
+        array_walk_recursive($data,function (&$item) {
+           $item = htmlspecialchars_decode($item);
+        });
+        return $data;
+    }
 }

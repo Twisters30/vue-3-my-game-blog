@@ -6,4 +6,4 @@ export const apiAdminPostsIndex = 'admin/posts';
 export const apiAdminGetPostStatuses = 'admin/posts/post-statuses';
 export const apiAdminPostCreate = 'admin/posts/store';
 export const apiRefreshToken = 'refresh';
-export const apiAdminPostDelete = 'delete';
+export const apiAdminPostDelete = 'admin/posts/delete';

@@ -9,6 +9,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const loginStore = useLoginStore();
     const axiosStore = useAxiosStore();
     const axiosInstance = axiosStore.setConfigAxios();
+    const router = useRouter();
     const posts = reactive([
         {
             id:1,
@@ -67,7 +68,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         }
         console.log(bodyFormData);
         try {
-            const response = await axiosInstance.post(`${apiHost}/${apiAdminCreatePost}`,
+            const response = await axiosInstance.post(`${apiHost}/${apiAdminPostCreate}`,
                     bodyFormData,
                 {
                     headers: {
@@ -85,7 +86,6 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const getPosts = async () => {
         const accessToken = loginStore.getAccessToken();
         console.log(accessToken, 'storeAdminPosts');
-        const router = useRouter();
         try {
             const response = await axiosInstance.get(`${apiHost}/${apiAdminPostsIndex}`,
                 {
@@ -93,6 +93,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
                 }
             )
             if (response.status === 200) {
+                return response.data;
             }
         } catch (error) {
             console.log(error);
@@ -104,7 +105,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         const accessToken = loginStore.getAccessToken();
         console.log(id)
         try {
-            const response = await axiosInstance.delete(`$apiHost}/${apiAdminPostDelete}`,{
+            const response = await axiosInstance.delete(`${apiHost}/${apiAdminPostDelete}`,{
                 data: {
                     id
                 },

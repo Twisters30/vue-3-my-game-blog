@@ -13,6 +13,7 @@ Router::routeGroup(['role' => 'Admin', 'prefix' => 'admin', 'namespace' => 'admi
     'posts' => ['controller' =>'posts\PostController', 'action' => 'index'],
     'posts/post-statuses' => ['controller' =>'posts\PostController', 'action' => 'getPostStatuses'],
     'posts/store' => ['controller' =>'posts\PostController', 'action' => 'store'],
+    'posts/delete' => ['controller' =>'posts\PostController', 'action' => 'delete'],
 ]);
 
 
