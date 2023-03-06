@@ -40,9 +40,9 @@ const adminPostsStore = useAdminPostsStore();
 const postStatuses = await adminPostsStore.getPostStatuses();
 await adminPostsStore.getPosts();
 const state = storeToRefs(adminPostsStore);
-const posts = state.getPostsStore;
-console.log(isReactive(state.getPostsStore))
-console.log(isRef(state.getPostsStore))
+const posts = state.posts;
+console.log(state)
+console.log(isRef(state.posts.value))
 definePageMeta({
   layout: 'admin'
 })

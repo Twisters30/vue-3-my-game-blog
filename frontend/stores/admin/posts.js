@@ -17,8 +17,9 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     })
 
     const getByPostId = async (payloadPostId) => {
-        if (posts === null) {
-            posts = await getPosts();
+        if (posts.value === null) {
+            console.log('inside IF')
+            posts.value = await getPosts();
         }
         return posts.find(({id}) => Number(id) === Number(payloadPostId));
     }
@@ -79,7 +80,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
                 }
             )
             if (response.status === 200) {
-                posts = response.data;
+                posts.value = response.data;
                 return response.data;
             }
         } catch (error) {
@@ -100,8 +101,8 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             });
             if (response.status === 200) {
                 console.log('Стаья удалена');
-                posts.value = posts.filter((post) => post.id !== id);
-                console.log(posts, 'отфильтрованно')
+                posts.value = posts.value.filter((post) => post.id !== id);
+                console.log(posts.value, 'отфильтрованно')
             }
         } catch (error) {
             console.log(error);
