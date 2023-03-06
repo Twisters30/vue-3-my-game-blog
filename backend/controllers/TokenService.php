@@ -10,7 +10,7 @@ use models\User\RefreshToken;
 
 class TokenService
 {
-    public static function createAccessToken(string $userRole): string
+    public static function createAccessToken(string $userRole, string $userEmail): string
     {
         $now = new \DateTimeImmutable();
 
@@ -19,7 +19,8 @@ class TokenService
             'exp' => $now->modify(TOKEN_LIFETIME)->getTimestamp(),
             'nbf'  => $now->getTimestamp(),
             'iss'  => DOMAIN,
-            'role' => strtolower($userRole)
+            'role' => strtolower($userRole),
+            'email' => strtolower($userEmail)
         ];
 
         return JWT::encode($data, SECRET_KEY, JWT_ALGORITHM);
@@ -43,12 +44,18 @@ class TokenService
      */
     public static function checkAccessToken(string $role): void
     {
-        $jwt = self::parseToken();
-        $data = self::decodeToken($jwt);
+        $data = self::getTokenData();
 
         if ($data->role !== strtolower($role)) {
             throw new Exception('Маршрут не доступен для вашей роли', 403);
         }
+    }
+
+    public static function getTokenData(): object
+    {
+        $jwt = self::parseToken();
+
+        return self::decodeToken($jwt);
     }
 
     /**
@@ -116,7 +123,7 @@ class TokenService
         ])->where('token', $tokenWithUser['token'])->execute();
 
         echo jsonWrite([
-            'accessToken' => self::createAccessToken($tokenWithUser['role_name']),
+            'accessToken' => self::createAccessToken($tokenWithUser['role_name'], $tokenWithUser['email']),
             'refreshToken' => $refreshToken,
             'role' => $tokenWithUser['role_name']
         ]);

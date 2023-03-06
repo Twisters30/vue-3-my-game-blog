@@ -10,7 +10,6 @@
           <th v-for="header of tableHeaders">{{ header }}</th>
         </tr>
         </thead>
-        <img src="../../backend/public/images/compressed_image.jpg" height="1280" width="1920"/>
         <tbody>
         <tr v-for="content of tableContent" :key="content.id" class="box">
           <td v-for="(item, key) of content" :key="key">

@@ -47,7 +47,7 @@ class LoginController extends BaseController
         $token->create(['token' => $refreshToken, 'user_id' => $user['id']]);
 
         echo jsonWrite([
-            'accessToken' => TokenService::createAccessToken($user['role_name']),
+            'accessToken' => TokenService::createAccessToken($user['role_name'], $user['email']),
             'refreshToken' => $refreshToken,
             'role' => $user['role_name']
         ]);
