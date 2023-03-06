@@ -21,7 +21,7 @@
                 {{ status.name }}
               </option>
             </select>
-            <span v-else>{{ item }}</span>
+            <span v-html="item" v-else></span>
           </td>
           <i @click="$emit('deletePost',content.id)" class="fa-solid fa-trash icon-transparent"></i>
           <NuxtLink :to="pathUrl + content.id">

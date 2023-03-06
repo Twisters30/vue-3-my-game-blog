@@ -5,7 +5,7 @@
         <div class="row d-flex justify-content-center">
           <div class="col-md-6 col-sm-12">
             <BaseTitle />
-            <AdminBaseForm
+            <admin-base-form
                 :post="adminPostsStore.createFormData"
                 :createFormData="adminPostsStore.createFormData"
                 :postStatuses="postStatuses"
@@ -23,7 +23,6 @@ import AdminBaseForm from "@/components/backend/forms/AdminBaseForm.vue";
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
 import BaseTitle from "@/components/backend/titles/BaseTitle.vue";
 import { useRoutesGuard } from "@/stores/guards/routesGuard.js";
-
 const postStatuses = ref(null);
 const adminPostsStore = useAdminPostsStore();
 const post = reactive({});

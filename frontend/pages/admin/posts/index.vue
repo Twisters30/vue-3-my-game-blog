@@ -12,7 +12,7 @@
               @delete-post="adminPostsStore.deletePost"
               :tableHeaders="adminPostsStore.tableHeaders"
               :tableTitle="adminPostsStore.tableTitle"
-              :tableContent="adminPostsStore.posts"
+              :tableContent="posts"
               :pathUrl="adminPostsStore.pathUrl"
               :post-statuses="postStatuses"
           />
@@ -38,9 +38,7 @@ import { useAdminPostsStore } from "@/stores/admin/posts.js";
 
 const adminPostsStore = useAdminPostsStore();
 const postStatuses = await adminPostsStore.getPostStatuses();
-onMounted(() => {
-  adminPostsStore.getPosts();
-})
+const posts = await adminPostsStore.getPosts();
 definePageMeta({
   layout: 'admin'
 })
