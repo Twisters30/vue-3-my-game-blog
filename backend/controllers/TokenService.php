@@ -44,7 +44,7 @@ class TokenService
      */
     public static function checkAccessToken(string $role): void
     {
-        $data =self::getTokenData();
+        $data = self::getTokenData();
 
         if ($data->role !== strtolower($role)) {
             throw new Exception('Маршрут не доступен для вашей роли', 403);
@@ -54,8 +54,8 @@ class TokenService
     public static function getTokenData(): object
     {
         $jwt = self::parseToken();
-        return self::decodeToken($jwt);
 
+        return self::decodeToken($jwt);
     }
 
     /**
@@ -123,7 +123,7 @@ class TokenService
         ])->where('token', $tokenWithUser['token'])->execute();
 
         echo jsonWrite([
-            'accessToken' => self::createAccessToken($tokenWithUser['role_name'],$tokenWithUser['email']),
+            'accessToken' => self::createAccessToken($tokenWithUser['role_name'], $tokenWithUser['email']),
             'refreshToken' => $refreshToken,
             'role' => $tokenWithUser['role_name']
         ]);

@@ -41,7 +41,7 @@ class Request
     {
         $result = [];
 
-        foreach($inputs as $input) {
+        foreach ($inputs as $input) {
             $result[$input] = $this->$input;
         }
 
@@ -64,11 +64,11 @@ class Request
     public function htmlEncode(...$inputs): array
     {
         $result = [];
+
         foreach ($inputs as $input) {
             $result[$input] = htmlspecialchars($this->$input);
         }
 
         return $result;
     }
-
 }

@@ -8,3 +8,4 @@
 /httpRequests/
 /backend/vendor
 /backend/tmp
+/backend/public/images

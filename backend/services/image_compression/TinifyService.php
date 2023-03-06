@@ -11,14 +11,17 @@ class TinifyService implements ImageCompressionInterface
     {
         self::setKey();
     }
-    public function compress(array $file, string $email)
+    public function compress(array $file, string $email): string
     {
         $source = \Tinify\fromFile($file['tmp_name']);
         $path = "public/images/{$email}";
-        if (!file_exists(ROOT. $path)) {
-            mkdir(ROOT. $path,0777, true);
+
+        if (!file_exists(ROOT . $path)) {
+            mkdir(ROOT . $path, 0777, true);
         }
-        $source->toFile(ROOT. "{$path}/{$file['name']}");
+
+        $source->toFile(ROOT . "{$path}/{$file['name']}");
+
         return "{$path}/{$file['name']}";
     }
 

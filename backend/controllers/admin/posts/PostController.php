@@ -49,23 +49,17 @@ class PostController extends BaseController
      */
     public function store(Request $request)
     {
-
         $this->allowMethod('post');
         $email = TokenService::getTokenData()->email;
+
         $result = $request->htmlEncode('name', 'description');
         $result .= $request->post_status_id;
-
 
         foreach ($request->files() as $key => $file) {
             $result[$key] = $this->compressor->compress($file, $email);
         }
 
-
-
-        dd(1,$result);
-
-
-        return $result;
+        dd(1, $result);
 
     }
 }
