@@ -3,5 +3,5 @@
 namespace services\interfaces\image_compression;
 interface ImageCompressionInterface
 {
-    public function compress($file);
+    public function compress(array $file, string $email);
 }

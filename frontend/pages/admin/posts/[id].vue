@@ -20,9 +20,9 @@ import { useRoutesGuard } from "@/stores/guards/routesGuard.js";
 const  adminPostsStore = useAdminPostsStore();
 const route = useRoute();
 const post = adminPostsStore.getByPostId(route.params.id);
-definePageMeta({
-  layout: 'admin'
-})
+// definePageMeta({
+//   layout: 'admin'
+// })
 </script>
 
 <style scoped>

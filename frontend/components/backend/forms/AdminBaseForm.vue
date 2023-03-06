@@ -1,7 +1,7 @@
 <template>
   <div class="card card-primary">
     <div class="card-header">
-      <h3 class="card-title">{{ props.titleForm  || 'Название формы'}}</h3>
+      <h3 class="card-title">{{ titleForm  || 'Название формы'}}</h3>
     </div>
     <form @submit.prevent="$emit('createPost', data)">
       <div class="card-body">
@@ -28,8 +28,8 @@
         </div>
         <div class="form-group" v-if="props.postStatuses">
           <label for="exampleFormControlSelect1">Example select</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option :value="status.id" v-for="status of props.postStatuses" :key="status">{{ status.name }}</option>
+          <select v-model="data.post_status_id" class="form-control" id="exampleFormControlSelect1">
+            <option :selected="data.post_status_id  === status.id" :value="status.id" v-for="status of props.postStatuses" :key="status">{{ status.name }}</option>
           </select>
         </div>
       </div>
@@ -46,7 +46,7 @@ const props = defineProps(['titleForm', 'postStatuses', 'post','adminPostsStore'
 const emits = defineEmits(['createPost']);
 const postImage = ref(null);
 const postIcon = ref(null);
-const data = ref(props.post || {});
+const data = ref(props.post || { post_status_id: 1 });
 const onFileChange = (e,flag) => {
   const files = e.target.files || e.dataTransfer.files;
   data.value[flag] = files[0];

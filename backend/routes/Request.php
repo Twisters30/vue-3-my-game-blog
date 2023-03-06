@@ -32,26 +32,43 @@ class Request
         }
     }
 
-    public function input(...$inputs): Request
+    public function files(): array
     {
-        $this->unsetProperties($inputs);
-
-        return $this;
+        return $_FILES;
     }
 
-    public function files(): Request
+    public function only(...$inputs): array
     {
-        $this->unsetProperties(array_keys($_FILES));
+        $result = [];
 
-        return $this;
+        foreach($inputs as $input) {
+            $result[$input] = $this->$input;
+        }
+
+        return $result;
     }
 
-    private function unsetProperties($properties): void
+    public function except(...$inputs): array
     {
+        $result = [];
+
         foreach (self::$data as $key => $value) {
-            if (!in_array($key, $properties)) {
-                unset($this->$key);
+            if (!in_array($key, $inputs)) {
+                $result[$key] = $value;
             }
         }
+
+        return $result;
     }
+
+    public function htmlEncode(...$inputs): array
+    {
+        $result = [];
+        foreach ($inputs as $input) {
+            $result[$input] = htmlspecialchars($this->$input);
+        }
+
+        return $result;
+    }
+
 }
