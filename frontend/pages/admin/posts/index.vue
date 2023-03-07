@@ -35,8 +35,12 @@
 <script setup>
 import BaseTable  from "@/components/BaseTable.vue";
 import { useAdminPostsStore} from "@/stores/admin/posts.js";
-import { storeToRefs } from 'Pinia';
+import {storeToRefs} from "pinia";
+
+
 const adminPostsStore = useAdminPostsStore();
+
+
 const postStatuses = await adminPostsStore.getPostStatuses();
 await adminPostsStore.getPosts();
 const state = storeToRefs(adminPostsStore);

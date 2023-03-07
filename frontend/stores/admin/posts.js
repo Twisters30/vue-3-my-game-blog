@@ -31,7 +31,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     )
     const pathUrl = '/admin/posts/';
     const getPostStatuses = async () => {
-        const accessToken = loginStore.getAccessToken();
+        const accessToken = loginStore.getAccessTokenStorage();
         try {
             const response = await axiosInstance.get(`${apiHost}/${apiAdminGetPostStatuses}`,
                 {
