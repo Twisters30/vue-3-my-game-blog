@@ -12,13 +12,18 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const router = useRouter();
     let posts = ref(null);
 
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
     const getByPostId = async (payloadPostId) => {
+        console.log(payloadPostId)
         if (posts.value === null) {
             posts.value = await getPosts();
         }
-        return posts.value.find((post) => {
-            return Number(post.id) === Number(payloadPostId)
-        });
+        return posts.value.find((post) => Number(post.id) === Number(payloadPostId));
     }
     const tableTitle = 'Редактирование статей';
     const tableHeaders = reactive(
@@ -79,7 +84,6 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             }
         } catch (error) {
             console.log(error);
-            // router.push({path: '/'});
         }
     }
 

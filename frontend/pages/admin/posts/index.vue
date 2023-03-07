@@ -1,7 +1,5 @@
 <template>
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="my-4">
@@ -13,7 +11,7 @@
               :tableHeaders="adminPostsStore.tableHeaders"
               :tableTitle="adminPostsStore.tableTitle"
               :tableContent="posts"
-              :post-statuses="postStatuses"
+              :post-statuses="statuses"
           />
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -22,12 +20,8 @@
             </ol>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
     </section>
-
-    <!-- Main content -->
-
-    <!-- /.content -->
   </div>
 </template>
 
@@ -36,15 +30,18 @@ import BaseTable  from "@/components/BaseTable.vue";
 import { useAdminPostsStore} from "@/stores/admin/posts.js";
 import { storeToRefs } from 'pinia'
 const adminPostsStore = useAdminPostsStore();
-const postStatuses = await adminPostsStore.getPostStatuses();
 await adminPostsStore.getPosts();
 const state = storeToRefs(adminPostsStore);
 const posts = state.posts;
+let statuses = ref();
 definePageMeta({
   layout: 'admin'
 })
-</script>
 
+onBeforeMount(async () => {
+  statuses.value = await adminPostsStore.getPostStatuses()
+})
+</script>
 
 
 <style scoped>

@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  routeRules: {
+    '/admin/**': { ssr: false },
+  },
   devtools: {
     enabled: false,
   },
@@ -20,7 +23,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  // ssr: false,
+  // ssr: true,
   modules: ['@pinia/nuxt','@nuxt/devtools'],
   css: ['normalize.css/normalize.css','bootstrap/dist/css/bootstrap.min.css','@fortawesome/fontawesome-free/css/all.css'],
   vite: {

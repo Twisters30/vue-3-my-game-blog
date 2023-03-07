@@ -18,14 +18,14 @@
             </div>
           </div>
         </div><div class="form-group">
-          <label for="iconInputFile">Загрузить  иконку</label>
-          <div class="input-group d-flex">
-            <div class="custom-file">
-              <input ref="postIcon" @change="onFileChange($event,'icon')" type="file" class="form-control" id="iconInputFile">
-              <label class="custom-file-label" for="iconInputFile">Choose file</label>
-            </div>
+        <label for="iconInputFile">Загрузить  иконку</label>
+        <div class="input-group d-flex">
+          <div class="custom-file">
+            <input ref="postIcon" @change="onFileChange($event,'icon')" type="file" class="form-control" id="iconInputFile">
+            <label class="custom-file-label" for="iconInputFile">Choose file</label>
           </div>
         </div>
+      </div>
         <div class="form-group" v-if="props.postStatuses">
           <label for="exampleFormControlSelect1">Example select</label>
           <select v-model="data.post_status_id" class="form-control" id="exampleFormControlSelect1">
@@ -46,7 +46,7 @@ const props = defineProps(['titleForm', 'postStatuses', 'post','adminPostsStore'
 const emits = defineEmits(['createPost']);
 const postImage = ref(null);
 const postIcon = ref(null);
-const data = ref(props.post || { post_status_id: 1 });
+const data = ref(props.post || { post_status_id:props.postStatuses });
 const onFileChange = (e,flag) => {
   const files = e.target.files || e.dataTransfer.files;
   data.value[flag] = files[0];
