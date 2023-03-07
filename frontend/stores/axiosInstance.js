@@ -2,16 +2,14 @@ import { defineStore } from "pinia";
 import { useLoginStore } from "~/stores/login";
 import axios from "axios";
 import { apiHost, apiRefreshToken } from "~/config/api.js";
-import { useRefreshUser } from "~/stores/refreshUser.js";
+import { useRefreshUserStore } from "~/stores/refreshUser.js";
 
 export const useAxiosStore = defineStore('axiosStore', () => {
     const loginStore = useLoginStore();
-    const refreshUser = useRefreshUser();
+    const refreshUserStore = useRefreshUserStore();
     const setConfigAxios = () => {
-        const tokenRefresh = loginStore.getRefreshToken();
-        const tokenAccess = loginStore.getAccessToken();
-
-        const axiosInstance = axios.create();
+        let axiosInstance;
+        axiosInstance = axios.create();
 
         // axiosInstance.interceptors.request.use(
         //     async config => {
@@ -33,7 +31,7 @@ export const useAxiosStore = defineStore('axiosStore', () => {
                 if (error.response.status === 403 && !originalRequest._retry) {
                     originalRequest._retry = true;
                     try {
-                        const newToken = await refreshUser.refresh();
+                        const newToken = await refreshUserStore.refresh();
                         originalRequest.headers.Authorization = `Bearer ${newToken.accessToken}`;
                         console.log(axiosInstance(originalRequest))
                         return axiosInstance(originalRequest);

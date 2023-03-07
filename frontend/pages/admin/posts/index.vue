@@ -13,7 +13,6 @@
               :tableHeaders="adminPostsStore.tableHeaders"
               :tableTitle="adminPostsStore.tableTitle"
               :tableContent="posts"
-              :pathUrl="adminPostsStore.pathUrl"
               :post-statuses="postStatuses"
           />
           <div class="col-sm-6">
@@ -35,18 +34,12 @@
 <script setup>
 import BaseTable  from "@/components/BaseTable.vue";
 import { useAdminPostsStore} from "@/stores/admin/posts.js";
-import {storeToRefs} from "pinia";
-
-
+import { storeToRefs } from 'pinia'
 const adminPostsStore = useAdminPostsStore();
-
-
 const postStatuses = await adminPostsStore.getPostStatuses();
 await adminPostsStore.getPosts();
 const state = storeToRefs(adminPostsStore);
 const posts = state.posts;
-console.log(state)
-console.log(isRef(state.posts.value))
 definePageMeta({
   layout: 'admin'
 })
