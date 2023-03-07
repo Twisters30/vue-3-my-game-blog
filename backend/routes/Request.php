@@ -60,15 +60,4 @@ class Request
 
         return $result;
     }
-
-    public function htmlEncode(...$inputs): array
-    {
-        $result = [];
-
-        foreach ($inputs as $input) {
-            $result[$input] = htmlspecialchars($this->$input);
-        }
-
-        return $result;
-    }
 }

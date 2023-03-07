@@ -111,11 +111,12 @@ class TokenService
     /**
      * @throws Exception
      */
-    public static function updateTokens(): void
+    public static function updateTokens(): array
     {
         $tokenWithUser = self::checkRefreshToken();
 
         $refreshToken = self::createRefreshToken($tokenWithUser['id']);
+
 
         $refreshTokenModel = new RefreshToken();
         $refreshTokenModel->update([
@@ -123,10 +124,10 @@ class TokenService
             'created_at' => date('Y-m-d H:i:s')
         ])->where('token', $tokenWithUser['token'])->execute();
 
-        echo jsonWrite([
+        return [
             'accessToken' => self::createAccessToken($tokenWithUser),
             'refreshToken' => $refreshToken,
-            'role' => $tokenWithUser['role_name']
-        ]);
+            'role' => $tokenWithUser['role_name'],
+        ];
     }
 }

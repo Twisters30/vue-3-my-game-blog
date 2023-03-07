@@ -7,6 +7,7 @@ abstract class Model
     public $instance;
     public string $table;
     public string $key = 'id';
+    public array $encoded = [];
     private string $query = '';
     public function __construct()
     {
@@ -89,6 +90,7 @@ abstract class Model
     public function create($data): array
     {
         (array)$data;
+
         $columns = implode(', ', array_keys($data));
         $values = implode('\', \'', array_values($data));
         $this->query = "INSERT INTO {$this->table} ({$columns}) VALUES ('{$values}')";
@@ -155,12 +157,19 @@ abstract class Model
 
     public function htmlDecode(): array
     {
-        $data = $this->all();
+        $data = $this->get();
 
         array_walk_recursive($data, function (&$item){
             $item = htmlspecialchars_decode($item);
         });
 
         return $data;
+    }
+
+    public function htmlEncode($data): Model
+    {
+        $this->encoded = array_map(fn($item) => htmlspecialchars($item), $data);
+
+        return $this;
     }
 }

@@ -38,7 +38,7 @@ class PostController extends BaseController
     {
         $this->allowMethod();
 
-        echo jsonWrite($this->postModel->htmlDecode());
+        echo jsonWrite($this->postModel->select()->htmlDecode());
     }
 
     /**
@@ -59,15 +59,15 @@ class PostController extends BaseController
         $this->allowMethod('post');
         $tokenData = TokenService::getTokenData();
 
-        $result = $request->htmlEncode('name', 'description');
-        $result['post_status_id'] = $request->post_status_id;
+        $result = $request->except('image', 'icon');
         $result['user_id'] = $tokenData->user_id;
 
         foreach ($request->files() as $key => $file) {
             $result[$key] = $this->compressor->compress($file, $tokenData->email);
         }
 
-        $this->postModel->create($result);
+        $this->postModel->htmlEncode($result)
+            ->create($this->postModel->encoded);
     }
 
     /**

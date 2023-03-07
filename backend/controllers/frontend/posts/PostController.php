@@ -9,6 +9,7 @@ class PostController extends BaseController
 {
     public function index()
     {
+
         dd(1, 'front post index');
     }
 }

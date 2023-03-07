@@ -69,6 +69,10 @@ class LoginController extends BaseController
     {
         $this->allowMethod('get');
 
-        TokenService::updateTokens();
+        $tokens = TokenService::updateTokens();
+
+        setcookie ("refreshToken", $tokens['refreshToken'], time()+3600, '/');
+
+        echo jsonWrite($tokens);
     }
 }
