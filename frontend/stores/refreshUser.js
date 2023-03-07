@@ -21,7 +21,6 @@ export const useRefreshUserStore = defineStore('refreshUser', () => {
             });
 
             if (response.status === 200) {
-
                 const responseToken = {
                     accessToken: response.data.accessToken,
                     refreshToken: response.data.refreshToken

@@ -10,8 +10,9 @@
           <th v-for="header of tableHeaders">{{ header }}</th>
         </tr>
         </thead>
+        {{statuses}}
         <tbody>
-        <tr @click.stop="$router.push({ path: $route.path + content.id })" v-for="content of tableContent" :key="content.id" class="box">
+        <tr @click.stop="$router.push({ path: $route.path + '/' + content.id })" v-for="content of tableContent" :key="content.id" class="box">
           <td v-for="(item, key) of content" :key="key">
             <select @click.stop v-if="key === 'post_status_id'">
               <option
@@ -24,7 +25,7 @@
             <span v-html="item" v-else></span>
           </td>
           <i @click.stop="$emit('deletePost', content.id)" class="fa-solid fa-trash icon-transparent"></i>
-          <NuxtLink @click.stop :to="{path: $route.path + content.id}">
+          <NuxtLink @click.stop :to="{path: $route.path + '/' + content.id}">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
         </tr>
@@ -35,6 +36,7 @@
 </template>
 
 <script setup>
+
 const emits = defineEmits(['deletePost'])
 const props = defineProps({
   tableTitle: String,
@@ -42,6 +44,12 @@ const props = defineProps({
   tableContent: Array,
   postStatuses: Array,
 })
+// onMounted(async () => {
+//   const statuses = computed(() => {
+//     return props.postStatuses;
+//   })
+// })
+watch(() => props.postStatuses, (newValue) => {
+  console.log(newValue)
+} )
 </script>
-<style scoped>
-</style>
