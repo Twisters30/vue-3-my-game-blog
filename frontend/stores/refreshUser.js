@@ -4,7 +4,7 @@ import { apiHost, apiRefreshToken } from "~/config/api.js";
 import { useLoginStore } from "~/stores/login.js";
 import { useUserRoleStore } from "~/stores/userRole.js";
 
-export const useRefreshUser = defineStore('refreshUser', () => {
+export const useRefreshUserStore = defineStore('refreshUser', () => {
     const loginStore = useLoginStore();
     const userRoleStore = useUserRoleStore();
     const refresh = async () => {
@@ -30,7 +30,6 @@ export const useRefreshUser = defineStore('refreshUser', () => {
                 loginStore.setStorageToken(responseToken);
                 loginStore.setStateToken(responseToken);
                 userRoleStore.setUserRole(response.data.role);
-
                 return responseToken;
             }
         } catch (error) {

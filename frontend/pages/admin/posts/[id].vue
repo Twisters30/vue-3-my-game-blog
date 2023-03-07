@@ -16,7 +16,6 @@
 import Editor from '@/components/Editor.vue';
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
 import AdminBaseForm from "@/components/backend/forms/AdminBaseForm.vue";
-import { useRoutesGuard } from "@/stores/guards/routesGuard.js";
 const  adminPostsStore = useAdminPostsStore();
 const route = useRoute();
 const post = await adminPostsStore.getByPostId(route.params.id);

@@ -11,9 +11,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr @click="$router.push({path:content.id})" v-for="content of post" :key="content.id" class="box">
+        <tr @click.stop="$router.push({ path: $route.path + content.id })" v-for="content of tableContent" :key="content.id" class="box">
           <td v-for="(item, key) of content" :key="key">
-            <select v-if="key === 'post_status_id'">
+            <select @click.stop v-if="key === 'post_status_id'">
               <option
                   :selected="Number(status.id) === Number(item)"
                   v-for="status in postStatuses" :key="status.id"
@@ -23,8 +23,8 @@
             </select>
             <span v-html="item" v-else></span>
           </td>
-          <i @click.stop="$emit('deletePost',content.id)" class="fa-solid fa-trash icon-transparent"></i>
-          <NuxtLink :to="pathUrl + content.id">
+          <i @click.stop="$emit('deletePost', content.id)" class="fa-solid fa-trash icon-transparent"></i>
+          <NuxtLink @click.stop :to="{path: $route.path + content.id}">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
         </tr>
@@ -40,12 +40,7 @@ const props = defineProps({
   tableTitle: String,
   tableHeaders: Array,
   tableContent: Array,
-  pathUrl: String,
   postStatuses: Array,
-})
-const post = computed(() => {
-  console.log(props.tableContent)
-  return props.tableContent;
 })
 </script>
 <style scoped>

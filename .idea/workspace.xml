@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="post delete backend">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="post delete ref">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/refreshUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/refreshUser.js" afterDir="false" />
     </list>
     <list id="0ad882db-258d-4240-a853-c718e6e80fa8" name="Revert: " comment="magic" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,14 +158,7 @@
       <workItem from="1677804906387" duration="11096000" />
       <workItem from="1677936007996" duration="21517000" />
       <workItem from="1678045082319" duration="16586000" />
-      <workItem from="1678107646093" duration="22528000" />
-    </task>
-    <task id="LOCAL-00003" summary="'models-&gt;create method return array'">
-      <created>1675815809914</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1675815809914</updated>
+      <workItem from="1678107646093" duration="35051000" />
     </task>
     <task id="LOCAL-00004" summary="'change gitignore - vendors'">
       <created>1675816539238</created>
@@ -500,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678122009405</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="post delete ref">
+      <created>1678133343983</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1678133343983</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +522,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="git ignore frontend штуки" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/tmp/logs/errors.log" />
     <MESSAGE value="layouts update" />
     <MESSAGE value="frontend validator added" />
@@ -544,6 +546,7 @@
     <MESSAGE value="merge backend added" />
     <MESSAGE value="post delete" />
     <MESSAGE value="post delete backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="post delete backend" />
+    <MESSAGE value="post delete ref" />
+    <option name="LAST_COMMIT_MESSAGE" value="post delete ref" />
   </component>
 </project>

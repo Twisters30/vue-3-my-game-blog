@@ -12,16 +12,13 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const router = useRouter();
     let posts = ref(null);
 
-    const getPostsStore = computed(() => {
-        return posts;
-    })
-
     const getByPostId = async (payloadPostId) => {
         if (posts.value === null) {
-            console.log('inside IF')
             posts.value = await getPosts();
         }
-        return posts.find(({id}) => Number(id) === Number(payloadPostId));
+        return posts.value.find((post) => {
+            return Number(post.id) === Number(payloadPostId)
+        });
     }
     const tableTitle = 'Редактирование статей';
     const tableHeaders = reactive(
@@ -29,9 +26,8 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             'id','name','description','image','icon','post_status_id','user_id','created_at','updated_at'
         ]
     )
-    const pathUrl = '/admin/posts/';
     const getPostStatuses = async () => {
-        const accessToken = loginStore.getAccessToken();
+        const accessToken = loginStore.getAccessTokenStorage();
         try {
             const response = await axiosInstance.get(`${apiHost}/${apiAdminGetPostStatuses}`,
                 {
@@ -39,7 +35,6 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
                 }
             )
             if (response.status === 200) {
-                console.log(response.data)
                 return response.data;
             }
         } catch (error) {
@@ -72,7 +67,6 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     }
     const getPosts = async () => {
         const accessToken = loginStore.getAccessToken();
-        console.log(accessToken, 'storeAdminPosts');
         try {
             const response = await axiosInstance.get(`${apiHost}/${apiAdminPostsIndex}`,
                 {
@@ -110,5 +104,5 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         }
     }
 
-    return { getPosts, pathUrl, tableHeaders, tableTitle, getByPostId, getPostStatuses, createPost, deletePost, getPostsStore, posts };
+    return { getPosts, tableHeaders, tableTitle, getByPostId, getPostStatuses, createPost, deletePost, posts };
 })
