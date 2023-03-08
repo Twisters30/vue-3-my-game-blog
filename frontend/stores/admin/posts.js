@@ -91,6 +91,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             )
             if (response.status === 200) {
                 console.log('Статья создана');
+                router.push('/admin/posts')
             }
         } catch (error) {
             console.log(error);

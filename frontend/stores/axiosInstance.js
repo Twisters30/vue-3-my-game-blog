@@ -37,7 +37,7 @@ export const useAxiosStore = defineStore('axiosStore', () => {
                         return axiosInstance(originalRequest);
                     } catch (error) {
                         console.log(error);
-                        loginStore.logout();
+                        await loginStore.logout();
                         const router = useRouter();
                         await router.push('/');
                         loginStore.showLoginPage();

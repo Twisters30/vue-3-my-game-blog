@@ -46,7 +46,7 @@ const props = defineProps(['titleForm', 'postStatuses', 'post','adminPostsStore'
 const emits = defineEmits(['createOrUpdatePost']);
 const postImage = ref(null);
 const postIcon = ref(null);
-const data = ref(props.post || { post_status_id:props.postStatuses });
+const data = ref(props.post || { post_status_id: 1 });
 const onFileChange = (e,flag) => {
   const files = e.target.files || e.dataTransfer.files;
   data.value[flag] = files[0];
