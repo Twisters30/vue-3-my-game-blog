@@ -1,8 +1,16 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-import { apiHost, apiAdminPostsIndex, apiAdminGetPostStatuses, apiAdminPostCreate, apiAdminPostDelete } from "~/config/api.js";
+import {
+    apiHost,
+    apiAdminPostsIndex,
+    apiAdminGetPostStatuses,
+    apiAdminPostCreate,
+    apiAdminPostDelete,
+    apiAdminChangePostStatus
+} from "~/config/api.js";
 import { useLoginStore } from "~/stores/login.js";
 import { useAxiosStore } from "~/stores/axiosInstance.js";
+import { fileFormData } from "~/helpers/fileFormData.js";
 
 
 export const useAdminPostsStore = defineStore('adminPostsStore', () => {
@@ -46,21 +54,18 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             console.log(error);
         }
     }
-    const createPost = async (data) => {
+    const createOrUpdatePost = async (post) => {
         const accessToken = loginStore.getAccessToken();
-        const bodyFormData = new FormData();
-        for (const [key,value] of Object.entries(data)) {
-            console.log(key,value)
-            bodyFormData.append(key, value);
-        }
-        console.log(bodyFormData);
+        const bodyFormData = fileFormData(post);
         try {
             const response = await axiosInstance.post(`${apiHost}/${apiAdminPostCreate}`,
-                    bodyFormData,
+                bodyFormData,
                 {
-                    headers: {
+                    headers:
+                        {
                         'Authorization': `Bearer ${accessToken}`,
-                        'Content-Type': 'multipart/form-data'},
+                        'Content-Type': 'multipart/form-data'
+                    },
                 }
             )
             if (response.status === 200) {
@@ -70,6 +75,26 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             console.log(error);
         }
     }
+    const changePostStatus = async (postStatus) => {
+        const accessToken = loginStore.getAccessToken();
+        console.log(postStatus)
+        try {
+            const response = await axiosInstance.post(`${apiHost}/${apiAdminChangePostStatus}`,
+                postStatus,
+                {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`
+                    },
+                }
+            )
+            if (response.status === 200) {
+                console.log('Статус изменён');
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     const getPosts = async () => {
         const accessToken = loginStore.getAccessToken();
         try {
@@ -89,7 +114,6 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
 
     const deletePost = async (id) => {
         const accessToken = loginStore.getAccessToken();
-        console.log(id)
         try {
             const response = await axiosInstance.delete(`${apiHost}/${apiAdminPostDelete}`,{
                 data: {
@@ -108,5 +132,14 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         }
     }
 
-    return { getPosts, tableHeaders, tableTitle, getByPostId, getPostStatuses, createPost, deletePost, posts };
+    return {
+        getPosts,
+        tableHeaders,
+        tableTitle,
+        getByPostId,
+        getPostStatuses,
+        createOrUpdatePost,
+        deletePost,
+        posts,
+        changePostStatus };
 })

@@ -44,30 +44,31 @@ class PostController extends BaseController
     /**
      * @throws Exception
      */
-    public function getPostStatuses(): void
-    {
-        $this->allowMethod();
-
-        echo jsonWrite($this->postStatusModel->all());
-    }
-
-    /**
-     * @throws Exception
-     */
-    public function store(Request $request): void
+    public function createOrUpdate(Request $request): void
     {
         $this->allowMethod('post');
         $tokenData = TokenService::getTokenData();
 
-        $result = $request->except('image', 'icon');
-        $result['user_id'] = $tokenData->user_id;
+        $result = $request->all();
 
-        foreach ($request->files() as $key => $file) {
-            $result[$key] = $this->compressor->compress($file, $tokenData->email);
+        if ($request->files()) {
+            foreach ($request->files() as $key => $file) {
+                $result[$key] = $this->compressor->compress($file, $tokenData->email);
+            }
         }
 
-        $this->postModel->htmlEncode($result)
-            ->create($this->postModel->encoded);
+        if ($request->id) {
+            $this->postModel
+                ->htmlEncode($result)
+                ->update($this->postModel->encoded)
+                ->where('id',$request->id)
+                ->execute();
+        } else {
+            $result['user_id'] = $tokenData->user_id;
+
+            $this->postModel->htmlEncode($result)
+                ->create($this->postModel->encoded);
+        }
     }
 
     /**
@@ -79,4 +80,27 @@ class PostController extends BaseController
 
         $this->postModel->delete('id', $request->id);
     }
+
+    /**
+     * @throws Exception
+     */
+    public function getPostStatuses(): void
+    {
+        $this->allowMethod();
+
+        echo jsonWrite($this->postStatusModel->all());
+    }
+
+    public function changeStatus(Request $request)
+    {
+        $this->allowMethod('post');
+
+        $this->postModel
+            ->update($request->only('post_status_id'))
+            ->where('id',$request->id)
+            ->execute();
+        dd(1, $request);
+
+    }
+
 }

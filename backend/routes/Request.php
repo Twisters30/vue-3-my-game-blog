@@ -60,4 +60,9 @@ class Request
 
         return $result;
     }
+
+    public function all(): array
+    {
+        return self::$data;
+    }
 }

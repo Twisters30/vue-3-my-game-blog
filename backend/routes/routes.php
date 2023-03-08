@@ -12,8 +12,9 @@ Router::addRoute('posts', ['controller' => 'frontend\posts\PostController', 'act
 Router::routeGroup(['role' => 'Admin', 'prefix' => 'admin', 'namespace' => 'admin'], fn () => [
     'posts' => ['controller' =>'posts\PostController', 'action' => 'index'],
     'posts/post-statuses' => ['controller' =>'posts\PostController', 'action' => 'getPostStatuses'],
-    'posts/store' => ['controller' =>'posts\PostController', 'action' => 'store'],
+    'posts/create-or-update' => ['controller' =>'posts\PostController', 'action' => 'createOrUpdate'],
     'posts/delete' => ['controller' =>'posts\PostController', 'action' => 'delete'],
+    'posts/change-status' => ['controller' =>'posts\PostController', 'action' => 'changeStatus'],
 ]);
 
 
