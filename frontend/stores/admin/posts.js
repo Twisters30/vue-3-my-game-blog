@@ -1,6 +1,14 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-import { apiHost, apiAdminPostsIndex, apiAdminGetPostStatuses, apiAdminPostCreate, apiAdminPostDelete } from "~/config/api.js";
+import {fileFormData} from "~/helpers/fileFormData.js";
+import {
+    apiHost,
+    apiAdminPostsIndex,
+    apiAdminGetPostStatuses,
+    apiAdminPostCreate,
+    apiAdminPostDelete,
+    apiAdminChangePostStatus,
+} from "~/config/api.js";
 import { useLoginStore } from "~/stores/login.js";
 import { useAxiosStore } from "~/stores/axiosInstance.js";
 
@@ -46,14 +54,32 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             console.log(error);
         }
     }
-    const createPost = async (data) => {
+
+    const changeStatus = async (data) => {
         const accessToken = loginStore.getAccessToken();
-        const bodyFormData = new FormData();
-        for (const [key,value] of Object.entries(data)) {
-            console.log(key,value)
-            bodyFormData.append(key, value);
+
+        console.log(data)
+
+        try {
+            const response = await axiosInstance.post(`${apiHost}/${apiAdminChangePostStatus}`,
+                data,
+                {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`,
+                    },
+                }
+            )
+            if (response.status === 200) {
+                console.log('Статус обновлен');
+            }
+        } catch (error) {
+            console.log(error);
         }
-        console.log(bodyFormData);
+    }
+    const createOrUpdatePost = async (data) => {
+        const accessToken = loginStore.getAccessToken();
+        const bodyFormData = fileFormData(data);
+
         try {
             const response = await axiosInstance.post(`${apiHost}/${apiAdminPostCreate}`,
                     bodyFormData,
@@ -108,5 +134,14 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
         }
     }
 
-    return { getPosts, tableHeaders, tableTitle, getByPostId, getPostStatuses, createPost, deletePost, posts };
+    return {
+        getPosts,
+        tableHeaders,
+        tableTitle,
+        getByPostId,
+        getPostStatuses,
+        createOrUpdatePost,
+        deletePost, posts,
+        changeStatus
+    };
 })

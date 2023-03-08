@@ -9,7 +9,7 @@
                 :post="adminPostsStore.createFormData"
                 :createFormData="adminPostsStore.createFormData"
                 :postStatuses="postStatuses"
-                @create-post="adminPostsStore.createPost"
+                @create-or-update-post="adminPostsStore.createOrUpdatePost"
             />
           </div>
         </div>

@@ -71,7 +71,7 @@ class TokenService
         } catch (SignatureInvalidException $e) {
             throw new Exception('Недействительный токен', 403);
         } catch (Exception $e) {
-            throw new Exception('Ошибка при декодировании токена', 500);
+            throw new Exception('Ошибка при декодировании токена', 403);
         }
 
         return $data;

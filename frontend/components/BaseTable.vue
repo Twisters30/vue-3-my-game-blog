@@ -12,19 +12,29 @@
         </thead>
         {{statuses}}
         <tbody>
-        <tr @click.stop="$router.push({ path: $route.path + '/' + content.id })" v-for="content of tableContent" :key="content.id" class="box">
+        <tr @click.stop="$router.push({ path: $route.path + '/' + content.id })"
+            v-for="content of tableContent"
+            :key="content.id"
+            class="box"
+        >
           <td v-for="(item, key) of content" :key="key">
-            <select @click.stop v-if="key === 'post_status_id'">
-              <option
-                  :selected="Number(status.id) === Number(item)"
-                  v-for="status in postStatuses" :key="status.id"
-                  :value="status.id">
-                {{ status.name }}
-              </option>
-            </select>
-            <span v-html="item" v-else></span>
+              <select class="form-control"
+                      @click.stop
+                      @change="emits('changeStatus',
+                      {post_status_id: $event.target.value, id: content.id})"
+                      v-if="key === 'post_status_id'"
+              >
+                <option
+                    :selected="Number(status.id) === Number(item)"
+                    v-for="status in postStatuses"
+                    :key="status.id"
+                    :value="status.id">
+                  {{ status.name }}
+                </option>
+              </select>
+            <span class="cut-text" v-html="item" v-else></span>
           </td>
-          <i @click.stop="$emit('deletePost', content.id)" class="fa-solid fa-trash icon-transparent"></i>
+          <i @click.stop="emits('deletePost', content.id)" class="fa-solid fa-trash icon-transparent"></i>
           <NuxtLink @click.stop :to="{path: $route.path + '/' + content.id}">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
@@ -37,7 +47,7 @@
 
 <script setup>
 
-const emits = defineEmits(['deletePost'])
+const emits = defineEmits(['deletePost', 'changeStatus'])
 const props = defineProps({
   tableTitle: String,
   tableHeaders: Array,
@@ -49,7 +59,19 @@ const props = defineProps({
 //     return props.postStatuses;
 //   })
 // })
+
 watch(() => props.postStatuses, (newValue) => {
   console.log(newValue)
 } )
 </script>
+<style>
+.cut-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.3em;
+  height: 2.4em;
+  max-width: 14em;
+}
+</style>

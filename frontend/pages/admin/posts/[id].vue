@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row d-flex justify-content-center">
           <div class="row col-md-6">
-            <AdminBaseForm :post="post" :post-statuses="statuses"/>
+            <AdminBaseForm :post="post" :post-statuses="statuses" @create-or-update-post="adminPostsStore.createOrUpdatePost" />
           </div>
         </div>
       </div>
@@ -13,10 +13,9 @@
 </template>
 
 <script setup>
-import Editor from '@/components/Editor.vue';
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
 import AdminBaseForm from "@/components/backend/forms/AdminBaseForm.vue";
-const  adminPostsStore = useAdminPostsStore();
+const adminPostsStore = useAdminPostsStore();
 const route = useRoute();
 const post = await adminPostsStore.getByPostId(route.params.id);
 const statuses = ref();

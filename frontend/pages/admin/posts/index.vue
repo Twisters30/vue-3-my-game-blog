@@ -8,6 +8,7 @@
         <div class="row mb-2">
           <BaseTable
               @delete-post="adminPostsStore.deletePost"
+              @change-status="adminPostsStore.changeStatus"
               :tableHeaders="adminPostsStore.tableHeaders"
               :tableTitle="adminPostsStore.tableTitle"
               :tableContent="posts"
