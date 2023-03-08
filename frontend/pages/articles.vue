@@ -8,10 +8,11 @@
 </template>
 
 <script setup>
-import Post from "../components/frontend/Post.vue";
+import Post from "@/components/frontend/Post.vue";
 definePageMeta({
   layout: 'default'
 })
+
 </script>
 
 <style lang="scss">

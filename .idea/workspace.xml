@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="ssr fix">
-      <change afterPath="$PROJECT_DIR$/frontend/helpers/fileFormData.js" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="post-statuses">
+      <change afterPath="$PROJECT_DIR$/frontend/stores/posts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/TokenService.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/TokenService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/admin/posts/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/backend/forms/AdminBaseForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/Post.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/[id].vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/admin/posts/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/articles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/articles.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" afterDir="false" />
     </list>
     <list id="0ad882db-258d-4240-a853-c718e6e80fa8" name="Revert: " comment="magic" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,14 +157,7 @@
       <workItem from="1677804906387" duration="11096000" />
       <workItem from="1677936007996" duration="21517000" />
       <workItem from="1678045082319" duration="16586000" />
-      <workItem from="1678107646093" duration="62042000" />
-    </task>
-    <task id="LOCAL-00006" summary="'model-&gt;delete'">
-      <created>1675885846788</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1675885846788</updated>
+      <workItem from="1678107646093" duration="65919000" />
     </task>
     <task id="LOCAL-00007" summary="'RegisterController'">
       <created>1675986758727</created>
@@ -509,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678201045754</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="post-statuses">
+      <created>1678233703590</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1678233703590</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +521,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="frontend validator added" />
     <MESSAGE value="middleware" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix2" />
@@ -553,6 +545,7 @@
     <MESSAGE value="post delete ref" />
     <MESSAGE value="update method get posts" />
     <MESSAGE value="ssr fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ssr fix" />
+    <MESSAGE value="post-statuses" />
+    <option name="LAST_COMMIT_MESSAGE" value="post-statuses" />
   </component>
 </project>

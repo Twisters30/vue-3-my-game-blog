@@ -20,12 +20,6 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
     const router = useRouter();
     let posts = ref(null);
 
-    function getCookie(name) {
-        let matches = document.cookie.match(new RegExp(
-            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-        ));
-        return matches ? decodeURIComponent(matches[1]) : undefined;
-    }
     const getByPostId = async (payloadPostId) => {
         console.log(payloadPostId)
         if (posts.value === null) {
@@ -91,6 +85,7 @@ export const useAdminPostsStore = defineStore('adminPostsStore', () => {
             )
             if (response.status === 200) {
                 console.log('Статья создана');
+                router.push({path: '/admin/posts/'})
             }
         } catch (error) {
             console.log(error);

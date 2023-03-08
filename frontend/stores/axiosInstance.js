@@ -1,3 +1,4 @@
+
 import { defineStore } from "pinia";
 import { useLoginStore } from "~/stores/login";
 import axios from "axios";
@@ -32,12 +33,12 @@ export const useAxiosStore = defineStore('axiosStore', () => {
                     originalRequest._retry = true;
                     try {
                         const newToken = await refreshUserStore.refresh();
-                        originalRequest.headers.Authorization = `Bearer ${newToken.accessToken}`;
+                        originalRequest.headers.Authorization = Bearer `${newToken.accessToken}`;
                         console.log(axiosInstance(originalRequest))
                         return axiosInstance(originalRequest);
                     } catch (error) {
                         console.log(error);
-                        loginStore.logout();
+                        await loginStore.logout();
                         const router = useRouter();
                         await router.push('/');
                         loginStore.showLoginPage();

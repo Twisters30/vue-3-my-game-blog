@@ -12,7 +12,7 @@
         </thead>
         {{statuses}}
         <tbody>
-        <tr @click.stop="$router.push({ path: $route.path + '/' + content.id })"
+        <tr @click.stop="$router.push({ path: $route.path + content.id })"
             v-for="content of tableContent"
             :key="content.id"
             class="box"
@@ -35,7 +35,7 @@
             <span class="cut-text" v-html="item" v-else></span>
           </td>
           <i @click.stop="emits('deletePost', content.id)" class="fa-solid fa-trash icon-transparent"></i>
-          <NuxtLink @click.stop :to="{path: $route.path + '/' + content.id}">
+          <NuxtLink @click.stop :to="{path: $route.path + content.id}">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
         </tr>
