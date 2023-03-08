@@ -47,8 +47,8 @@ class PostController extends BaseController
     public function createOrUpdate(Request $request): void
     {
         $this->allowMethod('post');
-        $tokenData = TokenService::getTokenData();
 
+        $tokenData = TokenService::getTokenData();
         $result = $request->all();
 
         if ($request->files()) {
@@ -58,10 +58,9 @@ class PostController extends BaseController
         }
 
         if ($request->id) {
-            $this->postModel
-                ->htmlEncode($result)
+            $this->postModel->htmlEncode($result)
                 ->update($this->postModel->encoded)
-                ->where('id',$request->id)
+                ->where('id', $request->id)
                 ->execute();
         } else {
             $result['user_id'] = $tokenData->user_id;
@@ -91,16 +90,13 @@ class PostController extends BaseController
         echo jsonWrite($this->postStatusModel->all());
     }
 
-    public function changeStatus(Request $request)
+    public function changeStatus(Request $request): void
     {
         $this->allowMethod('post');
 
         $this->postModel
             ->update($request->only('post_status_id'))
-            ->where('id',$request->id)
+            ->where('id', $request->id)
             ->execute();
-        dd(1, $request);
-
     }
-
 }

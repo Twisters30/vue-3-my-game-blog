@@ -12,28 +12,29 @@
         </thead>
         {{statuses}}
         <tbody>
-        <tr
-            @click.stop="$router.push({ path: $route.path + '/' + content.id })"
+        <tr @click.stop="$router.push({ path: $route.path + '/' + content.id })"
             v-for="content of tableContent"
             :key="content.id"
             class="box"
         >
           <td v-for="(item, key) of content" :key="key">
-            <select
-                @change="emit('changePostStatus', {id: content.id, post_status_id: $event.target.value})"
-                @click.stop
-                v-if="key === 'post_status_id'"
-            >
-              <option
-                  :selected="Number(status.id) === Number(item)"
-                  v-for="status in postStatuses" :key="status.id"
-                  :value="status.id">
-                {{ status.name }}
-              </option>
-            </select>
+              <select class="form-control"
+                      @click.stop
+                      @change="emits('changeStatus',
+                      {post_status_id: $event.target.value, id: content.id})"
+                      v-if="key === 'post_status_id'"
+              >
+                <option
+                    :selected="Number(status.id) === Number(item)"
+                    v-for="status in postStatuses"
+                    :key="status.id"
+                    :value="status.id">
+                  {{ status.name }}
+                </option>
+              </select>
             <span class="cut-text" v-html="item" v-else></span>
           </td>
-          <i @click.stop="$emit('deletePost', content.id)" class="fa-solid fa-trash icon-transparent"></i>
+          <i @click.stop="emits('deletePost', content.id)" class="fa-solid fa-trash icon-transparent"></i>
           <NuxtLink @click.stop :to="{path: $route.path + '/' + content.id}">
             <i class="fa-solid fa-file-pen"></i>
           </NuxtLink>
@@ -45,16 +46,24 @@
 </template>
 
 <script setup>
-const emit = defineEmits(['deletePost', 'changePostStatus'])
+
+const emits = defineEmits(['deletePost', 'changeStatus'])
 const props = defineProps({
   tableTitle: String,
   tableHeaders: Array,
   tableContent: Array,
   postStatuses: Array,
 })
+// onMounted(async () => {
+//   const statuses = computed(() => {
+//     return props.postStatuses;
+//   })
+// })
 
+watch(() => props.postStatuses, (newValue) => {
+  console.log(newValue)
+} )
 </script>
-
 <style>
 .cut-text {
   overflow: hidden;
@@ -62,7 +71,7 @@ const props = defineProps({
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 1.3em;
-  height: 2.5em;
+  height: 2.4em;
   max-width: 14em;
 }
 </style>

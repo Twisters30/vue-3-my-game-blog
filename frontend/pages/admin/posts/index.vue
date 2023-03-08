@@ -9,6 +9,7 @@
           <BaseTable
               @change-post-status="adminPostsStore.changePostStatus"
               @delete-post="adminPostsStore.deletePost"
+              @change-status="adminPostsStore.changeStatus"
               :tableHeaders="adminPostsStore.tableHeaders"
               :tableTitle="adminPostsStore.tableTitle"
               :tableContent="posts"

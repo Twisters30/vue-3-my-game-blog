@@ -3,7 +3,7 @@
     <div class="card-header">
       <h3 class="card-title">{{ titleForm  || 'Название формы'}}</h3>
     </div>
-    <form @submit.prevent="emit('createOrUpdatePost', data)">
+    <form @submit.prevent="emits('createOrUpdatePost', data)">
       <div class="card-body">
         <div class="form-group">
           <label for="inputName">Название Статьи</label>
@@ -18,7 +18,7 @@
             </div>
           </div>
         </div><div class="form-group">
-        <label for="iconInputFile">Загрузить  иконку</label>
+        <label for="iconInputFile">Загрузить иконку</label>
         <div class="input-group d-flex">
           <div class="custom-file">
             <input ref="postIcon" @change="onFileChange($event,'icon')" type="file" class="form-control" id="iconInputFile">
@@ -43,13 +43,13 @@
 
 <script setup>
 const props = defineProps(['titleForm', 'postStatuses', 'post','adminPostsStore']);
-const emit = defineEmits(['createOrUpdatePost']);
+const emits = defineEmits(['createOrUpdatePost']);
 const postImage = ref(null);
 const postIcon = ref(null);
-const data = ref(props.post || { post_status_id:1 });
-const onFileChange = (e,key) => {
+const data = ref(props.post || { post_status_id:props.postStatuses });
+const onFileChange = (e,flag) => {
   const files = e.target.files || e.dataTransfer.files;
-  data.value[key] = files[0];
+  data.value[flag] = files[0];
   console.log(data.value);
 }
 const preloadImageFile = (imagePath, ref) => {

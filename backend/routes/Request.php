@@ -10,7 +10,7 @@ class Request
         self::$data = array_merge(
             $_POST ?? [],
             $_FILES ?? [],
-            json_decode(file_get_contents('php://input'), true) ?? []
+            json_decode(file_get_contents('php://input'), true) ?? [],
         );
 
         foreach (self::$data as $key => $value) {
