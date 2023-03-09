@@ -5,7 +5,7 @@
                 <div class="header__logo logo">MY GameBLoG</div>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__item"><NuxtLink class="btn main-link" to="/articles">Статьи</NuxtLink></li>
+                        <li class="nav__item"><NuxtLink class="btn main-link" to="/">Статьи</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/about">О нас</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/join">Стать автором</NuxtLink></li>
                         <li class="nav__item"><NuxtLink class="btn main-link" to="/profile">Профиль</NuxtLink></li>

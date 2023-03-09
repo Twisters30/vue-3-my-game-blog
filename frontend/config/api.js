@@ -3,7 +3,6 @@ export const apiRegister = 'register';
 export const apiLogin = 'login';
 export const apiLogout = 'logout';
 
-export const apiPostsIndex = 'posts';
 export const apiAdminPostsIndex = 'admin/posts';
 export const apiAdminGetPostStatuses = 'admin/posts/post-statuses';
 export const apiAdminChangePostStatus = 'admin/posts/change-status';
