@@ -8,18 +8,16 @@
 </template>
 
 <script setup>
-import Post from "@/components/frontend/Post.vue";
-import { usePostsStore } from "@/stores/posts.js";
+import Post from "../components/frontend/Post.vue";
+import {usePostsStore} from "~/stores/posts.js";
+
 definePageMeta({
   layout: 'default'
 })
-const posts = ref([]);
-const postsStore = usePostsStore();
 
-onMounted(async () => {
-  posts.value = await postsStore.getPosts();
-})
+const postStore = usePostsStore();
 
+const posts = await postStore.getPosts();
 </script>
 
 <style lang="scss">
