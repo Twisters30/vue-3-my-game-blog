@@ -26,7 +26,7 @@ export const useLoginStore = defineStore('LoginStore', () => {
 
     const acceptAction = async (userAnswer) => {
         if (userAnswer === true) {
-           await logout();
+            await logout();
         }
         acceptWindowShow.value = !acceptWindowShow.value;
     }

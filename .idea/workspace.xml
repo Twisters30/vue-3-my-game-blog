@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="post-statuses">
-      <change afterPath="$PROJECT_DIR$/frontend/stores/posts.js" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="broken refresh">
+      <change afterPath="$PROJECT_DIR$/backend/controllers/frontend/MainPageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Post/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Post/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/BaseTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/articles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/articles.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/admin/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/admin/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/axiosInstance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/TheFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/TheFooter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/components/frontend/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/articles.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/posts.js" afterDir="false" />
     </list>
     <list id="0ad882db-258d-4240-a853-c718e6e80fa8" name="Revert: " comment="magic" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +111,10 @@
       <recent name="D:\PHP\Projects\Blog\frontend\pages\guest" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Blog/frontend/.output/public/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Blog/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -121,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.starter.html" />
         <item itemvalue="npm.dev" />
@@ -157,14 +170,8 @@
       <workItem from="1677804906387" duration="11096000" />
       <workItem from="1677936007996" duration="21517000" />
       <workItem from="1678045082319" duration="16586000" />
-      <workItem from="1678107646093" duration="65919000" />
-    </task>
-    <task id="LOCAL-00007" summary="'RegisterController'">
-      <created>1675986758727</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1675986758727</updated>
+      <workItem from="1678107646093" duration="72548000" />
+      <workItem from="1678292854388" duration="16386000" />
     </task>
     <task id="LOCAL-00008" summary="'RegisterController'">
       <created>1675986836378</created>
@@ -502,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678233703590</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="broken refresh">
+      <created>1678237478685</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1678237478685</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +535,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="middleware" />
     <MESSAGE value="fix" />
     <MESSAGE value="fix2" />
     <MESSAGE value="fix3" />
@@ -546,6 +559,7 @@
     <MESSAGE value="update method get posts" />
     <MESSAGE value="ssr fix" />
     <MESSAGE value="post-statuses" />
-    <option name="LAST_COMMIT_MESSAGE" value="post-statuses" />
+    <MESSAGE value="broken refresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="broken refresh" />
   </component>
 </project>

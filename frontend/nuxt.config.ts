@@ -15,6 +15,7 @@ export default defineNuxtConfig({
         // <meta name="description" content="My amazing site">
         { name: 'Пет проект', content: 'Пет проет с использованием технологий Nuxt 3,PHP' }
       ],
+      link: [{rel:'stylesheet', href:'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'}],
       script: [
         { src: '/js/jquery/jquery.min.js' },
         { src: '/js/bootstrap.bundle.min.js'},
@@ -23,9 +24,9 @@ export default defineNuxtConfig({
       ]
     }
   },
-  // ssr: true,
+  // ssr: false,
   modules: ['@pinia/nuxt','@nuxt/devtools'],
-  css: ['normalize.css/normalize.css','bootstrap/dist/css/bootstrap.min.css','@fortawesome/fontawesome-free/css/all.css'],
+  css: ['normalize.css/normalize.css','bootstrap/dist/css/bootstrap.min.css'],
   vite: {
     server: {
       watch: {

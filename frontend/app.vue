@@ -15,7 +15,6 @@ const layoutStore = useLayoutStore();
 const userRoleStore = useUserRoleStore();
 const refreshUser = useRefreshUserStore();
 const adminPostsStore = useAdminPostsStore();
-adminPostsStore.getPosts();
 onBeforeMount(() => {
   if (userRoleStore.userRole === 'guest') {
     refreshUser.refresh();

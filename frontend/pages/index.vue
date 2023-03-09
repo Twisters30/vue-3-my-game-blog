@@ -1,12 +1,32 @@
 <template>
-    <div>
-      <h1 class="main-title">Main</h1>
+  <div>
+    <h1 class="main-title">Articles</h1>
+    <div class="post__feed">
+      <Post :post="post" v-for="post in posts" :key="post.id" />
     </div>
+  </div>
 </template>
 
 <script setup>
-
+import Post from "@/components/frontend/Post.vue";
+import { usePostsStore } from "@/stores/posts.js";
 definePageMeta({
   layout: 'default'
 })
+const posts = ref([]);
+const postsStore = usePostsStore();
+
+onMounted(async () => {
+  posts.value = await postsStore.getPosts();
+})
+
 </script>
+
+<style lang="scss">
+.post {
+  &__feed {
+    padding: 0 50px;
+  }
+}
+
+</style>

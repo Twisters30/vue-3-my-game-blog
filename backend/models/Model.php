@@ -8,7 +8,7 @@ abstract class Model
     public string $table;
     public string $key = 'id';
     public array $encoded = [];
-    private string $query = '';
+    public string $query = '';
     public function __construct()
     {
         $this->instance = DB::getInstance();

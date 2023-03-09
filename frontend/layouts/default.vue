@@ -10,6 +10,7 @@
             <LoginForm v-if="loginStore.isLoginPageShow" />
           </main>
         </div>
+        <TheFooter />
       </div>
     </div>
   </div>
@@ -19,6 +20,7 @@
 import { useLoginStore } from "../stores/login";
 import LoginForm from '@/components/frontend/forms/LoginForm.vue';
 import TheHeader from '@/components/frontend/TheHeader.vue';
+import TheFooter from "@/components/frontend/TheFooter.vue";
 const loginStore = useLoginStore();
 
 </script>
