@@ -17,7 +17,9 @@
               >
             </li>
             <li class="nav__item">
-              <router-link class="btn main-link" to="/profile">Профиль</router-link>
+              <router-link class="btn main-link" to="/profile"
+                >Профиль</router-link
+              >
             </li>
             <li
               v-if="!loginStore.token.accessToken"

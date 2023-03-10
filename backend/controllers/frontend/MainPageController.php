@@ -17,6 +17,6 @@ class MainPageController extends BaseController
 
     public function index()
     {
-        echo jsonWrite($this->postModel->activePostsWithAuthor());
+//        echo jsonWrite($this->postModel->activePostsWithAuthor());
     }
 }

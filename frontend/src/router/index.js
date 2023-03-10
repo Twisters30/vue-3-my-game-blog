@@ -25,6 +25,11 @@ const routes = [
     name: "join",
     component: () => import("@/views/join.vue"),
   },
+  {
+    path: "/admin/dashboard",
+    name: "dashboard",
+    component: () => import("@/views/admin/dashboard.vue"),
+  },
 ];
 
 const router = createRouter({

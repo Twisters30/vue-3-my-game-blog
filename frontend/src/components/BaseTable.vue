@@ -7,7 +7,9 @@
       <table id="example1" class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th v-for="(header, index) of tableHeaders" :key="index">{{ header }}</th>
+            <th v-for="(header, index) of tableHeaders" :key="index">
+              {{ header }}
+            </th>
           </tr>
         </thead>
         {{

@@ -1154,6 +1154,10 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useLayoutStore } from "../../stores/layout.js";
+const layoutStore = useLayoutStore();
+layoutStore.switchLayout("admin");
+</script>
 
 <style scoped></style>
