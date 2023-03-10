@@ -59,7 +59,7 @@
             id="socials"
           />
         </div>
-        <ImageInput></ImageInput>
+        <image-input />
       </div>
       <div class="card-footer bg-transparent">
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -69,15 +69,15 @@
 </template>
 
 <script setup>
-import { defineProps, reactive } from "vue";
+import { defineProps, ref } from "vue";
 import ImageInput from "@/components/inputs/ImageInput.vue";
-defineProps({
+
+const props = defineProps({
   userData: {
     default: {},
-    type: () => Object,
   },
 });
-const formData = reactive({});
+const formData = ref(props.userData);
 </script>
 
 <style scoped></style>

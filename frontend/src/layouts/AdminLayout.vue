@@ -1,3 +1,4 @@
+<script src="../../../../../nuxt 3 frontend/nuxt.config.ts"></script>
 <template>
   <div>
     <div class="sidebar-mini layout-fixed layout-navbar-fixed">
@@ -235,6 +236,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import SideBar from "@/components/backend/SideBar.vue";
 const preloader = ref(null);
 setTimeout(() => {
@@ -242,25 +244,6 @@ setTimeout(() => {
   preloader.value.firstChild.style.display = "none";
   $('ul[data-widget="treeview"]').Treeview("init");
 }, 100);
-onMounted(() => {
-  useHead({
-    title: "My AdminLte",
-    meta: [{ name: "description", content: "Админка." }],
-    link: [
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback",
-      },
-      { rel: "stylesheet", href: "/css/all.min.css" },
-      { rel: "stylesheet", href: "/css/adminlte.min.css" },
-      { rel: "stylesheet", href: "/css/summernote-bs4.min.css" },
-      {
-        rel: "stylesheet",
-        href: "https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css",
-      },
-    ],
-  });
-});
 </script>
 
 <style scoped></style>
