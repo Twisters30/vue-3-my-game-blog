@@ -4,48 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="first-commit update">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="work on layouts+">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/frontend/MainPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/frontend/MainPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/errors/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/errors/error.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/css/app.8fd74daa.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/css/chunk-0dc07014.79cde76d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/css/chunk-557ab8c2.4e0f4614.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/css/chunk-vendors.dc94cbcf.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/img/battlefield-v.475ab307.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/app.0250b635.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/app.0250b635.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-0dc07014.e3c8e42d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-0dc07014.e3c8e42d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-2d0c80c2.1c53eeac.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-2d0c80c2.1c53eeac.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-2d0d6f02.392ceef0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-2d0d6f02.392ceef0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-2d20f8d6.53adac9d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-2d20f8d6.53adac9d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-557ab8c2.15d4d9d6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-557ab8c2.15d4d9d6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-vendors.c8da0d9b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/js/js/chunk-vendors.c8da0d9b.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BaseTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/forms/ProfileForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/forms/ProfileForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/backend/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/backend/SideBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/layouts/AdminLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/AdminLayout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/views/admin/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/admin/dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/profile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
     </list>
     <list id="0ad882db-258d-4240-a853-c718e6e80fa8" name="Revert: " comment="magic" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,21 +171,7 @@
       <workItem from="1678107646093" duration="72548000" />
       <workItem from="1678292854388" duration="17038000" />
       <workItem from="1678331104843" duration="26427000" />
-      <workItem from="1678395824337" duration="4967000" />
-    </task>
-    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/models/User/User.php">
-      <created>1676033481658</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1676033481658</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/models/User/User.php">
-      <created>1676033598166</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1676033598166</updated>
+      <workItem from="1678395824337" duration="10200000" />
     </task>
     <task id="LOCAL-00014" summary="added useLoginStore">
       <created>1676060847467</created>
@@ -548,7 +502,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678388163426</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="work on layouts">
+      <created>1678406724009</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1678406724010</updated>
+    </task>
+    <task id="LOCAL-00062" summary="work on layouts+">
+      <created>1678406814788</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1678406814788</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,8 +535,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="admin/posts added" />
-    <MESSAGE value="posts/id&#10;posts/create" />
     <MESSAGE value="admin/posts/create" />
     <MESSAGE value="admin/posts/fix" />
     <MESSAGE value="admin/posts/fix-2" />
@@ -592,6 +558,8 @@
     <MESSAGE value="footer Merge" />
     <MESSAGE value="first-commit" />
     <MESSAGE value="first-commit update" />
-    <option name="LAST_COMMIT_MESSAGE" value="first-commit update" />
+    <MESSAGE value="work on layouts" />
+    <MESSAGE value="work on layouts+" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on layouts+" />
   </component>
 </project>

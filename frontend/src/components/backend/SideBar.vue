@@ -647,9 +647,11 @@
 </template>
 
 <script setup>
-onMounted(() => {
-  $("#my-toggle-button").ControlSidebar("toggle");
-});
+// import { onMounted } from "vue";
+// import jQuery from "jquery";
+// onMounted(() => {
+//   jQuery("#my-toggle-button").ControlSidebar("toggle");
+// });
 </script>
 
 <style scoped></style>
