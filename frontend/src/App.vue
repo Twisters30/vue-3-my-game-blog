@@ -16,13 +16,14 @@ const layoutStore = useLayoutStore();
 const route = useRoute();
 const { layout } = storeToRefs(layoutStore);
 const layoutComponent = computed(() => {
-  if (layout.value === "admin" && route.path.startsWith("/admin")) {
+  if (layout.value === "admin") {
     return AdminLayout;
   }
   return DefaultLayout;
 });
 watch(layout.value, (newLayout) => {
   console.log(newLayout);
+  console.log(route.path);
   layoutStore.switchLayout(newLayout);
 });
 </script>

@@ -1,4 +1,3 @@
-<script src="../../../../../nuxt 3 frontend/nuxt.config.ts"></script>
 <template>
   <div>
     <div class="sidebar-mini layout-fixed layout-navbar-fixed">
@@ -203,7 +202,7 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <SideBar />
+        <side-bar />
 
         <!-- Content Wrapper. Contains page content -->
         <slot />
@@ -237,12 +236,13 @@
 
 <script setup>
 import { ref } from "vue";
+// import jQuery from "jquery";
 import SideBar from "@/components/backend/SideBar.vue";
 const preloader = ref(null);
 setTimeout(() => {
   preloader.value.style.height = 0 + "px";
   preloader.value.firstChild.style.display = "none";
-  $('ul[data-widget="treeview"]').Treeview("init");
+  // jQuery('ul[data-widget="treeview"]').Treeview("init");
 }, 100);
 </script>
 
