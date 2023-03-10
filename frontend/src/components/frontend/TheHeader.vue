@@ -25,7 +25,7 @@
               v-if="!loginStore.token.accessToken"
               class="nav__item item-login"
             >
-              <Loader v-if="loginStore.isUserDataLoading" />
+              <Loader v-if="loginStore.userDataLoading" />
               <button
                 v-else
                 class="btn main-link"
@@ -35,7 +35,7 @@
               </button>
             </li>
             <li v-else class="nav__item item-login">
-              <Loader v-if="loginStore.isUserDataLoading" />
+              <Loader v-if="loginStore.userDataLoading" />
               <button
                 v-else
                 class="btn main-link"

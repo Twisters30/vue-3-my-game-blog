@@ -6,12 +6,14 @@
       ref="editor"
       v-model="data.description"
     >
-      {{ data.description }}
     </textarea>
   </div>
 </template>
 
 <script setup>
+/* eslint-disable */
+import { defineEmits, defineProps, ref, computed, onMounted, onBeforeUnmount } from "vue";
+
 let props = defineProps(["content", "modelValue"]);
 let emit = defineEmits(["update:modelValue", "update-editor"]);
 const editor = ref(null);

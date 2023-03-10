@@ -6,7 +6,7 @@
   >
     <Form
       class="form__main"
-      @submit="loginStore.loginAction"
+      @submit="submitLogin"
       :validation-schema="schemaLogin"
       v-slot="{ meta }"
     >
@@ -50,12 +50,12 @@
         :class="{ 'btn-animate': meta.valid && meta.touched }"
       />
       <span class="form__link-wrapper">
-        <NuxtLink class="main-link form__link" to="#">забыли пароль?</NuxtLink>
-        <NuxtLink
+        <a class="main-link form__link" href="#">забыли пароль?</a>
+        <router-link
           @click="loginStore.showLoginPage"
           class="main-link form__link"
           to="/register"
-          >регистрация</NuxtLink
+          >регистрация</router-link
         >
       </span>
     </Form>
@@ -67,7 +67,17 @@ import ButtonBorderAnimate from "@/components/buttons/ButtonBorderAnimate.vue";
 import { useLoginStore } from "@/stores/login.js";
 import { Form, Field, ErrorMessage } from "vee-validate";
 import { schemaLogin } from "@/helpers/validatorRules.js";
+import { useRouter } from "vue-router";
 const loginStore = useLoginStore();
+const router = useRouter();
+const submitLogin = async () => {
+  const userRole = await loginStore.loginAction();
+  if (userRole === "admin" || userRole === "author") {
+    await router.push({ path: "/admin/dashboard" });
+    return;
+  }
+  await router.push({ path: "/articles" });
+};
 </script>
 
 <style lang="scss" scoped>

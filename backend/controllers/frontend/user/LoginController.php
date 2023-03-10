@@ -26,6 +26,7 @@ class LoginController extends BaseController
      */
     public function login(Request $request): void
     {
+        header('Content-Type: application/json; charset=utf-8');
         $this->allowMethod('post');
 
         $this->validator->validate(

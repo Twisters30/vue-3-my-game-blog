@@ -7,7 +7,7 @@
         <div class="container">
           <main class="main my-4">
             <slot />
-            <LoginForm v-if="loginStore.isLoginPageShow" />
+            <login-form v-if="loginStore.isLoginPageShown" />
           </main>
         </div>
         <TheFooter />
@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { useLoginStore } from "../stores/login";
+import { useLoginStore } from "@/stores/login";
 import LoginForm from "@/components/frontend/forms/LoginForm.vue";
 import TheHeader from "@/components/frontend/TheHeader.vue";
 import TheFooter from "@/components/frontend/TheFooter.vue";

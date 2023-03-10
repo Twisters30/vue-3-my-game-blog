@@ -8,10 +8,10 @@
         <div class="col-sm-6" v-if="breadcrumb">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item">
-              <NuxtLink to="/admin/dashboard">Dashboard</NuxtLink>
+              <router-link to="/admin/dashboard">Dashboard</router-link>
             </li>
             <li class="breadcrumb-item active">
-              <NuxtLink to="/admin/posts">Posts</NuxtLink>
+              <router-link to="/admin/posts">Posts</router-link>
             </li>
           </ol>
         </div>

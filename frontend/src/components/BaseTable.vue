@@ -12,12 +12,9 @@
             </th>
           </tr>
         </thead>
-        {{
-          statuses
-        }}
         <tbody>
           <tr
-            @click.stop="$router.push({ path: $route.path + content.id })"
+            @click.stop="$router.push({ path: $route.path + '/' + content.id })"
             v-for="content of tableContent"
             :key="content.id"
             class="box"
@@ -36,7 +33,7 @@
               >
                 <option
                   :selected="Number(status.id) === Number(item)"
-                  v-for="status in postStatuses"
+                  v-for="status in props.postStatuses"
                   :key="status.id"
                   :value="status.id"
                 >
@@ -49,9 +46,9 @@
               @click.stop="emits('deletePost', content.id)"
               class="fa-solid fa-trash icon-transparent"
             ></i>
-            <NuxtLink @click.stop :to="{ path: $route.path + content.id }">
+            <router-link @click.stop :to="{ path: $route.path + content.id }">
               <i class="fa-solid fa-file-pen"></i>
-            </NuxtLink>
+            </router-link>
           </tr>
         </tbody>
       </table>
@@ -63,12 +60,21 @@
 import { defineProps, defineEmits } from "vue";
 
 const emits = defineEmits(["deletePost", "changeStatus"]);
-defineProps({
-  tableTitle: String,
-  tableHeaders: Array,
-  tableContent: Array,
-  postStatuses: Array,
+const props = defineProps({
+  tableTitle: {
+    type: String,
+  },
+  tableHeaders: {
+    type: Array,
+  },
+  tableContent: {
+    type: Array,
+  },
+  postStatuses: {
+    type: Array,
+  },
 });
+console.log(props);
 </script>
 <style>
 .cut-text {

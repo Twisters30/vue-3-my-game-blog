@@ -30,11 +30,37 @@ const routes = [
     name: "dashboard",
     component: () => import("@/views/admin/dashboard.vue"),
   },
+  {
+    path: "/admin/posts",
+    name: "adminPosts",
+    component: () => import("@/views/admin/posts/index.vue"),
+  },
+  {
+    path: "/admin/create",
+    name: "adminPostsCreate",
+    component: () => import("@/views/admin/posts/create.vue"),
+  },
+  {
+    path: "/admin/posts/:id",
+    name: "adminPostsCreate",
+    component: () => import("@/views/admin/posts/edit.vue"),
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.beforeEach(async (to, from, next) => {
+  const { useLayoutStore } = await import("@/stores/layout.js");
+  const layoutStore = useLayoutStore();
+  if (to.path.startsWith("/admin")) {
+    layoutStore.switchLayout("admin");
+  } else {
+    layoutStore.switchLayout("default");
+  }
+  next();
 });
 
 export default router;

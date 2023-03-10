@@ -66,7 +66,7 @@
           </select>
         </div>
       </div>
-      <Editor v-model="data" />
+      <editor v-model="data" />
       <div class="card-footer bg-transparent">
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
@@ -75,6 +75,9 @@
 </template>
 
 <script setup>
+import { ref, defineProps, defineEmits, onMounted } from "vue";
+import Editor from "../../Editor";
+
 const props = defineProps([
   "titleForm",
   "postStatuses",
@@ -88,7 +91,6 @@ const data = ref(props.post || { post_status_id: 1 });
 const onFileChange = (e, flag) => {
   const files = e.target.files || e.dataTransfer.files;
   data.value[flag] = files[0];
-  console.log(data.value);
 };
 const preloadImageFile = (imagePath, ref) => {
   let imgBlob = new Blob([""], { type: "text/plain" });

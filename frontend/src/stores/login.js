@@ -3,12 +3,12 @@ import axios from "axios";
 import { useUserRoleStore } from "@/stores/userRole.js";
 import { apiHost, apiLogin, apiLogout } from "@/config/api.js";
 import { ref, reactive } from "vue";
-import { useRouter } from "vue-router";
+
 export const useLoginStore = defineStore("LoginStore", () => {
   const userRoleStore = useUserRoleStore();
-  const isLoginPageShow = ref(false);
+  const isLoginPageShown = ref(false);
   const formData = reactive({});
-  let isUserDataLoading = ref(true);
+  let userDataLoading = ref(true);
   let token = reactive({
     refreshToken: false,
     accessToken: false,
@@ -21,7 +21,7 @@ export const useLoginStore = defineStore("LoginStore", () => {
   };
 
   const disableLoader = () => {
-    isUserDataLoading.value = false;
+    userDataLoading.value = false;
   };
 
   const acceptAction = async (userAnswer) => {
@@ -41,7 +41,9 @@ export const useLoginStore = defineStore("LoginStore", () => {
   const getRefreshToken = () => token.refreshToken;
   const getAccessToken = () => token.accessToken;
 
-  const showLoginPage = () => (isLoginPageShow.value = !isLoginPageShow.value);
+  const showLoginPage = () => {
+    isLoginPageShown.value = !isLoginPageShown.value;
+  };
 
   const closeModalOutside = (event) => {
     if (event.target.id === "modal-overlay") {
@@ -76,14 +78,9 @@ export const useLoginStore = defineStore("LoginStore", () => {
         token.accessToken = response.data.accessToken;
         token.refreshToken = response.data.refreshToken;
         setStorageToken(token);
-        const router = useRouter();
         const userRole = response.data.role.toLocaleLowerCase();
         userRoleStore.setUserRole(response.data.role);
-        if (userRole === "admin" || userRole === "author") {
-          await router.push({ path: "/admin/dashboard" });
-          return;
-        }
-        await router.push({ path: "/articles" });
+        return userRole;
       }
     } catch (error) {
       console.log(error);
@@ -103,7 +100,7 @@ export const useLoginStore = defineStore("LoginStore", () => {
       if (response.status === 200) {
         removeDataUserStore();
         userRoleStore.removeUserRole();
-        isLoginPageShow.value = false;
+        isLoginPageShown.value = false;
       }
     } catch (error) {
       console.log(error);
@@ -111,7 +108,7 @@ export const useLoginStore = defineStore("LoginStore", () => {
   };
 
   return {
-    isLoginPageShow,
+    isLoginPageShown,
     showLoginPage,
     loginAction,
     formData,
@@ -121,7 +118,7 @@ export const useLoginStore = defineStore("LoginStore", () => {
     acceptAction,
     acceptWindowShow,
     updateFormDataFromRegister,
-    isUserDataLoading,
+    userDataLoading,
     setStorageToken,
     getRefreshToken,
     getAccessToken,

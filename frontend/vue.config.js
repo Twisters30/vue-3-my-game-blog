@@ -1,12 +1,12 @@
 const path = require("path");
 
 module.exports = {
-  indexPath: "index.php",
+  indexPath: "main.php",
   // Добавляем это:
   chainWebpack: (config) => {
     if (process.env.NODE_ENV === "production") {
       config.plugin("html").tap((args) => {
-        args[0].template = path.join(__dirname, "../backend/public/index.php");
+        args[0].template = path.join(__dirname, "../backend/public/main.php");
         args[0].minify.removeAttributeQuotes = false;
         return args;
       });
