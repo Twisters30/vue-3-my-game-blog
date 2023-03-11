@@ -2,7 +2,7 @@
   <div class="header__root line">
     <div class="container">
       <header class="header">
-        <div class="header__logo logo hui">MY GameBLoG</div>
+        <div class="header__logo logo hui">MyGameDevBlog!</div>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -22,7 +22,7 @@
               >
             </li>
             <li
-              v-if="!loginStore.token.accessToken"
+              v-if="!loginStore.getAccessTokenStorage()"
               class="nav__item item-login"
             >
               <Loader v-if="loginStore.userDataLoading" />
