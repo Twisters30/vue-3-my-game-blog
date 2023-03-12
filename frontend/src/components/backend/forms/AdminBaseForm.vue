@@ -25,9 +25,10 @@
                 class="form-control"
                 id="imageInputFile"
               />
-              <label class="custom-file-label" for="imageInputFile"
-                >Choose file</label
-              >
+              <label class="custom-file-label" for="imageInputFile">
+                <span v-if="!dataImages.image">Выберите файл</span>
+                <span v-else>{{ dataImages.image }}</span>
+              </label>
             </div>
           </div>
         </div>
@@ -42,9 +43,10 @@
                 class="form-control"
                 id="iconInputFile"
               />
-              <label class="custom-file-label" for="iconInputFile"
-                >Choose file</label
-              >
+              <label class="custom-file-label" for="iconInputFile">
+                <span v-if="!dataImages.icon">Выберите файл</span>
+                <span v-else>{{ dataImages.icon }}</span>
+              </label>
             </div>
           </div>
         </div>
@@ -76,7 +78,7 @@
 
 <script setup>
 import { ref, defineProps, defineEmits, onMounted } from "vue";
-import Editor from "../../Editor";
+import Editor from "../../Editor.vue";
 
 const props = defineProps([
   "titleForm",
@@ -88,10 +90,15 @@ const emits = defineEmits(["createOrUpdatePost"]);
 const postImage = ref(null);
 const postIcon = ref(null);
 const data = ref(props.post || { post_status_id: 1 });
-const onFileChange = (e, flag) => {
+const onFileChange = (e, key) => {
   const files = e.target.files || e.dataTransfer.files;
-  data.value[flag] = files[0];
+  data.value[key] = files[0];
+  dataImages.value[key] = files[0].name;
 };
+const dataImages = ref({
+  image: data.value.image,
+  icon: data.value.icon,
+});
 const preloadImageFile = (imagePath, ref) => {
   let imgBlob = new Blob([""], { type: "text/plain" });
   let file = new File(
@@ -103,6 +110,7 @@ const preloadImageFile = (imagePath, ref) => {
   let container = new DataTransfer();
   container.items.add(file);
   ref.value.files = container.files;
+  console.log(ref.value.files[0].name);
 };
 onMounted(() => {
   preloadImageFile(data.value.icon, postImage);

@@ -5,11 +5,7 @@
         {{ post.name }}
       </h3>
       <div class="post__left">
-        <img
-          class="post__image"
-          :src="apiHost + '/' + post.image"
-          alt="Изображение статьи"
-        />
+        <img class="post__image" :src="post.image" alt="Изображение статьи" />
         <p v-html="post.description" class="post__text-preview cut-text"></p>
       </div>
       <div class="post__footer-wrapper">
@@ -23,7 +19,6 @@
   </div>
 </template>
 <script setup>
-import { apiHost } from "@/config/api.js";
 import { defineProps } from "vue";
 
 defineProps(["post"]);

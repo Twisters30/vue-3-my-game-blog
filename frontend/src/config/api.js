@@ -9,3 +9,4 @@ export const apiAdminChangePostStatus = "admin/posts/change-status";
 export const apiAdminPostCreate = "admin/posts/create-or-update";
 export const apiRefreshToken = "refresh";
 export const apiAdminPostDelete = "admin/posts/delete";
+export const apiGetPosts = "api/posts";

@@ -4,7 +4,6 @@
       <div class="container-fluid">
         <div class="row d-flex justify-content-center">
           <div class="col-md-6 col-sm-12">
-            <BaseTitle />
             <admin-base-form
               :post="adminPostsStore.createFormData"
               :createFormData="adminPostsStore.createFormData"
@@ -29,5 +28,3 @@ onMounted(async () => {
   console.log(postStatuses);
 });
 </script>
-
-<style scoped></style>

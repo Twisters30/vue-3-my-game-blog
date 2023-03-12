@@ -26,6 +26,7 @@ export const useLoginStore = defineStore("LoginStore", () => {
 
   const acceptAction = async (userAnswer) => {
     if (userAnswer === true) {
+      console.log(userAnswer);
       await logout();
     }
     acceptWindowShow.value = !acceptWindowShow.value;
@@ -88,13 +89,14 @@ export const useLoginStore = defineStore("LoginStore", () => {
   };
 
   const logout = async () => {
-    if (!token.accessToken) return;
+    const token = getAccessTokenStorage();
+    if (!token) return;
     try {
       const response = await axios.post(
         `${apiHost}/${apiLogout}`,
         {},
         {
-          headers: { Authorization: `Bearer ${token.refreshToken}` },
+          headers: { Authorization: `Bearer ${token}` },
         }
       );
       if (response.status === 200) {

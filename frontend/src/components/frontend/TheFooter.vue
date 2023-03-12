@@ -14,18 +14,16 @@
             <li><i class="fa fa-pied-piper" aria-hidden="true"></i></li>
           </ul>
         </div>
-        <img class="logo" :src="logo" alt="logo">
+        <img class="logo" :src="logo" alt="logo" />
       </div>
     </footer>
   </div>
 </template>
 
 <script setup>
-const logo = require('@/assets/images/GB.png')
+const logo = require("@/assets/images/GB.png");
 </script>
-
 <style lang="scss">
-
 .logo {
   width: 120px;
   height: 50px;

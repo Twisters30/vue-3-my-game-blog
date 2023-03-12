@@ -4,24 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="repair layouts">
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/frontend/MainPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/frontend/MainPageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/public/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/adminlte.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/adminlte.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.slim.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.slim.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/summernote-bs4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/js/summernote-bs4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/backend/SideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/backend/SideBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BaseTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Loader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/backend/forms/AdminBaseForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/backend/forms/AdminBaseForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/Post.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/TheFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/TheFooter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/forms/AcceptForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/forms/AcceptForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/layouts/AdminLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/AdminLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/admin/dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/admin/dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/stores/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/stores/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/stores/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/stores/refreshUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/stores/refreshUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/admin/posts/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/admin/posts/create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
     </list>
     <list id="0ad882db-258d-4240-a853-c718e6e80fa8" name="Revert: " comment="magic" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -98,13 +107,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/public/images/admin@admin.com" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PHP\Projects\Blog\backend\public\images\admin@admin.com" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PHP\Projects\Blog\frontend\src" />
       <recent name="D:\PHP\Projects\Blog\frontend\server\api" />
@@ -180,14 +192,8 @@
       <workItem from="1678292854388" duration="17038000" />
       <workItem from="1678331104843" duration="26427000" />
       <workItem from="1678395824337" duration="43887000" />
-      <workItem from="1678531851014" duration="2814000" />
-    </task>
-    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/config/init.php&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/helpers/helpers.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php">
-      <created>1676073523912</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1676073523912</updated>
+      <workItem from="1678531851014" duration="35041000" />
+      <workItem from="1678657573824" duration="3544000" />
     </task>
     <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/frontend/user/LoginController.php">
       <created>1676073678194</created>
@@ -525,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678500384846</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue">
+      <created>1678538066401</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1678538066401</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,8 +557,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="admin/posts/fix-2" />
-    <MESSAGE value="axios-jwt" />
     <MESSAGE value="intercept" />
     <MESSAGE value="middleware process" />
     <MESSAGE value="layouts all page set definePageMeta" />
@@ -569,6 +580,8 @@
     <MESSAGE value="work on layouts+" />
     <MESSAGE value="layouts is worked" />
     <MESSAGE value="repair layouts" />
-    <option name="LAST_COMMIT_MESSAGE" value="repair layouts" />
+    <MESSAGE value="logo" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue" />
   </component>
 </project>

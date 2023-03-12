@@ -36,13 +36,13 @@ const routes = [
     component: () => import("@/views/admin/posts/index.vue"),
   },
   {
-    path: "/admin/create",
+    path: "/admin/posts/create",
     name: "adminPostsCreate",
     component: () => import("@/views/admin/posts/create.vue"),
   },
   {
-    path: "/admin/posts/:id",
-    name: "adminPostsCreate",
+    path: "/admin/post/:id",
+    name: "adminPostsEdit",
     component: () => import("@/views/admin/posts/edit.vue"),
   },
 ];
@@ -51,14 +51,19 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
-
-router.beforeEach(async (to, from, next) => {
+router.beforeResolve(async (to, from, next) => {
   const { useLayoutStore } = await import("@/stores/layout.js");
+  const { storeToRefs } = await import("pinia");
   const layoutStore = useLayoutStore();
+  const { layout } = storeToRefs(layoutStore);
   if (to.path.startsWith("/admin")) {
-    layoutStore.switchLayout("admin");
+    if (layout.value !== "admin") {
+      layoutStore.switchLayout("admin");
+    }
   } else {
-    layoutStore.switchLayout("default");
+    if (layout.value !== "default") {
+      layoutStore.switchLayout("default");
+    }
   }
   next();
 });

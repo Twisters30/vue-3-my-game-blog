@@ -14,7 +14,7 @@
         </thead>
         <tbody>
           <tr
-            @click.stop="$router.push({ path: $route.path + '/' + content.id })"
+            @click.stop="$router.push({ path: '/admin/post/' + content.id })"
             v-for="content of tableContent"
             :key="content.id"
             class="box"
@@ -40,13 +40,16 @@
                   {{ status.name }}
                 </option>
               </select>
-              <span class="cut-text" v-html="item" v-else></span>
+              <span class="cut-text" v-else>{{ striptags(item) }}</span>
             </td>
             <i
               @click.stop="emits('deletePost', content.id)"
               class="fa-solid fa-trash icon-transparent"
             ></i>
-            <router-link @click.stop :to="{ path: $route.path + content.id }">
+            <router-link
+              @click.stop
+              :to="{ path: '/admin/post/' + content.id }"
+            >
               <i class="fa-solid fa-file-pen"></i>
             </router-link>
           </tr>
@@ -58,7 +61,8 @@
 
 <script setup>
 import { defineProps, defineEmits } from "vue";
-
+// const regExp = /^(&nbsp;|<br>)+/;
+const striptags = require("striptags");
 const emits = defineEmits(["deletePost", "changeStatus"]);
 const props = defineProps({
   tableTitle: {

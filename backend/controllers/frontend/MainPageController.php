@@ -17,7 +17,13 @@ class MainPageController extends BaseController
 
     public function index()
     {
-//        echo jsonWrite($this->postModel->activePostsWithAuthor());
+        header('Content-Type:text/html; charset=UTF-8');
         return require(ROOT . "public/main.php");
+    }
+
+    public function getPosts(): void
+    {
+        self::allowMethod('get');
+        echo jsonWrite($this->postModel->activePostsWithAuthor());
     }
 }
