@@ -13,8 +13,6 @@ class RegisterController extends BaseController
      */
     public function store(Request $request): void
     {
-        $this->allowMethod('POST');
-
         $user = new User();
         $checkUser = $user->select()->where('email', $request->email)->first();
 

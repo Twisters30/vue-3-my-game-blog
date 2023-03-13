@@ -27,7 +27,6 @@ class LoginController extends BaseController
     public function login(Request $request): void
     {
         header('Content-Type: application/json; charset=utf-8');
-        $this->allowMethod('post');
 
         $this->validator->validate(
             ['password' => 'randompassword'],
@@ -59,8 +58,6 @@ class LoginController extends BaseController
      */
     public function logout(): void
     {
-        $this->allowMethod('post');
-
         $refreshToken = TokenService::parseToken();
         $refreshTokenModel = new RefreshToken();
         $refreshTokenModel->delete('token', $refreshToken);
@@ -68,8 +65,6 @@ class LoginController extends BaseController
 
     public function reissueTokens(): void
     {
-        $this->allowMethod('get');
-
         $tokens = TokenService::updateTokens();
 
         setcookie ("refreshToken", $tokens['refreshToken'], time()+3600, '/');

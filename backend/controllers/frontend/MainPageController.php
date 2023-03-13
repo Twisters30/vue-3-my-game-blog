@@ -23,7 +23,6 @@ class MainPageController extends BaseController
 
     public function getPosts(): void
     {
-        self::allowMethod('get');
         echo jsonWrite($this->postModel->activePostsWithAuthor());
     }
 }
