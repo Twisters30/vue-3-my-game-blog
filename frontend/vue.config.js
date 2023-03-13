@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+  publicPath: "/",
   indexPath: "main.php",
   // Добавляем это:
   chainWebpack: (config) => {

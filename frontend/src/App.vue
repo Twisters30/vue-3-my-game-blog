@@ -1,5 +1,11 @@
 <template>
-  <component :is="layoutComponent">
+  <loader
+    v-if="!layoutComponent"
+    class="main-loader"
+    width="150px"
+    height="100px"
+  />
+  <component v-else :is="layoutComponent">
     <suspense>
       <router-view />
     </suspense>
@@ -7,13 +13,21 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import DefaultLayout from "@/layouts/DefaultLayout.vue";
-import AdminLayout from "@/layouts/AdminLayout.vue";
-import { useLayoutStore } from "./stores/layout.js";
+import { computed, onBeforeMount, defineAsyncComponent } from "vue";
+import { useLayoutStore } from "@/stores/layout.js";
+import { useRefreshUserStore } from "@/stores/refreshUser.js";
+import { useUserRoleStore } from "@/stores/userRole.js";
 import { storeToRefs } from "pinia";
-
+import Loader from "./components/Loader.vue";
+const DefaultLayout = defineAsyncComponent(() => {
+  return import("./layouts/DefaultLayout.vue");
+});
+const AdminLayout = defineAsyncComponent(() => {
+  return import("@/layouts/AdminLayout.vue");
+});
 const layoutStore = useLayoutStore();
+const refreshUser = useRefreshUserStore();
+const userRoleStore = useUserRoleStore();
 const { layout } = storeToRefs(layoutStore);
 const layoutComponent = computed(() => {
   if (layout.value === "admin") {
@@ -21,6 +35,9 @@ const layoutComponent = computed(() => {
   }
   return DefaultLayout;
 });
+onBeforeMount(() => {
+  if (userRoleStore.userRole === "guest") {
+    refreshUser.refresh();
+  }
+});
 </script>
-
-<style lang="scss"></style>

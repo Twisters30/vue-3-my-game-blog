@@ -17,12 +17,13 @@ class MainPageController extends BaseController
 
     public function index()
     {
-        header("Content-Type: text/html");
-        return require(ROOT.'/public/main.php');
+        header('Content-Type:text/html; charset=UTF-8');
+        return require(ROOT . "public/main.php");
     }
 
-    public function getPosts()
+    public function getPosts(): void
     {
+        self::allowMethod('get');
         echo jsonWrite($this->postModel->activePostsWithAuthor());
     }
 }

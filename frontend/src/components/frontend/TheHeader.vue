@@ -2,7 +2,7 @@
   <div class="header__root line">
     <div class="container">
       <header class="header">
-        <div class="header__logo logo hui">MyGameDevBlog!</div>
+        <div class="header__logo logo hui">MyGameBlog!</div>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -44,7 +44,7 @@
                 Выйти
               </button>
               <AcceptForm
-                :acceptAction="loginStore.acceptAction"
+                @acceptAction="loginStore.acceptAction"
                 v-if="loginStore.acceptWindowShow"
               />
             </li>

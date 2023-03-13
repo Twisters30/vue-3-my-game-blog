@@ -3,12 +3,15 @@
     <div class="accept__wrapper">
       <h5 class="mb-2">Вы Уверенны?</h5>
       <button
-        @click="acceptAction(true)"
+        @click="$emit('acceptAction', true)"
         class="accept__btn btn btn-primary mb-2"
       >
         Выйти
       </button>
-      <button @click="acceptAction(false)" class="accept__btn btn btn-primary">
+      <button
+        @click="$emit('acceptAction', false)"
+        class="accept__btn btn btn-primary"
+      >
         Отмена
       </button>
     </div>
@@ -16,8 +19,8 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
-defineProps(["acceptAction"]);
+import { defineEmits } from "vue";
+defineEmits(["acceptAction"]);
 </script>
 
 <style lang="scss" scoped>

@@ -8,6 +8,7 @@ Router::addRoute('register', ['controller' => 'frontend\user\RegisterController'
 Router::addRoute('login', ['controller' => 'frontend\user\LoginController', 'action' => 'login']);
 Router::addRoute('logout', ['controller' => 'frontend\user\LoginController', 'action' => 'logout']);
 Router::addRoute('refresh', ['controller' => 'frontend\user\LoginController', 'action' => 'reissueTokens']);
+Router::addRoute('api/posts', ['controller' => 'frontend\MainPageController', 'action' => 'getPosts']);
 
 Router::routeGroup(['role' => 'Admin', 'prefix' => 'admin', 'namespace' => 'admin'], fn () => [
     'posts' => ['controller' =>'posts\PostController', 'action' => 'index'],
