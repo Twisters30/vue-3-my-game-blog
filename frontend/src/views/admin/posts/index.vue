@@ -3,18 +3,16 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="my-4">
-          <NuxtLink to="/admin/posts/create" class="btn btn-success"
-            >Создать</NuxtLink
-          >
+          <router-link to="/admin/posts/create" class="btn btn-success">
+            Создать
+          </router-link>
         </div>
         <div class="row mb-2">
-          <BaseTable
-            @change-post-status="adminPostsStore.changePostStatus"
+          <base-table
             @delete-post="adminPostsStore.deletePost"
             @change-status="adminPostsStore.changeStatus"
-            :tableHeaders="adminPostsStore.tableHeaders"
-            :tableTitle="adminPostsStore.tableTitle"
-            :tableContent="posts"
+            :table-headers="adminPostsStore.tableHeaders"
+            :table-content="posts"
             :post-statuses="statuses"
           />
           <div class="col-sm-6">
@@ -30,19 +28,13 @@
 </template>
 
 <script setup>
-import { onBeforeMount, ref } from "vue";
-import BaseTable from "@/components/BaseTable.vue";
+import BaseTable from "../../../components/BaseTable.vue";
 import { useAdminPostsStore } from "@/stores/admin/posts.js";
 import { storeToRefs } from "pinia";
 const adminPostsStore = useAdminPostsStore();
 await adminPostsStore.getPosts();
-const state = storeToRefs(adminPostsStore);
-const posts = state.posts;
-let statuses = ref();
-
-onBeforeMount(async () => {
-  statuses.value = await adminPostsStore.getPostStatuses();
-});
+const { posts } = storeToRefs(adminPostsStore);
+const statuses = await adminPostsStore.getPostStatuses();
 </script>
 
 <style scoped></style>

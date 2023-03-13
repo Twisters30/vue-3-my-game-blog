@@ -3,7 +3,7 @@
     <footer class="footer fixed-footer">
       <div class="center">
         <div id="social-test">
-          <ul class="social">
+          <ul class="social mr-5">
             <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
             <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
             <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
@@ -14,12 +14,23 @@
             <li><i class="fa fa-pied-piper" aria-hidden="true"></i></li>
           </ul>
         </div>
+        <img class="logo" :src="logo" alt="logo">
       </div>
     </footer>
   </div>
 </template>
 
+<script setup>
+const logo = require('@/assets/images/GB.png')
+</script>
+
 <style lang="scss">
+
+.logo {
+  width: 120px;
+  height: 50px;
+}
+
 .fixed-footer {
   position: fixed;
   bottom: 0;

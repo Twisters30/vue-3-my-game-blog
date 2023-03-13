@@ -235,15 +235,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-// import jQuery from "jquery";
+/* eslint-disable */
 import SideBar from "@/components/backend/SideBar.vue";
+import { onMounted, ref } from "vue";
 const preloader = ref(null);
-setTimeout(() => {
-  preloader.value.style.height = 0 + "px";
-  preloader.value.firstChild.style.display = "none";
-  // jQuery('ul[data-widget="treeview"]').Treeview("init");
-}, 100);
+onMounted(() => {
+  setTimeout(() => {
+    preloader.value.style.height = 0 + 'px';
+    preloader.value.firstChild.style.display = 'none';
+    $('ul[data-widget="treeview"]').Treeview('init');
+  },100)
+})
 </script>
-
 <style scoped></style>

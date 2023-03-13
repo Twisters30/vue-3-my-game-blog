@@ -373,10 +373,10 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <NuxtLink to="/admin/posts" class="nav-link">
+                <router-link to="/admin/posts" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Posts</p>
-                </NuxtLink>
+                </router-link>
               </li>
             </ul>
           </li>
@@ -646,12 +646,6 @@
   </aside>
 </template>
 
-<script setup>
-// import { onMounted } from "vue";
-// import jQuery from "jquery";
-// onMounted(() => {
-//   jQuery("#my-toggle-button").ControlSidebar("toggle");
-// });
-</script>
+<script setup></script>
 
 <style scoped></style>

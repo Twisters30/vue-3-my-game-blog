@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { fileFormData } from "~/helpers/fileFormData.js";
-import { reactive, ref } from "vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 import {
   apiHost,
@@ -30,7 +30,7 @@ export const useAdminPostsStore = defineStore("adminPostsStore", () => {
     );
   };
   const tableTitle = "Редактирование статей";
-  const tableHeaders = reactive([
+  const tableHeaders = [
     "id",
     "name",
     "description",
@@ -40,7 +40,7 @@ export const useAdminPostsStore = defineStore("adminPostsStore", () => {
     "user_id",
     "created_at",
     "updated_at",
-  ]);
+  ];
   const getPostStatuses = async () => {
     const accessToken = loginStore.getAccessTokenStorage();
     try {
@@ -59,7 +59,7 @@ export const useAdminPostsStore = defineStore("adminPostsStore", () => {
   };
 
   const changeStatus = async (data) => {
-    const accessToken = loginStore.getAccessToken();
+    const accessToken = loginStore.getAccessTokenStorage();
 
     console.log(data);
 
@@ -81,7 +81,7 @@ export const useAdminPostsStore = defineStore("adminPostsStore", () => {
     }
   };
   const createOrUpdatePost = async (data) => {
-    const accessToken = loginStore.getAccessToken();
+    const accessToken = loginStore.getAccessTokenStorage();
     const bodyFormData = fileFormData(data);
 
     try {
@@ -97,14 +97,14 @@ export const useAdminPostsStore = defineStore("adminPostsStore", () => {
       );
       if (response.status === 200) {
         console.log("Статья создана");
-        router.push("/admin/posts");
+        await router.push("/admin/posts");
       }
     } catch (error) {
       console.log(error);
     }
   };
   const getPosts = async () => {
-    const accessToken = loginStore.getAccessToken();
+    const accessToken = loginStore.getAccessTokenStorage();
     try {
       const response = await axiosInstance.get(
         `${apiHost}/${apiAdminPostsIndex}`,
@@ -122,7 +122,7 @@ export const useAdminPostsStore = defineStore("adminPostsStore", () => {
   };
 
   const deletePost = async (id) => {
-    const accessToken = loginStore.getAccessToken();
+    const accessToken = loginStore.getAccessTokenStorage();
     console.log(id);
     try {
       const response = await axiosInstance.delete(
