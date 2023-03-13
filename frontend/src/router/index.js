@@ -1,9 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
+    path: "/:pathMatch(.*)*",
+    name: "notFoundPage",
+    component: () => import("@/views/404.vue"),
+  },
+  {
     path: "/",
     name: "index",
     component: () => import("@/views/index.vue"),
+  },
+  {
+    path: "/post/:id",
+    name: "post",
+    component: () => import("@/views/post.vue"),
   },
   {
     path: "/about",

@@ -2,7 +2,12 @@
   <div>
     <h1 class="main-title">Articles</h1>
     <div class="post__feed">
-      <post :post="post" v-for="post in posts" :key="post.id" />
+      <post
+        @click="$router.push('/post/' + post.id)"
+        :post="post"
+        v-for="post in posts"
+        :key="post.id"
+      />
     </div>
   </div>
 </template>
@@ -15,10 +20,4 @@ const posts = await postStore.getPosts();
 console.log(posts);
 </script>
 
-<style lang="scss">
-.post {
-  &__feed {
-    padding: 0 50px;
-  }
-}
-</style>
+<style lang="scss"></style>

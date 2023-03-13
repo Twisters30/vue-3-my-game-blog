@@ -56,6 +56,7 @@
 </template>
 
 <script setup>
+/* eslint-disable */
 import { useLoginStore } from "@/stores/login.js";
 import { onMounted } from "vue";
 import Loader from "@/components/Loader.vue";
@@ -68,13 +69,6 @@ onMounted(() => {
 <style lang="scss">
 .item-login {
   width: 71.69px;
-}
-
-.line {
-  text-align: center;
-  border-bottom: 2px solid transparent;
-  border-image-slice: 1;
-  width: 100%;
 }
 
 .header {

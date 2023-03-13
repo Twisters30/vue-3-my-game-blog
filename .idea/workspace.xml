@@ -4,33 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="router guard">
+      <change afterPath="$PROJECT_DIR$/frontend/src/assets/scss/post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/404.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/post.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/frontend/MainPageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/frontend/MainPageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/public/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/adminlte.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/font/summernote.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/font/summernote.hash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/font/summernote.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/font/summernote.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/font/summernote.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/summernote-bs4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/adminlte.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/jquery/jquery.slim.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/js/summernote-bs4.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/BaseTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BaseTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Loader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/backend/forms/AdminBaseForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/backend/forms/AdminBaseForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/backend/titles/BaseTitle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/backend/titles/BaseTitle.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/Post.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/TheFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/TheFooter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/forms/AcceptForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/forms/AcceptForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/AdminLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/AdminLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/DefaultLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/layouts/DefaultLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/stores/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/stores/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/stores/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/stores/refreshUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/stores/refreshUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/admin/posts/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/admin/posts/create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/index.vue" afterDir="false" />
     </list>
     <list id="0ad882db-258d-4240-a853-c718e6e80fa8" name="Revert: " comment="magic" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +66,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -108,6 +130,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/public/images/admin@admin.com" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -193,14 +216,8 @@
       <workItem from="1678331104843" duration="26427000" />
       <workItem from="1678395824337" duration="43887000" />
       <workItem from="1678531851014" duration="35041000" />
-      <workItem from="1678657573824" duration="3544000" />
-    </task>
-    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/frontend/user/LoginController.php">
-      <created>1676073678194</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1676073678194</updated>
+      <workItem from="1678657573824" duration="3844000" />
+      <workItem from="1678722585668" duration="16604000" />
     </task>
     <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/frontend/user/LoginController.php">
       <created>1676139198413</created>
@@ -538,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678538066401</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="router guard">
+      <created>1678665489487</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1678665489487</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +581,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="intercept" />
     <MESSAGE value="middleware process" />
     <MESSAGE value="layouts all page set definePageMeta" />
     <MESSAGE value="vueuse add" />
@@ -582,6 +605,7 @@
     <MESSAGE value="repair layouts" />
     <MESSAGE value="logo" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue" />
+    <MESSAGE value="router guard" />
+    <option name="LAST_COMMIT_MESSAGE" value="router guard" />
   </component>
 </project>

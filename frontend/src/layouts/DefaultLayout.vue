@@ -1,17 +1,17 @@
 <template>
-  <div>
-    <div class="page-wrapper">
-      <img class="bg-page" src="@/assets/images/battlefield-v.jpg" alt="обои" />
-      <div class="wrapper-content">
-        <TheHeader />
-        <div class="container">
-          <main class="main my-4">
-            <slot />
-            <login-form v-if="loginStore.isLoginPageShown" />
-          </main>
-        </div>
-        <TheFooter />
+  <div
+    class="page-wrapper bg-page"
+    :style="{ backgroundImage: `url(${require('@/assets/' + bgImage)})` }"
+  >
+    <div class="wrapper-content">
+      <TheHeader />
+      <div class="container">
+        <main class="main my-4 border-line">
+          <slot />
+          <login-form v-if="loginStore.isLoginPageShown" />
+        </main>
       </div>
+      <TheFooter />
     </div>
   </div>
 </template>
@@ -22,34 +22,34 @@ import LoginForm from "@/components/frontend/forms/LoginForm.vue";
 import TheHeader from "@/components/frontend/TheHeader.vue";
 import TheFooter from "@/components/frontend/TheFooter.vue";
 const loginStore = useLoginStore();
+const bgImage = "images/battlefield-v.jpg";
 </script>
 
 <style lang="scss">
 .wrapper-content {
   position: relative;
   z-index: 10;
+  padding-bottom: 100px;
 }
 
 .main {
-  height: 100vh;
+  min-height: 100vh;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
+  padding: 50px;
 }
 
 .page-wrapper {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 2;
 }
 
 .bg-page {
   width: 100%;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .zoom {
   animation: scale 40s linear infinite;

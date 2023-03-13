@@ -1,0 +1,36 @@
+.post {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    &:last-child {
+      border: none;
+    }
+  }
+  &__footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+  &__footer {
+    align-self: flex-end;
+  }
+  &__image {
+    width: 600px;
+    height: 300px;
+    margin-bottom: 15px;
+  }
+  &__text-preview {
+    font-size: 21px;
+    text-align: left;
+  }
+  &__left {
+    display: flex;
+    gap: 1rem;
+  }
+  &__separator {
+    padding: 0 5px;
+  }
+  &__title {
+    text-align: left;
+  }
+}

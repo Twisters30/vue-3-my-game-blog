@@ -5,7 +5,6 @@ import axios from "axios";
 
 export const usePostsStore = defineStore("postsStore", () => {
   const posts = ref(null);
-
   const getPosts = async () => {
     if (!posts.value) {
       console.log(posts);
@@ -22,5 +21,11 @@ export const usePostsStore = defineStore("postsStore", () => {
     return posts.value;
   };
 
-  return { getPosts };
+  const getActivePostById = async (postId) => {
+    if (!posts.value) {
+      await getPosts();
+    }
+    return posts.value.find((post) => post.id === postId);
+  };
+  return { getPosts, getActivePostById };
 });
