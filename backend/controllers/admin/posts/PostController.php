@@ -36,8 +36,6 @@ class PostController extends BaseController
      */
     public function index()
     {
-        $this->allowMethod();
-
         echo jsonWrite($this->postModel->select()->htmlDecode());
     }
 
@@ -46,8 +44,6 @@ class PostController extends BaseController
      */
     public function createOrUpdate(Request $request): void
     {
-        $this->allowMethod('post');
-
         $tokenData = TokenService::getTokenData();
         $result = $request->all();
 
@@ -75,8 +71,6 @@ class PostController extends BaseController
      */
     public function delete(Request $request): void
     {
-        $this->allowMethod('delete');
-
         $this->postModel->delete('id', $request->id);
     }
 
@@ -85,15 +79,11 @@ class PostController extends BaseController
      */
     public function getPostStatuses(): void
     {
-        $this->allowMethod();
-
         echo jsonWrite($this->postStatusModel->all());
     }
 
     public function changeStatus(Request $request): void
     {
-        $this->allowMethod('post');
-
         $this->postModel
             ->update($request->only('post_status_id'))
             ->where('id', $request->id)

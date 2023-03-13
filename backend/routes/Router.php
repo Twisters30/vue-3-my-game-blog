@@ -66,6 +66,8 @@ class Router
             $namespace = RouteAttributeService::namespace(self::$route['attributes']);
             $controller = "controllers\\{$namespace}" . self::$route['controller'];
 
+            self::allowMethod(self::$route['method'] ?? 'GET');
+
             if (class_exists($controller)){
 
                 $controllerObject = new $controller(self::$route);
@@ -91,16 +93,25 @@ class Router
         $urlParts = explode('/', $url);
 
         foreach (self::$routes as $path => $route){
+
+            if ($path === '{any}'){
+                self::$route = $route;
+
+                return true;
+            }
+
             $pathParts = explode('/', $path);
 
             if (count($urlParts) !== count($pathParts)) {
+
                 continue;
             }
             for ($i = 0; $i < count($urlParts); $i++ ){
 
                 if ($urlParts[$i] !== $pathParts[$i]){
 
-                    if ($pathParts[$i] === '{id}') {
+                    if ($pathParts[$i] === '{id}' || $pathParts[$i] === '*') {
+
                         continue;
                     }
                     continue 2;
@@ -111,5 +122,17 @@ class Router
             return true;
         }
         return false;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public static function allowMethod(string $method = 'GET'): void
+    {
+        $upMethod = strtoupper($method);
+
+        if ($_SERVER['REQUEST_METHOD'] != strtoupper($upMethod)) {
+            throw new Exception("Недопустимый метод {$_SERVER['REQUEST_METHOD']}, необходим {$upMethod}", 405);
+        }
     }
 }
