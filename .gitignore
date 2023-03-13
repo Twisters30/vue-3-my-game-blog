@@ -9,3 +9,6 @@
 /backend/vendor
 /backend/tmp
 /backend/public/images
+/backend/public/css
+/backend/public/img
+/backend/public/js
