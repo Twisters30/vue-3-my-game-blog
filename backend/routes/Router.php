@@ -91,16 +91,25 @@ class Router
         $urlParts = explode('/', $url);
 
         foreach (self::$routes as $path => $route){
+
+            if ($path === '{any}'){
+                self::$route = $route;
+
+                return true;
+            }
+
             $pathParts = explode('/', $path);
 
             if (count($urlParts) !== count($pathParts)) {
+
                 continue;
             }
             for ($i = 0; $i < count($urlParts); $i++ ){
 
                 if ($urlParts[$i] !== $pathParts[$i]){
 
-                    if ($pathParts[$i] === '{id}') {
+                    if ($pathParts[$i] === '{id}' || $pathParts[$i] === '*') {
+
                         continue;
                     }
                     continue 2;
