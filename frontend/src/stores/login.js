@@ -3,11 +3,13 @@ import axios from "axios";
 import { useUserRoleStore } from "@/stores/userRole.js";
 import { apiHost, apiLogin, apiLogout } from "@/config/api.js";
 import { ref, reactive } from "vue";
+import { useRouter } from "vue-router";
 
 export const useLoginStore = defineStore("LoginStore", () => {
   const userRoleStore = useUserRoleStore();
   const isLoginPageShown = ref(false);
   const formData = reactive({});
+  const router = useRouter();
   let userDataLoading = ref(true);
   let token = reactive({
     refreshToken: false,
@@ -81,6 +83,9 @@ export const useLoginStore = defineStore("LoginStore", () => {
         setStorageToken(token);
         const userRole = response.data.role.toLocaleLowerCase();
         userRoleStore.setUserRole(response.data.role);
+        if (userRole === "admin" || userRole === "author") {
+          await router.push({ path: "/admin/dashboard" });
+        }
         return userRole;
       }
     } catch (error) {

@@ -4,7 +4,7 @@
       {{ post.name }}
     </h3>
     <div class="post__left">
-      <img class="post__image" :src="post.image" alt="Изображение статьи" />
+      <img class="post__image" :src="image" alt="Изображение статьи" />
       <p v-html="post.description" class="post__text-preview cut-text"></p>
     </div>
     <div class="post__footer-wrapper">
@@ -18,7 +18,7 @@
 </template>
 <script setup>
 import { defineProps } from "vue";
-
-defineProps(["post"]);
+const props = defineProps(["post"]);
+const image = "http://localhost/" + props.post.image;
 </script>
 <style lang="scss" scoped></style>

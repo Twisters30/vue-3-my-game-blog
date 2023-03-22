@@ -4,7 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="page by id add" />
+    <list default="true" id="2156ae98-701c-4ec5-b4df-a2b2d6b6cce0" name="Default Changelist" comment="gitignore update">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_03_2023_23_38_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_03_2023_23_38__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/app.0450eacb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/app.fd5d1b08.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/chunk-120474e3.7bced034.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/chunk-15e70942.184bba2f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/chunk-7a63eadb.576ec115.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/chunk-7d22884a.b547204c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/chunk-eb715188.9f170716.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/chunk-eb715188.b362790f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/css/chunk-vendors.a8154426.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/img/GB.c5bf60a0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/img/user2-160x160.b88fb2c0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/img/user5-128x128.8ac6ab34.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/img/user6-128x128.4d91e2f0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/img/user7-128x128.2c5a9130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/img/user8-128x128.07e64900.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/app.38d7b789.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/app.38d7b789.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/app.4a6eb0b9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/app.4a6eb0b9.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/app.a191abf6.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-120474e3.4fde5286.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-120474e3.4fde5286.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-15e70942.45ef2101.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-2d0c80c2.df3a1e3d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-2d0d6f02.ceccc18a.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-2d20f8d6.b60be681.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-2d20f8d6.b60be681.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-2dd7c2c1.9ddb305e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-2dd7c2c1.9ddb305e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-3961fd03.b7c58c43.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-3961fd03.b7c58c43.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-5b64e0b4.5ad90970.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-5b64e0b4.5ad90970.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-646b1a64.dadff6ce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-646b1a64.dadff6ce.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-7a63eadb.fce6f426.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-7a63eadb.fce6f426.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-7d22884a.613797c4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-7d22884a.613797c4.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-8c79ba7e.246f52cd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-8c79ba7e.246f52cd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-8c79ba7e.cc03ed3d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-8c79ba7e.cc03ed3d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-eb715188.1448f003.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-eb715188.1448f003.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-eb715188.caada968.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-eb715188.caada968.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-eef2c2f6.c744bc1f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-eef2c2f6.c744bc1f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-vendors.0baaa720.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-vendors.0baaa720.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-vendors.ee276359.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-vendors.ee276359.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-vendors.fc93283c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/js/chunk-vendors.fc93283c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/public/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/scss/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/frontend/forms/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/frontend/forms/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/config/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/config/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/stores/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/stores/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/post.vue" afterDir="false" />
+    </list>
     <list id="0ad882db-258d-4240-a853-c718e6e80fa8" name="Revert: " comment="magic" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,14 +240,10 @@
       <workItem from="1678395824337" duration="43887000" />
       <workItem from="1678531851014" duration="35041000" />
       <workItem from="1678657573824" duration="3844000" />
-      <workItem from="1678722585668" duration="16922000" />
-    </task>
-    <task id="LOCAL-00019" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/admin/posts/PostController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/public/errors/error.php">
-      <created>1676146420592</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1676146420593</updated>
+      <workItem from="1678722585668" duration="21679000" />
+      <workItem from="1678788005980" duration="2220000" />
+      <workItem from="1678818049133" duration="1825000" />
+      <workItem from="1679490703667" duration="1365000" />
     </task>
     <task id="LOCAL-00020" summary="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;backend/controllers/BaseController.php&#10;#&#9;backend/controllers/frontend/user/LoginController.php&#10;#&#9;backend/controllers/frontend/user/RegisterController.php&#10;#&#9;backend/errors/ErrorHandler.php&#10;#&#9;backend/models/DB.php&#10;#&#9;backend/models/Model.php&#10;#&#9;backend/routes/Router.php&#10;#&#9;backend/tmp/logs/errors.log">
       <created>1676146688956</created>
@@ -514,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678746872106</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="gitignore update">
+      <created>1678747467774</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1678747467774</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +607,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="layouts all page set definePageMeta" />
     <MESSAGE value="vueuse add" />
     <MESSAGE value="update getters token methods" />
     <MESSAGE value="axiosInstance.js fix" />
@@ -558,6 +631,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master' into master&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;frontend/public/index.html&#10;#&#9;frontend/src/App.vue&#10;#&#9;frontend/src/components/backend/SideBar.vue&#10;#&#9;frontend/src/layouts/AdminLayout.vue&#10;#&#9;frontend/src/views/admin/dashboard.vue" />
     <MESSAGE value="router guard" />
     <MESSAGE value="page by id add" />
-    <option name="LAST_COMMIT_MESSAGE" value="page by id add" />
+    <MESSAGE value="gitignore update" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore update" />
   </component>
 </project>

@@ -6,7 +6,7 @@
   >
     <Form
       class="form__main"
-      @submit="submitLogin"
+      @submit="loginStore.loginAction"
       :validation-schema="schemaLogin"
       v-slot="{ meta }"
     >
@@ -67,17 +67,7 @@ import ButtonBorderAnimate from "@/components/buttons/ButtonBorderAnimate.vue";
 import { useLoginStore } from "@/stores/login.js";
 import { Form, Field, ErrorMessage } from "vee-validate";
 import { schemaLogin } from "@/helpers/validatorRules.js";
-import { useRouter } from "vue-router";
 const loginStore = useLoginStore();
-const router = useRouter();
-const submitLogin = async () => {
-  const userRole = await loginStore.loginAction();
-  if (userRole === "admin" || userRole === "author") {
-    await router.push({ path: "/admin/dashboard" });
-    return;
-  }
-  await router.push({ path: "/articles" });
-};
 </script>
 
 <style lang="scss" scoped>
@@ -123,7 +113,7 @@ const submitLogin = async () => {
   }
   &__main {
     max-width: 450px;
-    position: fixed;
+    position: sticky;
     z-index: 99;
     top: calc(50% - 138px);
     left: calc(50% - 225px);

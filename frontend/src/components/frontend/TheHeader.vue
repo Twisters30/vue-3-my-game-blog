@@ -72,6 +72,9 @@ onMounted(() => {
 }
 
 .header {
+  &__root {
+    backdrop-filter: blur(15px);
+  }
   display: flex;
   justify-content: space-between;
   align-items: center;

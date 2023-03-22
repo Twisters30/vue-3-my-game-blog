@@ -3,6 +3,7 @@
     <h1 class="main-title">Articles</h1>
     <div class="post__feed">
       <post
+        class="box b-radius-15"
         @click="$router.push('/post/' + post.id)"
         :post="post"
         v-for="post in posts"

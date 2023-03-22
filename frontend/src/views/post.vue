@@ -5,7 +5,7 @@
     </h3>
     <div class="post__left">
       <img class="post__image" :src="image" alt="Изображение статьи" />
-      <p v-html="post.description" class="post__text-preview cut-text"></p>
+      <p v-html="post.description" class="post__text-preview"></p>
     </div>
     <div class="post__footer-wrapper">
       <div class="post__footer">

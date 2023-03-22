@@ -14,7 +14,7 @@ Router::addRoute('api/logout',
     ['controller' => 'frontend\user\LoginController', 'action' => 'logout', 'method' => 'post']
 );
 Router::addRoute('api/refresh',
-    ['controller' => 'frontend\user\LoginController', 'action' => 'reissueTokens', 'method' => 'post']
+    ['controller' => 'frontend\user\LoginController', 'action' => 'reissueTokens']
 );
 Router::addRoute('api/posts',
     ['controller' => 'frontend\MainPageController', 'action' => 'getPosts']

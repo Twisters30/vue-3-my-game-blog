@@ -91,3 +91,8 @@ img {
     border-style: solid;
     border-image: linear-gradient(to bottom, rgba(56,2,155,0),rgba(255,249,34), rgba(255,0,128), rgba(56,2,155,0)) 1 100%;
 }
+
+.b-radius-15 {
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
